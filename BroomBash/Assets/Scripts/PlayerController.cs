@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float yawMaxSteerRotationAmount = 20f; // Degrees
     [Tooltip("The linear interpolation speed (smoothing) of the Z rotation steer mutiplied by Time.deltaTime and steer input")]
     public float yawMaxSteerRotationSpeed = 5f;
+    [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
+    public GameObject childObjectToRotateTowardSteer;
 
     private float speed;
     private float lastSpeed;
@@ -65,11 +67,12 @@ public class PlayerController : MonoBehaviour
 
         this.transform.position += moveVector * Time.deltaTime;
 
-        RotateTowardSteer();
+        RotateChildTowardSteer();
     }
 
     private void Update()
     {
+        // Change colors of the broom to see what is happening - Temporary will be taken out in later build
         if (inputHandler.SpeedControl > inputHandler.controllerDeadZone)
         {
             this.GetComponentInChildren<Renderer>().material.color = Color.green;
@@ -109,7 +112,7 @@ public class PlayerController : MonoBehaviour
         return _wantedSpeed;
     }
 
-    private void RotateTowardSteer()
+    private void RotateChildTowardSteer()
     {
         float _currentSteer = inputHandler.Steer;
         Vector3 _wantedAngle = Vector3.zero;
@@ -117,20 +120,20 @@ public class PlayerController : MonoBehaviour
         // Tilt to the right if steering right
         if(_currentSteer > inputHandler.controllerDeadZone)
         {
-            _wantedAngle = Quaternion.Euler(new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, -yawMaxSteerRotationAmount)).eulerAngles;
-            this.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(this.transform.eulerAngles), Quaternion.Euler(_wantedAngle), Time.deltaTime * Mathf.Abs(_currentSteer) * yawMaxSteerRotationSpeed).eulerAngles;
+            _wantedAngle = Quaternion.Euler(new Vector3(childObjectToRotateTowardSteer.transform.eulerAngles.x, childObjectToRotateTowardSteer.transform.eulerAngles.y, -yawMaxSteerRotationAmount)).eulerAngles;
+            childObjectToRotateTowardSteer.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(childObjectToRotateTowardSteer.transform.eulerAngles), Quaternion.Euler(_wantedAngle), Time.deltaTime * Mathf.Abs(_currentSteer) * yawMaxSteerRotationSpeed).eulerAngles;
         }
         // Tilt to the left if steering left
         else if (_currentSteer < -inputHandler.controllerDeadZone)
         {
-            _wantedAngle = Quaternion.Euler(new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, yawMaxSteerRotationAmount)).eulerAngles;
-            this.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(this.transform.eulerAngles), Quaternion.Euler(_wantedAngle), Time.deltaTime * Mathf.Abs(_currentSteer) * yawMaxSteerRotationSpeed).eulerAngles;
+            _wantedAngle = Quaternion.Euler(new Vector3(childObjectToRotateTowardSteer.transform.eulerAngles.x, childObjectToRotateTowardSteer.transform.eulerAngles.y, yawMaxSteerRotationAmount)).eulerAngles;
+            childObjectToRotateTowardSteer.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(childObjectToRotateTowardSteer.transform.eulerAngles), Quaternion.Euler(_wantedAngle), Time.deltaTime * Mathf.Abs(_currentSteer) * yawMaxSteerRotationSpeed).eulerAngles;
         }
         // Tilt back to 0 if not steering
         else
         {
-            _wantedAngle = Quaternion.Euler(new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, 0)).eulerAngles;
-            this.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(this.transform.eulerAngles), Quaternion.Euler(_wantedAngle), Time.deltaTime * yawMaxSteerRotationSpeed).eulerAngles;
+            _wantedAngle = Quaternion.Euler(new Vector3(childObjectToRotateTowardSteer.transform.eulerAngles.x, childObjectToRotateTowardSteer.transform.eulerAngles.y, 0)).eulerAngles;
+            childObjectToRotateTowardSteer.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(childObjectToRotateTowardSteer.transform.eulerAngles), Quaternion.Euler(_wantedAngle), Time.deltaTime * yawMaxSteerRotationSpeed).eulerAngles;
         }
     }
 }
