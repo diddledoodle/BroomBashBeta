@@ -100,6 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 752601669522157328}
+  - component: {fileID: 3077118277526158684}
   - component: {fileID: 752601669522157329}
   - component: {fileID: 752601669522157422}
   - component: {fileID: 1908411987}
@@ -126,6 +127,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3077118277526158684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752601669522157423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7afacea2ccde83f4db87565e60146a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1616401540575755103, guid: 62c14e9777cfced4f9dba858d29f7c02,
+    type: 3}
+  miniMapCamera: {fileID: 6462295477380196185, guid: acd78f9b2c9b5414cb458c67395f1770,
+    type: 3}
+  cinemachineVCam: {fileID: 3051870992745005639, guid: bba107a0ad4787646888d6aa2f60145d,
+    type: 3}
+  miniMapRenderTexture: {fileID: 8400000, guid: 1ca6e5146a4741f40ae37ffae24c3fdc,
+    type: 2}
+  playerUI: {fileID: 6912106911742556547, guid: 1486256fa4f30ed499c719a83dd42104,
+    type: 3}
+  inControl: {fileID: 7279247252426972244, guid: 4248ec95a44f5b04d8f557344bc2240b,
+    type: 3}
 --- !u!114 &752601669522157329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +202,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1908411986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187,7 +212,7 @@ BoxCollider:
   m_GameObject: {fileID: 752601669522157423}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.7, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
