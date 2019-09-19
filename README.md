@@ -1,5 +1,6 @@
 # BroomBashBeta
 Beta version of Capstone Indie Project 1.
+The vision: https://docs.google.com/document/d/15jF80VY-1r-qdMqu5siMPZbDUu3057p2mO6Ahn8zsrg/edit
 
 # Information
 This is the repository for BroomBash an indie game developed for the first half of Columbia College Chicago Indie Capstone Fall 2019 class.
