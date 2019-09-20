@@ -18,7 +18,9 @@ public class SceneSetup : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
+        // Input
+        GameObject _inControl = Instantiate(inControl);
         // Set up the cameras
         GameObject _mainCamera = Instantiate(mainCamera);
         CinemachineVirtualCamera _cinemachineVCam = Instantiate(cinemachineVCam).GetComponent<CinemachineVirtualCamera>();
@@ -31,7 +33,5 @@ public class SceneSetup : MonoBehaviour
         GameObject _playerUI = Instantiate(playerUI);
         // Set up miniMap
         GameObject.Find("MiniMap").GetComponent<RawImage>().texture = miniMapRenderTexture;
-        // Input
-        GameObject _inControl = Instantiate(inControl);
     }
 }

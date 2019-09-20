@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float yawMaxSteerRotationAmount = 20f; // Degrees
     [Tooltip("The linear interpolation speed (smoothing) of the Z rotation steer mutiplied by Time.deltaTime and steer input")]
     public float yawMaxSteerRotationSpeed = 5f;
+    [Tooltip("The speed at which the player object will level out when stopped")]
+    public float stoppedLevelingRotattionSpeed = 4f;
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
 
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         // Get the input handler
-        inputHandler = GameObject.FindObjectOfType<InputHandler>();
+        inputHandler = this.gameObject.AddComponent<InputHandler>() as InputHandler;
     }
 
     private void OnGUI()
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
         GUI.Box (new Rect (10.0f, 10.0f, 400.0f, 40.0f), "A,W,S,D/Left Stick - Main Control", textStyle);
         GUI.Box (new Rect (10.0f, 50.0f, 400.0f, 40.0f), "Left Shift/Right Trigger - Speed up", textStyle);
         GUI.Box (new Rect (10.0f, 90.0f, 400.0f, 40.0f), "Left Control/Left Trigger - Slow Down", textStyle);
+        GUI.Box(new Rect(10.0f, 130.0f, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
     }
 
     private void FixedUpdate()
@@ -55,37 +58,32 @@ public class PlayerController : MonoBehaviour
 
         // Limit rotation
         float maxX = Quaternion.LookRotation(moveVector + dir).eulerAngles.x;
-        if(maxX < 90 && maxX > 70 || maxX > 270 && maxX < 290)
-        {
-            // TODO: Maybe to some sort of falloff if angle is exceeded to add difficulty?
-        }
-        else
-        {
-            moveVector += dir;
-            transform.rotation = Quaternion.LookRotation(moveVector);
-        }
+        
 
-        this.transform.position += moveVector * Time.deltaTime;
+
+        if(speed != 0)
+        {
+            this.transform.position += moveVector * Time.deltaTime;
+            if (maxX < 90 && maxX > 70 || maxX > 270 && maxX < 290)
+            {
+                // TODO: Maybe to some sort of falloff if angle is exceeded to add difficulty?
+            }
+            else
+            {
+                moveVector += dir;
+                transform.rotation = Quaternion.LookRotation(moveVector);
+            }
+        }
 
         RotateChildTowardSteer();
     }
 
     private void Update()
     {
-        // Change colors of the broom to see what is happening - Temporary will be taken out in later build
-        if (inputHandler.SpeedControl > inputHandler.controllerDeadZone)
+        // Reset the player to the origin - will be removed in the future
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            this.GetComponentInChildren<Renderer>().material.color = Color.green;
-        }
-        // Slow down
-        else if (inputHandler.SpeedControl < -inputHandler.controllerDeadZone)
-        {
-            this.GetComponentInChildren<Renderer>().material.color = Color.red;
-        }
-        // Go back to base speed
-        else
-        {
-            this.GetComponentInChildren<Renderer>().material.color = new Color32(77, 41, 0, 255);
+            this.gameObject.transform.position = new Vector3(0, 2, 0);
         }
     }
 
@@ -104,9 +102,14 @@ public class PlayerController : MonoBehaviour
             _wantedSpeed = minimumSpeed;
         }
         // Go back to base speed
-        else
+        else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && inputHandler.Stop < inputHandler.controllerDeadZone)
         {
             _wantedSpeed = baseSpeed;
+        }
+
+        else if(inputHandler.Stop > inputHandler.controllerDeadZone)
+        {
+            _wantedSpeed = 0;
         }
 
         return _wantedSpeed;
@@ -134,6 +137,12 @@ public class PlayerController : MonoBehaviour
         {
             _wantedAngle = Quaternion.Euler(new Vector3(childObjectToRotateTowardSteer.transform.eulerAngles.x, childObjectToRotateTowardSteer.transform.eulerAngles.y, 0)).eulerAngles;
             childObjectToRotateTowardSteer.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(childObjectToRotateTowardSteer.transform.eulerAngles), Quaternion.Euler(_wantedAngle), Time.deltaTime * yawMaxSteerRotationSpeed).eulerAngles;
+        }
+
+        // Rotate back level if player is stopped
+        if(speed == 0)
+        {
+            this.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(this.transform.eulerAngles), Quaternion.Euler(0, this.transform.eulerAngles.y, this.transform.eulerAngles.z), Time.deltaTime * stoppedLevelingRotattionSpeed).eulerAngles;
         }
     }
 }

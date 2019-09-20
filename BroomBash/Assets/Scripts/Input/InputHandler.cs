@@ -6,12 +6,13 @@ using InControl;
 public class InputHandler : MonoBehaviour {
 
     // Input Handler settings
-    public float controllerDeadZone;
+    public float controllerDeadZone = 0.2f;
 
     // Player inputs
     public float Pitch = 0;
     public float Steer = 0;
     public float SpeedControl = 0;
+    public float Stop = 0;
    
     private PlayerControlActions playerControlActions;
     private InputDevice currentInputDevice;
@@ -28,6 +29,7 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.steerRight.AddDefaultBinding(InputControlType.LeftStickRight);
         playerControlActions.speedUp.AddDefaultBinding(InputControlType.RightTrigger);
         playerControlActions.slowDown.AddDefaultBinding(InputControlType.LeftTrigger);
+        playerControlActions.stop.AddDefaultBinding(InputControlType.LeftBumper);
         // Player default bindings - Keyboard
         playerControlActions.pitchDown.AddDefaultBinding(Key.W);
         playerControlActions.pitchUp.AddDefaultBinding(Key.S);
@@ -35,6 +37,7 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.steerRight.AddDefaultBinding(Key.D);
         playerControlActions.speedUp.AddDefaultBinding(Key.Shift);
         playerControlActions.slowDown.AddDefaultBinding(Key.LeftControl);
+        playerControlActions.stop.AddDefaultBinding(Key.Space);
 
     }
 	
@@ -48,5 +51,6 @@ public class InputHandler : MonoBehaviour {
         Pitch = playerControlActions.pitch.Value;
         Steer = playerControlActions.steer.Value;
         SpeedControl = playerControlActions.speedControl.Value;
+        Stop = playerControlActions.stop.Value;
     }
 }
