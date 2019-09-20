@@ -31,7 +31,5 @@ public class SceneSetup : MonoBehaviour
         _miniMap.player = this.gameObject.transform;
         // Set up the player UI
         GameObject _playerUI = Instantiate(playerUI);
-        // Set up miniMap
-        GameObject.Find("MiniMap").GetComponent<RawImage>().texture = miniMapRenderTexture;
     }
 }
