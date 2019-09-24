@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public float yawMaxSteerRotationSpeed = 5f;
     [Tooltip("The speed at which the player object will level out when stopped")]
     public float stoppedLevelingRotattionSpeed = 4f;
+    [Tooltip("The amount of noise in the broom hover when the player is stopped. (Best to keep this low)")]
+    public float stoppedHoverNoiseAmount = 0.01f;
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
 
@@ -74,6 +76,10 @@ public class PlayerController : MonoBehaviour
                 moveVector += dir;
                 transform.rotation = Quaternion.LookRotation(moveVector);
             }
+        }
+        else if(speed == 0)
+        {
+            this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(this.transform.position.y - stoppedHoverNoiseAmount, this.transform.position.y + stoppedHoverNoiseAmount, Mathf.PingPong(Time.time, 1)), this.transform.position.z);
         }
 
         RotateChildTowardSteer();
