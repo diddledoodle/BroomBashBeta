@@ -56,20 +56,7 @@ public class Quest : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            Debug.Log("Hit a trigger");
-            // Add time to the quest controller timer
-            switch (questDifficulty)
-            {
-                case QuestDifficulty.EASY:
-                    questController.timeLeft += questController.easyTimeAddition;
-                    break;
-                case QuestDifficulty.MEDIUM:
-                    questController.timeLeft += questController.mediumTimeAddition;
-                    break;
-                case QuestDifficulty.HARD:
-                    questController.timeLeft += questController.hardTimeAddition;
-                    break;
-            }
+            questController.PlayerArrivedAtDeliveryLocation(this);   
         }
         
     }

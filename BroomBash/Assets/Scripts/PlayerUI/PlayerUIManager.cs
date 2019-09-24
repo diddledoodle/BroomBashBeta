@@ -10,6 +10,7 @@ public class PlayerUIManager : MonoBehaviour
     public GameObject notifcationPanel;
     public GameObject dialogPanel;
     public Texture miniMapRenderTexture;
+    private QuestController questController;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,14 @@ public class PlayerUIManager : MonoBehaviour
         // Turn off all components that arent used at the start of the game
         notifcationPanel.SetActive(false);
         dialogPanel.SetActive(false);
+
+        // Get the questController
+        questController = GameObject.FindObjectOfType<QuestController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer.text = $"{questController.timeLeft.ToString("F0")} seconds";
     }
 }

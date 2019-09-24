@@ -57,7 +57,8 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = yaw + pitch;
 
         // Limit rotation
-        float maxX = Quaternion.LookRotation(moveVector + dir).eulerAngles.x;
+
+        float maxX = (moveVector + dir != Vector3.zero) ? Quaternion.LookRotation(moveVector + dir).eulerAngles.x : 0; // Need to get rid of that annoying debug from Quaternion.LookRotation taking in a 0 vector
         
 
 
