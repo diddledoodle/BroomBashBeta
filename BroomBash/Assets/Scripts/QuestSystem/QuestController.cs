@@ -33,6 +33,14 @@ public class QuestController : MonoBehaviour
     [Tooltip("The maximum distance from the player in meters to be considered an [hard] quest")]
     public float hardQuestDistance = 300f;
 
+    [Button]
+    [DisableInEditorMode]
+    [DisableIf("playerHasQuest")]
+    public void AssignNewQuestToPlayer()
+    {
+        AssignQuestToPlayer();
+    }
+
     [SerializeField]
     [DisableInPlayMode]
     [DisableInEditorMode]

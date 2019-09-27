@@ -25,8 +25,11 @@ public class PlayerController : MonoBehaviour
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
 
+    public Vector3 MoveVector;
+
     private float speed;
     private float lastSpeed;
+    private Vector3 playerStartingPosition = Vector3.zero;
 
     private InputHandler inputHandler;
 
@@ -34,6 +37,8 @@ public class PlayerController : MonoBehaviour
     {
         // Get the input handler
         inputHandler = this.gameObject.AddComponent<InputHandler>() as InputHandler;
+        // Get the players starting poosition
+        playerStartingPosition = this.gameObject.transform.position;
     }
 
     private void OnGUI()
@@ -57,6 +62,8 @@ public class PlayerController : MonoBehaviour
         Vector3 yaw = inputHandler.Steer * transform.right * rotattionSpeedX * Time.deltaTime;
         Vector3 pitch = -(inputHandler.Pitch) * transform.up * rotattionSpeedY * Time.deltaTime; // Need to negate pitch input to meet design doc specifications
         Vector3 dir = yaw + pitch;
+
+        MoveVector = moveVector;
 
         // Limit rotation
 
@@ -91,7 +98,7 @@ public class PlayerController : MonoBehaviour
         // Reset the player to the origin - will be removed in the future
         if (Input.GetKeyDown(KeyCode.R))
         {
-            this.gameObject.transform.position = new Vector3(0, 2, 0);
+            this.gameObject.transform.position = playerStartingPosition;
         }
     }
 
