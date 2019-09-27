@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     private QuestController questController;
+    private float timePlayerEnteredTrigger = -1;
 
     public void Initialize(QuestController _qc)
     {
@@ -16,7 +17,26 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            questController.PlayerArrivedAtPickUpLocation(this);
+            timePlayerEnteredTrigger = questController.timeLeft;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            if(timePlayerEnteredTrigger - questController.timeLeft >= questController.timeToStayForPickUp)
+            {
+                questController.PlayerArrivedAtPickUpLocation(this);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            timePlayerEnteredTrigger = -1;
         }
     }
 }

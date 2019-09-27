@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
         }
         else if(speed == 0)
         {
+            // Hover noise
             this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(this.transform.position.y - stoppedHoverNoiseAmount, this.transform.position.y + stoppedHoverNoiseAmount, Mathf.PingPong(Time.time, 1)), this.transform.position.z);
         }
 
