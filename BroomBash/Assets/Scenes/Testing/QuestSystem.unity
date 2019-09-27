@@ -323,7 +323,7 @@ MonoBehaviour:
   pickUps:
   - {fileID: 23975973}
   - {fileID: 1777162636}
-  quests:
+  dropOffs:
   - {fileID: 1234262192}
   - {fileID: 1387944026}
   - {fileID: 1168821328}
@@ -333,6 +333,8 @@ MonoBehaviour:
   mediumTimeAddition: 25
   hardTimeAddition: 35
   timeLeft: 0
+  timeToStayForPickUp: 2
+  timeToStayForDelivery: 2
   easyQuestDistance: 75
   mediumQuestDistance: 150
   hardQuestDistance: 300
@@ -436,7 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100059975}
   m_Layer: 0
-  m_Name: Quests
+  m_Name: DropOffLocations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +475,7 @@ GameObject:
   - component: {fileID: 1168821329}
   - component: {fileID: 1168821328}
   m_Layer: 0
-  m_Name: Quest2
+  m_Name: DropOff2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,6 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65e6f749d5c012448ca9d5f864ee5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropOffName: NO NAME
   questDifficulty: 0
 --- !u!65 &1168821329
 BoxCollider:
@@ -578,7 +581,7 @@ GameObject:
   - component: {fileID: 1234262193}
   - component: {fileID: 1234262192}
   m_Layer: 0
-  m_Name: Quest0
+  m_Name: DropOff0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,6 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65e6f749d5c012448ca9d5f864ee5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropOffName: NO NAME
   questDifficulty: 0
 --- !u!65 &1234262193
 BoxCollider:
@@ -757,7 +761,7 @@ GameObject:
   - component: {fileID: 1387944023}
   - component: {fileID: 1387944026}
   m_Layer: 0
-  m_Name: Quest1
+  m_Name: DropOff1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -847,6 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65e6f749d5c012448ca9d5f864ee5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropOffName: NO NAME
   questDifficulty: 0
 --- !u!1 &1777162634
 GameObject:

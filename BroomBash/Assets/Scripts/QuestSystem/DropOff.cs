@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
-public class Quest : MonoBehaviour
+public class DropOff : MonoBehaviour
 {
-
+    public string dropOffName = "NO NAME";
+    private float timePlayerEnteredTrigger = -1f;
     public enum QuestDifficulty { EASY, MEDIUM, HARD}
     [DisableInPlayMode]
     [DisableInEditorMode]
@@ -56,8 +57,26 @@ public class Quest : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            questController.PlayerArrivedAtDeliveryLocation(this);   
+            timePlayerEnteredTrigger = questController.timeLeft;
         }
-        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            if(timePlayerEnteredTrigger - questController.timeLeft >= questController.timeToStayForDelivery)
+            {
+                questController.PlayerArrivedAtDeliveryLocation(this);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            timePlayerEnteredTrigger = -1;
+        }
     }
 }

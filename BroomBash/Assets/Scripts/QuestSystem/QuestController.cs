@@ -6,9 +6,8 @@ using Sirenix.OdinInspector;
 public class QuestController : MonoBehaviour
 {
     public List<PickUp> pickUps = new List<PickUp>();
-    public List<Quest> quests = new List<Quest>();
-    [DisableInEditorMode]
-    [DisableInPlayMode]
+    public List<DropOff> dropOffs = new List<DropOff>();
+    [HideInInspector]
     public GameObject player;
 
     [Tooltip("The amount of time the player has at the start of the game in seconds")]
@@ -22,6 +21,10 @@ public class QuestController : MonoBehaviour
     [DisableInPlayMode]
     [DisableInEditorMode]
     public float timeLeft = 0;
+    [Tooltip("The time in seconds the player has to stay in the pick up zone to make the pick up successful")]
+    public float timeToStayForPickUp = 2f;
+    [Tooltip("The time in seconds the player has to stay in the delivery zone to make the delivery successful")]
+    public float timeToStayForDelivery = 2f;
 
     [Tooltip("The maximum distance from the player in meters to be considered an [easy] quest")]
     public float easyQuestDistance = 75f;
@@ -41,7 +44,7 @@ public class QuestController : MonoBehaviour
     [SerializeField]
     [DisableInPlayMode]
     [DisableInEditorMode]
-    private Quest currentQuest = null;
+    private DropOff currentQuest = null;
     [SerializeField]
     [DisableInPlayMode]
     [DisableInEditorMode]
@@ -50,14 +53,6 @@ public class QuestController : MonoBehaviour
     [DisableInPlayMode]
     [DisableInEditorMode]
     private PickUp closestPickUp = null;
-
-    [DisableIf("playerHasQuest")]
-    [DisableInEditorMode]
-    [Button(ButtonSizes.Large), GUIColor(0.4f, 0.8f, 1)]
-    private void AssignNewQuestToPlayer()
-    {
-        AssignQuestToPlayer();
-    }
 
     private System.Random randomNumber = new System.Random();
 
@@ -75,11 +70,11 @@ public class QuestController : MonoBehaviour
             }
         }
         // Initialize all of the quest objects
-        if(quests.Count > 0)
+        if(dropOffs.Count > 0)
         {
-            foreach(Quest q in quests)
+            foreach(DropOff d in dropOffs)
             {
-                q.Initialize(this);
+                d.Initialize(this);
             }
         }
         // Set the timer
@@ -105,7 +100,7 @@ public class QuestController : MonoBehaviour
         }
     }
 
-    public void PlayerArrivedAtDeliveryLocation(Quest _questLocation)
+    public void PlayerArrivedAtDeliveryLocation(DropOff _questLocation)
     {
         if(_questLocation == currentQuest && playerHasQuest && playerHasDelivery)
         {
@@ -114,13 +109,13 @@ public class QuestController : MonoBehaviour
             // Add time to timeLeft
             switch (_questLocation.questDifficulty)
             {
-                case Quest.QuestDifficulty.EASY:
+                case DropOff.QuestDifficulty.EASY:
                     timeLeft += easyTimeAddition;
                     break;
-                case Quest.QuestDifficulty.MEDIUM:
+                case DropOff.QuestDifficulty.MEDIUM:
                     timeLeft += mediumTimeAddition;
                     break;
-                case Quest.QuestDifficulty.HARD:
+                case DropOff.QuestDifficulty.HARD:
                     timeLeft += hardTimeAddition;
                     break;
             }
@@ -146,33 +141,33 @@ public class QuestController : MonoBehaviour
 
     private void GetRandomQuest()
     {
-        if(quests.Count > 1)
+        if(dropOffs.Count > 1)
         {
-            int _questAssignmentIndex = randomNumber.Next(0, quests.Count);
+            int _questAssignmentIndex = randomNumber.Next(0, dropOffs.Count);
             // Make sure we don't get the same quest as the last time
             if(_questAssignmentIndex == lastQuestIndex)
             {
                 int _flipCoin = randomNumber.Next(0, 2);
-                if (_questAssignmentIndex == quests.Count - 1)
+                if (_questAssignmentIndex == dropOffs.Count - 1)
                 {
                     
                     _questAssignmentIndex = (_flipCoin == 1) ? 0 : _questAssignmentIndex -= 1;
                 }
                 else if(_questAssignmentIndex == 0)
                 {
-                    _questAssignmentIndex = (_flipCoin == 1) ? 1 : quests.Count - 1;
+                    _questAssignmentIndex = (_flipCoin == 1) ? 1 : dropOffs.Count - 1;
                 }
                 else
                 {
                     _questAssignmentIndex = (_flipCoin == 1) ? _questAssignmentIndex += 1 : _questAssignmentIndex -= 1;
                 }
             }
-            currentQuest = quests[_questAssignmentIndex];
+            currentQuest = dropOffs[_questAssignmentIndex];
             lastQuestIndex = _questAssignmentIndex;
         }
-        else if(quests.Count == 1)
+        else if(dropOffs.Count == 1)
         {
-            currentQuest = quests[0];
+            currentQuest = dropOffs[0];
             // Set the last quest so we can't get it next time
             lastQuestIndex = 0;
         }
