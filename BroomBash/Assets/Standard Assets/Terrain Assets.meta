@@ -1,9 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:BroomBash/Assets/Standard Assets/Terrain Assets.meta
 guid: 7e6f84bf81c8d4de280f1133cff7e601
 folderAsset: yes
 timeCreated: 1427358697
 licenseType: Store
+=======
+guid: c5ec7b189eefeb346a52d1e86b16b5de
+>>>>>>> master:BroomBash/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta
 DefaultImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

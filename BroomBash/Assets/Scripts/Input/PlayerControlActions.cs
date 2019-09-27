@@ -10,6 +10,7 @@ public class PlayerControlActions : PlayerActionSet
     public PlayerAction steerLeft;
     public PlayerAction speedUp;
     public PlayerAction slowDown;
+    public PlayerAction stop;
 
     // Player action axes
     public PlayerOneAxisAction steer;
@@ -25,6 +26,7 @@ public class PlayerControlActions : PlayerActionSet
         steerLeft = CreatePlayerAction("SteerLeft");
         speedUp = CreatePlayerAction("SpeedUp");
         slowDown = CreatePlayerAction("SlowDown");
+        stop = CreatePlayerAction("Stop");
 
 
         // Create the player action axes
