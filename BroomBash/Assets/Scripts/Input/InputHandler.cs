@@ -12,7 +12,7 @@ public class InputHandler : MonoBehaviour {
     public float Pitch = 0;
     public float Steer = 0;
     public float SpeedControl = 0;
-    public float Stop = 0;
+    public bool Stop = false;
    
     private PlayerControlActions playerControlActions;
     private InputDevice currentInputDevice;
@@ -51,6 +51,15 @@ public class InputHandler : MonoBehaviour {
         Pitch = playerControlActions.pitch.Value;
         Steer = playerControlActions.steer.Value;
         SpeedControl = playerControlActions.speedControl.Value;
-        Stop = playerControlActions.stop.Value;
+        // Toggle stopped based on the stop button
+        if (playerControlActions.stop.WasPressed)
+        {
+            Stop = (Stop == true) ? false : true;
+        }
+        // Accelerate from stop if speed control is changed from "0"
+        if(SpeedControl > controllerDeadZone || SpeedControl < -controllerDeadZone)
+        {
+            Stop = false;
+        }
     }
 }

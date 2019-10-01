@@ -44,13 +44,13 @@ public class PlayerController : MonoBehaviour
     private void OnGUI()
     {
         // Print directions on the screen - temporary
-        GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
-        textStyle.fontSize = 22;
-        GUI.color = Color.black;
-        GUI.Box (new Rect (10.0f, 10.0f, 400.0f, 40.0f), "A,W,S,D/Left Stick - Main Control", textStyle);
-        GUI.Box (new Rect (10.0f, 50.0f, 400.0f, 40.0f), "Left Shift/Right Trigger - Speed up", textStyle);
-        GUI.Box (new Rect (10.0f, 90.0f, 400.0f, 40.0f), "Left Control/Left Trigger - Slow Down", textStyle);
-        GUI.Box(new Rect(10.0f, 130.0f, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
+        //GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
+        //textStyle.fontSize = 22;
+        //GUI.color = Color.black;
+        //GUI.Box (new Rect (10.0f, 10.0f, 400.0f, 40.0f), "A,W,S,D/Left Stick - Main Control", textStyle);
+        //GUI.Box (new Rect (10.0f, 50.0f, 400.0f, 40.0f), "Left Shift/Right Trigger - Speed up", textStyle);
+        //GUI.Box (new Rect (10.0f, 90.0f, 400.0f, 40.0f), "Left Control/Left Trigger - Slow Down", textStyle);
+        //GUI.Box(new Rect(10.0f, 130.0f, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
     }
 
     private void FixedUpdate()
@@ -117,12 +117,12 @@ public class PlayerController : MonoBehaviour
             _wantedSpeed = minimumSpeed;
         }
         // Go back to base speed
-        else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && inputHandler.Stop < inputHandler.controllerDeadZone)
+        else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = baseSpeed;
         }
 
-        else if(inputHandler.Stop > inputHandler.controllerDeadZone)
+        else if(inputHandler.Stop)
         {
             _wantedSpeed = 0;
         }

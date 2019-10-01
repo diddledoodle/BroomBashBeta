@@ -57,7 +57,7 @@ public class DropOff : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            timePlayerEnteredTrigger = questController.timeLeft;
+            timePlayerEnteredTrigger = questController.timeSinceStart;
         }
     }
 
@@ -65,7 +65,7 @@ public class DropOff : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            if(timePlayerEnteredTrigger - questController.timeLeft >= questController.timeToStayForDelivery)
+            if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForDelivery)
             {
                 questController.PlayerArrivedAtDeliveryLocation(this);
             }

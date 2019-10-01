@@ -17,7 +17,7 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            timePlayerEnteredTrigger = questController.timeLeft;
+            timePlayerEnteredTrigger = questController.timeSinceStart;
         }
     }
 
@@ -25,7 +25,7 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            if(timePlayerEnteredTrigger - questController.timeLeft >= questController.timeToStayForPickUp)
+            if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForPickUp)
             {
                 questController.PlayerArrivedAtPickUpLocation(this);
             }

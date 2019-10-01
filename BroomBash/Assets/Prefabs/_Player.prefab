@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 752601669522157328}
   - component: {fileID: 3077118277526158684}
   - component: {fileID: 752601669522157329}
+  - component: {fileID: 1707904220858327486}
   - component: {fileID: 1908411986}
   - component: {fileID: 43654826}
   m_Layer: 0
@@ -173,6 +174,22 @@ MonoBehaviour:
   stoppedHoverNoiseAmount: 0.005
   childObjectToRotateTowardSteer: {fileID: 752601669811963281}
   MoveVector: {x: 0, y: 0, z: 0}
+--- !u!114 &1707904220858327486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752601669522157423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f23b8e5e751e2f4bb6ee8f2592363c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xp: 0
+  currentLevel: 0
+  nextLevelXP: 0
+  xpNeededForNextLevel: 0
 --- !u!65 &1908411986
 BoxCollider:
   m_ObjectHideFlags: 0

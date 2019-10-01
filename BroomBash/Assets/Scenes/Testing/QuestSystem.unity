@@ -224,11 +224,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 752601669522157423, guid: db4908519adb79d4ba2dbd3d8274d9c1,
-        type: 3}
-      propertyPath: m_Name
-      value: _Player
-      objectReference: {fileID: 0}
     - target: {fileID: 752601669522157328, guid: db4908519adb79d4ba2dbd3d8274d9c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,10 +279,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 752601669522157329, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+    - target: {fileID: 752601669522157423, guid: db4908519adb79d4ba2dbd3d8274d9c1,
         type: 3}
-      propertyPath: stoppedHoverNoiseAmount
-      value: 0.005
+      propertyPath: m_Name
+      value: _Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
@@ -328,16 +323,21 @@ MonoBehaviour:
   - {fileID: 1387944026}
   - {fileID: 1168821328}
   player: {fileID: 0}
-  startingTimeLimit: 90
-  easyTimeAddition: 15
-  mediumTimeAddition: 25
-  hardTimeAddition: 35
+  playerLevelSystem: {fileID: 0}
+  easyQuestTimeLimit: 60
+  mediumQuestTimeLimit: 45
+  hardQuestTimeLimit: 30
+  easyQuestCompletionPoints: 50
+  mediumQuestCompletionPoints: 75
+  hardQuestCompletionPoints: 100
+  timeSinceStart: 0
   timeLeft: 0
   timeToStayForPickUp: 2
   timeToStayForDelivery: 2
   easyQuestDistance: 75
   mediumQuestDistance: 150
   hardQuestDistance: 300
+  countdownTimerIsActive: 0
   playerHasQuest: 0
   playerHasDelivery: 0
   currentQuest: {fileID: 0}
@@ -680,11 +680,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6620730851382086204, guid: 921d2a2832ac99f4080789b97163845e,
-        type: 3}
-      propertyPath: m_Name
-      value: Plane
-      objectReference: {fileID: 0}
     - target: {fileID: 6620730851382086200, guid: 921d2a2832ac99f4080789b97163845e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -739,6 +734,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620730851382086204, guid: 921d2a2832ac99f4080789b97163845e,
+        type: 3}
+      propertyPath: m_Name
+      value: Plane
       objectReference: {fileID: 0}
     - target: {fileID: 6620730851382086205, guid: 921d2a2832ac99f4080789b97163845e,
         type: 3}

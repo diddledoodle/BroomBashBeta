@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class PlayerUIManager : MonoBehaviour
 {
     public Text timer;
+    public Text xpText;
+    public Text levelText;
     public GameObject miniMap;
     public GameObject notifcationPanel;
     public GameObject dialogPanel;
     public Texture miniMapRenderTexture;
     private QuestController questController;
+
+    private LevelSystem playerLevelSystem;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +27,23 @@ public class PlayerUIManager : MonoBehaviour
 
         // Get the questController
         questController = GameObject.FindObjectOfType<QuestController>();
+        // Get the player leveling system
+        playerLevelSystem = questController.player.GetComponent<LevelSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer.text = $"{questController.timeLeft.ToString("F0")} seconds";
+        if (questController.countdownTimerIsActive)
+        {
+            timer.text = $"{questController.timeLeft.ToString("F0")} seconds";
+        }
+        else
+        {
+            timer.text = string.Empty;
+        }
+        // Update the xp and level text
+        xpText.text = $"{playerLevelSystem.xp} XP";
+        levelText.text = $"Level {playerLevelSystem.currentLevel}";
     }
 }

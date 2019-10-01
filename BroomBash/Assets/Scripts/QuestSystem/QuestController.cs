@@ -9,15 +9,23 @@ public class QuestController : MonoBehaviour
     public List<DropOff> dropOffs = new List<DropOff>();
     [HideInInspector]
     public GameObject player;
+    [HideInInspector]
+    public LevelSystem playerLevelSystem;
 
-    [Tooltip("The amount of time the player has at the start of the game in seconds")]
-    public float startingTimeLimit = 90f; // seconds
-    [Tooltip("The amount of time added to the time limit for [easy] quests in seconds")]
-    public float easyTimeAddition = 15f; // Seconds
-    [Tooltip("The amount of time added to the time limit for [medium] quests in seconds")]
-    public float mediumTimeAddition = 25f; // Seconds
-    [Tooltip("The amount of time added to the time limit for [hard] quests in seconds")]
-    public float hardTimeAddition = 35f; // Seconds
+    [Tooltip("The amount of time the player has to complete the [easy] quest in seconds")]
+    public float easyQuestTimeLimit = 60f;
+    [Tooltip("The amount of time the player has to complete the [medium] quest in seconds")]
+    public float mediumQuestTimeLimit = 45f;
+    [Tooltip("The amount of time the player has to complete the [hard] quest in seconds")]
+    public float hardQuestTimeLimit = 30f;
+    [Tooltip("The amount of points the player receives for completing [easy] quests")]
+    public int easyQuestCompletionPoints = 10;
+    [Tooltip("The amount of points the player receives for completing [medium] quests")]
+    public int mediumQuestCompletionPoints = 25;
+    [Tooltip("The amount of points the player receives for completing [hard] quests")]
+    public int hardQuestCompletionPoints = 50;
+    [HideInInspector]
+    public float timeSinceStart = 0;
     [DisableInPlayMode]
     [DisableInEditorMode]
     public float timeLeft = 0;
@@ -32,14 +40,10 @@ public class QuestController : MonoBehaviour
     public float mediumQuestDistance = 150f;
     [Tooltip("The maximum distance from the player in meters to be considered an [hard] quest")]
     public float hardQuestDistance = 300f;
+    [HideInInspector]
+    public bool countdownTimerIsActive = false;
 
-    [Button]
-    [DisableInEditorMode]
-    [DisableIf("playerHasQuest")]
-    public void AssignNewQuestToPlayer()
-    {
-        AssignQuestToPlayer();
-    }
+    private int currentPlayerDifficulty = 0;
 
     [SerializeField]
     [DisableInPlayMode]
@@ -69,6 +73,7 @@ public class QuestController : MonoBehaviour
     {
         // Get the player object
         player = GameObject.FindObjectOfType<PlayerController>().gameObject;
+        playerLevelSystem = player.GetComponent<LevelSystem>();
         // Initialize all of the pick up locations
         if(pickUps.Count > 0)
         {
@@ -85,26 +90,51 @@ public class QuestController : MonoBehaviour
                 d.Initialize(this);
             }
         }
-        // Set the timer
-        timeLeft = startingTimeLimit;
         // Test get random quest
-        AssignQuestToPlayer();
+        //AssignQuestToPlayer();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Keep track of time since start
+        CountupTimer();
         // Count down the time
-        CountdownTimer();
+        if (countdownTimerIsActive)
+        {
+            CountdownTimer();
+        }
+        
         // TODO: End the game when the timer hits zero
     }
 
     public void PlayerArrivedAtPickUpLocation(PickUp _pickUpLocation)
     {
-        if(_pickUpLocation == closestPickUp && playerHasQuest && playerHasDelivery == false)
+        if(!playerHasQuest && !playerHasDelivery)
         {
             playerHasDelivery = true;
             Debug.Log("<color=red>Player picked up a delivery!</color>");
+            // Assign drop off within player level difficulty range
+            GetQuestBasedOnCurrentPlayerDifficulty(0);
+            // Start the countdown timer
+            SetTimeLeftBasedOnPlayerDifficulty(0);
+            countdownTimerIsActive = true;
+        }
+    }
+
+    private void SetTimeLeftBasedOnPlayerDifficulty(int _difficulty)
+    {
+        switch (_difficulty)
+        {
+            case 0:
+                timeLeft = easyQuestTimeLimit;
+                break;
+            case 1:
+                timeLeft = mediumQuestTimeLimit;
+                break;
+            case 2:
+                timeLeft = hardQuestTimeLimit;
+                break;
         }
     }
 
@@ -114,21 +144,33 @@ public class QuestController : MonoBehaviour
         {
             playerHasQuest = false;
             playerHasDelivery = false;
-            // Add time to timeLeft
-            switch (_questLocation.questDifficulty)
-            {
-                case DropOff.QuestDifficulty.EASY:
-                    timeLeft += easyTimeAddition;
-                    break;
-                case DropOff.QuestDifficulty.MEDIUM:
-                    timeLeft += mediumTimeAddition;
-                    break;
-                case DropOff.QuestDifficulty.HARD:
-                    timeLeft += hardTimeAddition;
-                    break;
-            }
+            countdownTimerIsActive = false;
+            // Add XP to player leveling system
+            AddXpToPlayerLevelingSystem(0);
             Debug.Log("<color=blue>Player made a delivery!</color>");
         }
+    }
+
+    public void AddXpToPlayerLevelingSystem(int _playerDifficulty)
+    {
+        switch (_playerDifficulty)
+        {
+            case 0:
+                playerLevelSystem.AddXpToPlayerLevel(easyQuestCompletionPoints);
+                break;
+            case 1:
+                playerLevelSystem.AddXpToPlayerLevel(mediumQuestCompletionPoints);
+                break;
+            case 2:
+                playerLevelSystem.AddXpToPlayerLevel(hardQuestCompletionPoints);
+                break;
+        }
+    }
+
+    private float CountupTimer()
+    {
+        float _timeSinceStart = timeSinceStart += Time.deltaTime;
+        return _timeSinceStart;
     }
 
     private float CountdownTimer()
@@ -137,50 +179,83 @@ public class QuestController : MonoBehaviour
         return _timeLeft;
     }
 
-    private void AssignQuestToPlayer()
+    //private void AssignQuestToPlayer()
+    //{
+    //    // Get random quest from available quests that wasn't the last quest
+    //    GetRandomQuest();
+    //    // Get the closest pick up location from list of pick up locations
+    //    GetClosestPickUpLocation();
+    //    // Tell the manager that the player does have a quest
+    //    playerHasQuest = true;
+    //}
+
+    private void GetQuestBasedOnCurrentPlayerDifficulty(int _difficulty)
     {
-        // Get random quest from available quests that wasn't the last quest
-        GetRandomQuest();
-        // Get the closest pick up location from list of pick up locations
-        GetClosestPickUpLocation();
-        // Tell the manager that the player does have a quest
-        playerHasQuest = true;
+        List<DropOff> _d = new List<DropOff>();
+        // Get all the drop off locations within the difficulty distance
+        switch (_difficulty)
+        {
+            case 0:
+                _d = MeasureDropOffDistances(1, easyQuestDistance);
+                break;
+            case 1:
+                _d = MeasureDropOffDistances(easyQuestDistance, mediumQuestDistance);
+                break;
+            case 2:
+                _d = MeasureDropOffDistances(mediumQuestDistance, hardQuestDistance);
+                break;
+        }
+        // Assign a random drop off within the difficulty distance
+        GetRandomQuestInDistance(_d);
     }
 
-    private void GetRandomQuest()
+    private List<DropOff> MeasureDropOffDistances(float _minDistance, float _maxDistance)
     {
-        if(dropOffs.Count > 1)
+        List<DropOff> _d = new List<DropOff>();
+        foreach(DropOff d in dropOffs)
         {
-            int _questAssignmentIndex = randomNumber.Next(0, dropOffs.Count);
+            float _distance = Vector3.Distance(player.transform.position, d.transform.position);
+            if (_distance >= _minDistance && _distance <= _maxDistance)
+            {
+                _d.Add(d);
+            }
+        }
+        return _d;
+    }
+
+    private void GetRandomQuestInDistance(List<DropOff> _dropOffList)
+    {
+        if(_dropOffList.Count > 1)
+        {
+            int _questAssignmentIndex = randomNumber.Next(0, _dropOffList.Count);
             // Make sure we don't get the same quest as the last time
             if(_questAssignmentIndex == lastQuestIndex)
             {
                 int _flipCoin = randomNumber.Next(0, 2);
-                if (_questAssignmentIndex == dropOffs.Count - 1)
+                if (_questAssignmentIndex == _dropOffList.Count - 1)
                 {
                     
                     _questAssignmentIndex = (_flipCoin == 1) ? 0 : _questAssignmentIndex -= 1;
                 }
                 else if(_questAssignmentIndex == 0)
                 {
-                    _questAssignmentIndex = (_flipCoin == 1) ? 1 : dropOffs.Count - 1;
+                    _questAssignmentIndex = (_flipCoin == 1) ? 1 : _dropOffList.Count - 1;
                 }
                 else
                 {
                     _questAssignmentIndex = (_flipCoin == 1) ? _questAssignmentIndex += 1 : _questAssignmentIndex -= 1;
                 }
             }
-            currentQuest = dropOffs[_questAssignmentIndex];
+            currentQuest = _dropOffList[_questAssignmentIndex];
             lastQuestIndex = _questAssignmentIndex;
         }
-        else if(dropOffs.Count == 1)
+        else if(_dropOffList.Count == 1)
         {
-            currentQuest = dropOffs[0];
+            currentQuest = _dropOffList[0];
             // Set the last quest so we can't get it next time
             lastQuestIndex = 0;
         }
-
-        
+        playerHasQuest = true;
     }
 
     private void GetClosestPickUpLocation()
