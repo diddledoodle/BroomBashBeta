@@ -12,6 +12,9 @@ public class QuestController : MonoBehaviour
     [HideInInspector]
     public LevelSystem playerLevelSystem;
 
+    [HideInInspector]
+    public PlayerUIManager playerUIManager;
+
     [Tooltip("The amount of time the player has to complete the [easy] quest in seconds")]
     public float easyQuestTimeLimit = 60f;
     [Tooltip("The amount of time the player has to complete the [medium] quest in seconds")]
@@ -40,10 +43,16 @@ public class QuestController : MonoBehaviour
     public float mediumQuestDistance = 150f;
     [Tooltip("The maximum distance from the player in meters to be considered an [hard] quest")]
     public float hardQuestDistance = 300f;
-    [HideInInspector]
-    public bool countdownTimerIsActive = false;
 
-    private int currentPlayerDifficulty = 0;
+    [Tooltip("The required level the player has to hit before they get [medium] quests")]
+	public int easyQuestLevelCap = 3;
+    [Tooltip("The required level the player has to hit before they get [hard] quests")]
+	public int mediumQuestLevelCap = 6;
+    // 0 = easy, 1 = medium, 2 = hard
+	private int currentPlayerDifficulty = 0;
+
+	[HideInInspector]
+    public bool countdownTimerIsActive = false;
 
     [SerializeField]
     [DisableInPlayMode]
@@ -104,6 +113,9 @@ public class QuestController : MonoBehaviour
         {
             CountdownTimer();
         }
+
+        // FIX: Really dirty hardcode for player stop
+        
         
         // TODO: End the game when the timer hits zero
     }
@@ -115,9 +127,9 @@ public class QuestController : MonoBehaviour
             playerHasDelivery = true;
             Debug.Log("<color=red>Player picked up a delivery!</color>");
             // Assign drop off within player level difficulty range
-            GetQuestBasedOnCurrentPlayerDifficulty(0);
+            GetQuestBasedOnCurrentPlayerDifficulty(currentPlayerDifficulty);
             // Start the countdown timer
-            SetTimeLeftBasedOnPlayerDifficulty(0);
+            SetTimeLeftBasedOnPlayerDifficulty(currentPlayerDifficulty);
             countdownTimerIsActive = true;
         }
     }
@@ -146,7 +158,9 @@ public class QuestController : MonoBehaviour
             playerHasDelivery = false;
             countdownTimerIsActive = false;
             // Add XP to player leveling system
-            AddXpToPlayerLevelingSystem(0);
+            AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
+			// Csalculate the players current difficulty based on current level from xp gain
+			CalculatePlayersCurrentDifficulty(playerLevelSystem.currentLevel);
             Debug.Log("<color=blue>Player made a delivery!</color>");
         }
     }
@@ -178,6 +192,11 @@ public class QuestController : MonoBehaviour
         float _timeLeft = timeLeft -= Time.deltaTime;
         return _timeLeft;
     }
+
+    private void CalculatePlayersCurrentDifficulty(int _difficulty)
+	{
+
+	}
 
     //private void AssignQuestToPlayer()
     //{

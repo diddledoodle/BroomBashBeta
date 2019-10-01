@@ -13,6 +13,8 @@ public class InputHandler : MonoBehaviour {
     public float Steer = 0;
     public float SpeedControl = 0;
     public bool Stop = false;
+    public float Accept = 0;
+    public float Decline = 0;
    
     private PlayerControlActions playerControlActions;
     private InputDevice currentInputDevice;
@@ -30,6 +32,8 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.speedUp.AddDefaultBinding(InputControlType.RightTrigger);
         playerControlActions.slowDown.AddDefaultBinding(InputControlType.LeftTrigger);
         playerControlActions.stop.AddDefaultBinding(InputControlType.LeftBumper);
+        playerControlActions.accept.AddDefaultBinding(InputControlType.Action1);
+        playerControlActions.decline.AddDefaultBinding(InputControlType.Action2);
         // Player default bindings - Keyboard
         playerControlActions.pitchDown.AddDefaultBinding(Key.W);
         playerControlActions.pitchUp.AddDefaultBinding(Key.S);
@@ -38,6 +42,8 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.speedUp.AddDefaultBinding(Key.Shift);
         playerControlActions.slowDown.AddDefaultBinding(Key.LeftControl);
         playerControlActions.stop.AddDefaultBinding(Key.Space);
+        playerControlActions.accept.AddDefaultBinding(Key.Return);
+        playerControlActions.decline.AddDefaultBinding(Key.Backspace);
 
     }
 	
@@ -51,6 +57,8 @@ public class InputHandler : MonoBehaviour {
         Pitch = playerControlActions.pitch.Value;
         Steer = playerControlActions.steer.Value;
         SpeedControl = playerControlActions.speedControl.Value;
+        Accept = playerControlActions.accept.Value;
+        Decline = playerControlActions.decline.Value;
         // Toggle stopped based on the stop button
         if (playerControlActions.stop.WasPressed)
         {

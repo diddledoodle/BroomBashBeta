@@ -31,5 +31,7 @@ public class SceneSetup : MonoBehaviour
         _miniMap.player = this.gameObject.transform;
         // Set up the player UI
         GameObject _playerUI = Instantiate(playerUI);
+        // Reference the player UI in the quest manager
+        GameObject.FindObjectOfType<QuestController>().playerUIManager = _playerUI.GetComponent<PlayerUIManager>();
     }
 }

@@ -10,9 +10,17 @@ public class PlayerUIManager : MonoBehaviour
     public Text levelText;
     public GameObject miniMap;
     public GameObject notifcationPanel;
+    public Text notifictionText;
     public GameObject dialogPanel;
+    public Text dialogText;
     public Texture miniMapRenderTexture;
     private QuestController questController;
+    private InputHandler inputHandler;
+
+    [HideInInspector]
+    public bool dialogSystemIsActive = false;
+    [HideInInspector]
+    public bool notificationSystemIsActive = false;
 
     private LevelSystem playerLevelSystem;
 
@@ -29,6 +37,8 @@ public class PlayerUIManager : MonoBehaviour
         questController = GameObject.FindObjectOfType<QuestController>();
         // Get the player leveling system
         playerLevelSystem = questController.player.GetComponent<LevelSystem>();
+        // Get the input handler
+        inputHandler = questController.player.GetComponent<InputHandler>();
     }
 
     // Update is called once per frame
@@ -45,5 +55,25 @@ public class PlayerUIManager : MonoBehaviour
         // Update the xp and level text
         xpText.text = $"{playerLevelSystem.xp} XP";
         levelText.text = $"Level {playerLevelSystem.currentLevel}";
+    }
+
+    public void RunDialogSystem(string _dialogMessage)
+    {
+        dialogSystemIsActive = true;
+        dialogPanel.SetActive(true);
+        dialogText.text = _dialogMessage;
+    }
+
+    private void CloseDialogSystem()
+    {
+        if (dialogSystemIsActive)
+        {
+            if(inputHandler.Accept > inputHandler.controllerDeadZone)
+            {
+                dialogText.text = string.Empty;
+                dialogPanel.SetActive(false);
+                // TODO: Bring up the notifiction system
+            }
+        }
     }
 }
