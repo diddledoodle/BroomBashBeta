@@ -5,40 +5,33 @@ using Sirenix.OdinInspector;
 
 public class QuestController : MonoBehaviour
 {
+    [Header("Pick up and drop off scene objects")]
     public List<PickUp> pickUps = new List<PickUp>();
     public List<DropOff> dropOffs = new List<DropOff>();
-    [HideInInspector]
-    public GameObject player;
-    [HideInInspector]
-    public PlayerController playerController;
-    [HideInInspector]
-    public LevelSystem playerLevelSystem;
 
-    [HideInInspector]
-    public PlayerUIManager playerUIManager;
-
+    [Header("Time Limits")]
     [Tooltip("The amount of time the player has to complete the [easy] quest in seconds")]
     public float easyQuestTimeLimit = 60f;
     [Tooltip("The amount of time the player has to complete the [medium] quest in seconds")]
     public float mediumQuestTimeLimit = 45f;
     [Tooltip("The amount of time the player has to complete the [hard] quest in seconds")]
     public float hardQuestTimeLimit = 30f;
+
+    [Header("Points for Deliveries")]
     [Tooltip("The amount of points the player receives for completing [easy] quests")]
     public int easyQuestCompletionPoints = 10;
     [Tooltip("The amount of points the player receives for completing [medium] quests")]
     public int mediumQuestCompletionPoints = 25;
     [Tooltip("The amount of points the player receives for completing [hard] quests")]
     public int hardQuestCompletionPoints = 50;
-    [HideInInspector]
-    public float timeSinceStart = 0;
-    [DisableInPlayMode]
-    [DisableInEditorMode]
-    public float timeLeft = 0;
+    
+    [Header("Pick up and drop off times")]
     [Tooltip("The time in seconds the player has to stay in the pick up zone to make the pick up successful")]
     public float timeToStayForPickUp = 2f;
     [Tooltip("The time in seconds the player has to stay in the delivery zone to make the delivery successful")]
     public float timeToStayForDelivery = 2f;
 
+    [Header("Quest difficulty distances")]
     [Tooltip("The maximum distance from the player in meters to be considered an [easy] quest")]
     public float easyQuestDistance = 75f;
     [Tooltip("The maximum distance from the player in meters to be considered an [medium] quest")]
@@ -46,6 +39,7 @@ public class QuestController : MonoBehaviour
     [Tooltip("The maximum distance from the player in meters to be considered an [hard] quest")]
     public float hardQuestDistance = 300f;
 
+    [Header("Quest difficulty caps")]
     [Tooltip("The required level the player has to hit before they get [medium] quests")]
 	public int easyQuestLevelCap = 3;
     [Tooltip("The required level the player has to hit before they get [hard] quests")]
@@ -53,35 +47,35 @@ public class QuestController : MonoBehaviour
     // 0 = easy, 1 = medium, 2 = hard
 	private int currentPlayerDifficulty = 0;
 
+    [Header("Player quest failing")]
     [Tooltip("The amount of times the player can fail a quest before a game over")]
     public int maxPlayerFailedQuests = 3;
     [Tooltip("The amount of collisions the player can make with other objects during a quest")]
     public int maxPlayerCollisionsPerDelivery = 3;
     private int currentPlayerFailedQuests = 3;
-    [SerializeField]
     private int currentPlayerCollisionsPerDelivery = 3;
 
-	[HideInInspector]
+    [HideInInspector]
+    public GameObject player;
+    [HideInInspector]
+    public PlayerController playerController;
+    [HideInInspector]
+    public LevelSystem playerLevelSystem;
+    [HideInInspector]
+    public PlayerUIManager playerUIManager;
+    [HideInInspector]
+    public float timeSinceStart = 0;
+    [HideInInspector]
+    public float timeLeft = 0;
+    [HideInInspector]
     public bool countdownTimerIsActive = false;
+    [HideInInspector]
+    public DropOff currentQuest = null;
 
     private bool playerHasQuest = false;
-    [SerializeField]
-    [DisableInPlayMode]
-    [DisableInEditorMode]
     private bool playerHasDelivery = false;
-    [SerializeField]
-    [DisableInPlayMode]
-    [DisableInEditorMode]
-    public DropOff currentQuest = null;
-    [SerializeField]
-    [DisableInPlayMode]
-    [DisableInEditorMode]
     private int lastQuestIndex = -1;
-    [SerializeField]
-    [DisableInPlayMode]
-    [DisableInEditorMode]
     private PickUp closestPickUp = null;
-
     private System.Random randomNumber = new System.Random();
 
     // Start is called before the first frame update
