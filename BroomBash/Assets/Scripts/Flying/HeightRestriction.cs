@@ -11,11 +11,8 @@ public class HeightRestriction : MonoBehaviour
     [Tooltip("How low the player can fly based on current height from ground")]
     public float minHeightFromGround;
 
-    [SerializeField]
     private GameObject ground;
-    [SerializeField]
     private float minFlightHeight;
-    [SerializeField]
     private float maxFlightHeight;
     private PlayerController playerController;
 
