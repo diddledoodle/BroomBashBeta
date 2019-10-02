@@ -7,6 +7,8 @@ public class DropOff : MonoBehaviour
 {
     public string dropOffName = "NO NAME";
     private float timePlayerEnteredTrigger = -1f;
+    private bool playerEnteredTrigger = false;
+
     public enum QuestDifficulty { EASY, MEDIUM, HARD}
     [DisableInPlayMode]
     [DisableInEditorMode]
@@ -57,7 +59,7 @@ public class DropOff : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            timePlayerEnteredTrigger = questController.timeLeft;
+            timePlayerEnteredTrigger = questController.timeSinceStart;
         }
     }
 
@@ -65,9 +67,13 @@ public class DropOff : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            if(timePlayerEnteredTrigger - questController.timeLeft >= questController.timeToStayForDelivery)
+            if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForDelivery)
             {
-                questController.PlayerArrivedAtDeliveryLocation(this);
+                if(playerEnteredTrigger == false)
+                {
+                    questController.PlayerArrivedAtDeliveryLocation(this);
+                    playerEnteredTrigger = true;
+                }
             }
         }
     }
@@ -77,6 +83,7 @@ public class DropOff : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerController>())
         {
             timePlayerEnteredTrigger = -1;
+            playerEnteredTrigger = false;
         }
     }
 }

@@ -12,7 +12,9 @@ public class InputHandler : MonoBehaviour {
     public float Pitch = 0;
     public float Steer = 0;
     public float SpeedControl = 0;
-    public float Stop = 0;
+    public bool Stop = false;
+    public bool Accept = false;
+    public bool Decline = false;
    
     private PlayerControlActions playerControlActions;
     private InputDevice currentInputDevice;
@@ -30,6 +32,8 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.speedUp.AddDefaultBinding(InputControlType.RightTrigger);
         playerControlActions.slowDown.AddDefaultBinding(InputControlType.LeftTrigger);
         playerControlActions.stop.AddDefaultBinding(InputControlType.LeftBumper);
+        playerControlActions.accept.AddDefaultBinding(InputControlType.Action1);
+        playerControlActions.decline.AddDefaultBinding(InputControlType.Action2);
         // Player default bindings - Keyboard
         playerControlActions.pitchDown.AddDefaultBinding(Key.W);
         playerControlActions.pitchUp.AddDefaultBinding(Key.S);
@@ -38,6 +42,8 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.speedUp.AddDefaultBinding(Key.Shift);
         playerControlActions.slowDown.AddDefaultBinding(Key.LeftControl);
         playerControlActions.stop.AddDefaultBinding(Key.Space);
+        playerControlActions.accept.AddDefaultBinding(Key.Return);
+        playerControlActions.decline.AddDefaultBinding(Key.Backspace);
 
     }
 	
@@ -51,6 +57,17 @@ public class InputHandler : MonoBehaviour {
         Pitch = playerControlActions.pitch.Value;
         Steer = playerControlActions.steer.Value;
         SpeedControl = playerControlActions.speedControl.Value;
-        Stop = playerControlActions.stop.Value;
+        Accept = playerControlActions.accept.WasPressed;//(playerControlActions.accept.Value > controllerDeadZone) ? true : false;
+        Decline = playerControlActions.decline.WasPressed;
+        // Toggle stopped based on the stop button
+        if (playerControlActions.stop.WasPressed)
+        {
+            Stop = (Stop == true) ? false : true;
+        }
+        // Accelerate from stop if speed control is changed from "0"
+        if(SpeedControl > controllerDeadZone || SpeedControl < -controllerDeadZone)
+        {
+            Stop = false;
+        }
     }
 }
