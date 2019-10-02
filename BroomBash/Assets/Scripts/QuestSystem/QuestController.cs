@@ -72,7 +72,7 @@ public class QuestController : MonoBehaviour
     [SerializeField]
     [DisableInPlayMode]
     [DisableInEditorMode]
-    private DropOff currentQuest = null;
+    public DropOff currentQuest = null;
     [SerializeField]
     [DisableInPlayMode]
     [DisableInEditorMode]
@@ -138,7 +138,7 @@ public class QuestController : MonoBehaviour
 
     private void CheckForEndQuestFromFailure()
     {
-        if(currentPlayerCollisionsPerDelivery <= 0)
+        if((currentPlayerCollisionsPerDelivery <= 0 && countdownTimerIsActive)|| (timeLeft <= 0 && countdownTimerIsActive))
         {
             EndQuestFromFailure();
         }
@@ -251,21 +251,21 @@ public class QuestController : MonoBehaviour
         {
             case 0:
                 _xpSubstraction = -easyQuestCompletionPoints / 2;
-                if(_currentXP - _xpSubstraction > 0)
+                if(_currentXP - Mathf.Abs(_xpSubstraction) > 0)
                 {
                     playerLevelSystem.AddXpToPlayerLevel(_xpSubstraction);
                 }
                 break;
             case 1:
                 _xpSubstraction = -mediumQuestCompletionPoints / 2;
-                if (_currentXP - _xpSubstraction > 0)
+                if (_currentXP - Mathf.Abs(_xpSubstraction) > 0)
                 {
                     playerLevelSystem.AddXpToPlayerLevel(_xpSubstraction);
                 }
                 break;
             case 2:
                 _xpSubstraction = -hardQuestCompletionPoints / 2;
-                if (_currentXP - _xpSubstraction > 0)
+                if (_currentXP - Mathf.Abs(_xpSubstraction) > 0)
                 {
                     playerLevelSystem.AddXpToPlayerLevel(_xpSubstraction);
                 }
