@@ -35,11 +35,14 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerStartingPosition = Vector3.zero;
 
     private InputHandler inputHandler;
+    private QuestController questController;
 
     private void Start()
     {
         // Get the input handler
         inputHandler = this.gameObject.AddComponent<InputHandler>() as InputHandler;
+        // Get the quest controller
+        questController = GameObject.FindObjectOfType<QuestController>();
         // Get the players starting poosition
         playerStartingPosition = this.gameObject.transform.position;
     }
@@ -170,6 +173,14 @@ public class PlayerController : MonoBehaviour
         if(speed == 0)
         {
             this.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(this.transform.eulerAngles), Quaternion.Euler(0, this.transform.eulerAngles.y, this.transform.eulerAngles.z), Time.deltaTime * stoppedLevelingRotattionSpeed).eulerAngles;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (questController.countdownTimerIsActive)
+        {
+            questController.PlayerCollidedWithObjectDuringQuest();
         }
     }
 }

@@ -53,12 +53,17 @@ public class QuestController : MonoBehaviour
     // 0 = easy, 1 = medium, 2 = hard
 	private int currentPlayerDifficulty = 0;
 
+    [Tooltip("The amount of times the player can fail a quest before a game over")]
+    public int maxPlayerFailedQuests = 3;
+    [Tooltip("The amount of collisions the player can make with other objects during a quest")]
+    public int maxPlayerCollisionsPerDelivery = 3;
+    private int currentPlayerFailedQuests = 3;
+    [SerializeField]
+    private int currentPlayerCollisionsPerDelivery = 3;
+
 	[HideInInspector]
     public bool countdownTimerIsActive = false;
 
-    [SerializeField]
-    [DisableInPlayMode]
-    [DisableInEditorMode]
     private bool playerHasQuest = false;
     [SerializeField]
     [DisableInPlayMode]
@@ -102,6 +107,9 @@ public class QuestController : MonoBehaviour
                 d.Initialize(this);
             }
         }
+        // Set max failed quests and player collisions
+        currentPlayerFailedQuests = maxPlayerFailedQuests;
+        currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
         // Test get random quest
         //AssignQuestToPlayer();
     }
@@ -123,8 +131,22 @@ public class QuestController : MonoBehaviour
             playerController.stopPlayer = true;
         }
         else playerController.stopPlayer = false;
-        
+
         // TODO: End the game when the timer hits zero
+        CheckForEndQuestFromFailure();
+    }
+
+    private void CheckForEndQuestFromFailure()
+    {
+        if(currentPlayerCollisionsPerDelivery <= 0)
+        {
+            EndQuestFromFailure();
+        }
+    }
+
+    private void CheckForGameOver()
+    {
+
     }
 
     public void PlayerArrivedAtPickUpLocation(PickUp _pickUpLocation)
@@ -141,12 +163,18 @@ public class QuestController : MonoBehaviour
         {
             playerHasDelivery = true;
             Debug.Log("<color=red>Player picked up a delivery!</color>");
+            // Set the 
             // Assign drop off within player level difficulty range
             GetQuestBasedOnCurrentPlayerDifficulty(currentPlayerDifficulty);
             // Start the countdown timer
             SetTimeLeftBasedOnPlayerDifficulty(currentPlayerDifficulty);
             countdownTimerIsActive = true;
         }
+    }
+
+    public void PlayerCollidedWithObjectDuringQuest()
+    {
+        currentPlayerCollisionsPerDelivery -= 1;
     }
 
     private void SetTimeLeftBasedOnPlayerDifficulty(int _difficulty)
@@ -178,11 +206,25 @@ public class QuestController : MonoBehaviour
     {
         playerHasQuest = false;
         playerHasDelivery = false;
+        // Reset player collisions during quest
+        currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
         // Add XP to player leveling system
         AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
         // Csalculate the players current difficulty based on current level from xp gain
         CalculatePlayersCurrentDifficulty(playerLevelSystem.currentLevel);
         Debug.Log("<color=blue>Player made a delivery!</color>");
+    }
+
+    public void EndQuestFromFailure()
+    {
+        countdownTimerIsActive = false;
+        playerHasQuest = false;
+        playerHasDelivery = false;
+        SubXpToPlayerLevelingSystem(currentPlayerDifficulty);
+        CalculatePlayersCurrentDifficulty(playerLevelSystem.currentLevel);
+        currentPlayerFailedQuests -= 1;
+        currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
+        playerUIManager.RunDialogSystem("You failed this quest! :(", PlayerUIManager.QuestStatus.FAIL);
     }
 
     public void AddXpToPlayerLevelingSystem(int _playerDifficulty)
@@ -197,6 +239,36 @@ public class QuestController : MonoBehaviour
                 break;
             case 2:
                 playerLevelSystem.AddXpToPlayerLevel(hardQuestCompletionPoints);
+                break;
+        }
+    }
+
+    public void SubXpToPlayerLevelingSystem(int _playerDifficulty)
+    {
+        int _currentXP = playerLevelSystem.xp;
+        int _xpSubstraction = 0;
+        switch (_playerDifficulty)
+        {
+            case 0:
+                _xpSubstraction = -easyQuestCompletionPoints / 2;
+                if(_currentXP - _xpSubstraction > 0)
+                {
+                    playerLevelSystem.AddXpToPlayerLevel(_xpSubstraction);
+                }
+                break;
+            case 1:
+                _xpSubstraction = -mediumQuestCompletionPoints / 2;
+                if (_currentXP - _xpSubstraction > 0)
+                {
+                    playerLevelSystem.AddXpToPlayerLevel(_xpSubstraction);
+                }
+                break;
+            case 2:
+                _xpSubstraction = -hardQuestCompletionPoints / 2;
+                if (_currentXP - _xpSubstraction > 0)
+                {
+                    playerLevelSystem.AddXpToPlayerLevel(_xpSubstraction);
+                }
                 break;
         }
     }

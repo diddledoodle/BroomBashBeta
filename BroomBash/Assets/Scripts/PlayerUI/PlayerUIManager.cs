@@ -19,7 +19,7 @@ public class PlayerUIManager : MonoBehaviour
     private QuestController questController;
     private InputHandler inputHandler;
 
-    public enum QuestStatus { STANDBY, START, END}
+    public enum QuestStatus { STANDBY, START, END, FAIL}
     [HideInInspector]
     public QuestStatus questStatus = QuestStatus.STANDBY;
 
@@ -109,6 +109,12 @@ public class PlayerUIManager : MonoBehaviour
                 notificationAcceptText.text = "<color=green>Collect -> A/Enter</color>";
                 notifictionText.text = "Collect Reward.";
                 break;
+            case QuestStatus.FAIL:
+                notificationAcceptText.enabled = true;
+                notificationDeclineText.enabled = false;
+                notificationAcceptText.text = "<color=green>OK -> A/Enter</color>";
+                notifictionText.text = "You lost some XP";
+                break;
         }
         
     }
@@ -143,6 +149,14 @@ public class PlayerUIManager : MonoBehaviour
                         notificationSystemIsActive = false;
                         // End the quest
                         questController.EndQuest();
+                    }
+                    break;
+                case QuestStatus.FAIL:
+                    if (inputHandler.Accept)
+                    {
+                        notifictionText.text = string.Empty;
+                        notifcationPanel.SetActive(false);
+                        notificationSystemIsActive = false;
                     }
                     break;
             }

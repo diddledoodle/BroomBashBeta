@@ -260,8 +260,10 @@ MonoBehaviour:
   hardQuestDistance: 300
   easyQuestLevelCap: 3
   mediumQuestLevelCap: 6
+  maxPlayerFailedQuests: 3
+  maxPlayerCollisionsPerDelivery: 3
+  currentPlayerCollisionsPerDelivery: 3
   countdownTimerIsActive: 0
-  playerHasQuest: 0
   playerHasDelivery: 0
   currentQuest: {fileID: 0}
   lastQuestIndex: -1
@@ -525,6 +527,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6620730851382086204, guid: 921d2a2832ac99f4080789b97163845e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6620730851382086200, guid: 921d2a2832ac99f4080789b97163845e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -583,7 +590,7 @@ PrefabInstance:
     - target: {fileID: 6620730851382086205, guid: 921d2a2832ac99f4080789b97163845e,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 921d2a2832ac99f4080789b97163845e, type: 3}

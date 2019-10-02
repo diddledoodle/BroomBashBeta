@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 752601669522157328}
   - component: {fileID: 3077118277526158684}
   - component: {fileID: 752601669522157329}
+  - component: {fileID: 5204524461918749767}
   - component: {fileID: 1707904220858327486}
   - component: {fileID: 1908411986}
   - component: {fileID: 43654826}
@@ -176,6 +177,21 @@ MonoBehaviour:
   stoppedHoverNoiseAmount: 0.005
   childObjectToRotateTowardSteer: {fileID: 752601669811963281}
   stopPlayer: 0
+--- !u!114 &5204524461918749767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752601669522157423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d415587f29db40f9bd3cfded8021722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundTag: Ground
+  maxHeightFromGround: 40
+  minHeightFromGround: 0.3
 --- !u!114 &1707904220858327486
 MonoBehaviour:
   m_ObjectHideFlags: 0
