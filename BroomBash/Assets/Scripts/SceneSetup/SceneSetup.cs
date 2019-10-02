@@ -15,6 +15,8 @@ public class SceneSetup : MonoBehaviour
     public GameObject playerUI;
     // Input
     public GameObject inControl;
+    // Post processing
+    public GameObject postProcessing;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +35,7 @@ public class SceneSetup : MonoBehaviour
         GameObject _playerUI = Instantiate(playerUI);
         // Reference the player UI in the quest manager
         GameObject.FindObjectOfType<QuestController>().playerUIManager = _playerUI.GetComponent<PlayerUIManager>();
+        // Instantiate post processing
+        GameObject _pp = Instantiate(postProcessing);
     }
 }
