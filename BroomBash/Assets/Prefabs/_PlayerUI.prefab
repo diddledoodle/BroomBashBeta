@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -150, y: -150.07}
+  m_AnchoredPosition: {x: -150, y: -150.06982}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &400370161
@@ -674,6 +674,7 @@ MonoBehaviour:
   dialogText: {fileID: 464384108}
   miniMapRenderTexture: {fileID: 8400000, guid: 1ca6e5146a4741f40ae37ffae24c3fdc,
     type: 2}
+  questController: {fileID: 0}
   questStatus: 0
   dialogSystemIsActive: 0
   notificationSystemIsActive: 0
@@ -790,7 +791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -61.19995}
+  m_AnchoredPosition: {x: 0, y: -61.200195}
   m_SizeDelta: {x: 400, y: 61.2}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &8312567506029914888

@@ -16,7 +16,7 @@ public class PlayerUIManager : MonoBehaviour
     public GameObject dialogPanel;
     public Text dialogText;
     public Texture miniMapRenderTexture;
-    private QuestController questController;
+    public QuestController questController;
     private InputHandler inputHandler;
 
     public enum QuestStatus { STANDBY, START, END, FAIL}
