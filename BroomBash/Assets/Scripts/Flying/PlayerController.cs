@@ -25,75 +25,97 @@ public class PlayerController : MonoBehaviour
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
 
+    [HideInInspector]
+    public bool stopPlayer = false;
+
+    
+
     private float speed;
     private float lastSpeed;
+    private Vector3 playerStartingPosition = Vector3.zero;
 
     private InputHandler inputHandler;
+    private QuestController questController;
 
     private void Start()
     {
         // Get the input handler
         inputHandler = this.gameObject.AddComponent<InputHandler>() as InputHandler;
+        // Get the quest controller
+        questController = GameObject.FindObjectOfType<QuestController>();
+        // Get the players starting poosition
+        playerStartingPosition = this.gameObject.transform.position;
     }
 
     private void OnGUI()
     {
         // Print directions on the screen - temporary
-        GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
-        textStyle.fontSize = 22;
-        GUI.color = Color.black;
-        GUI.Box (new Rect (10.0f, 10.0f, 400.0f, 40.0f), "A,W,S,D/Left Stick - Main Control", textStyle);
-        GUI.Box (new Rect (10.0f, 50.0f, 400.0f, 40.0f), "Left Shift/Right Trigger - Speed up", textStyle);
-        GUI.Box (new Rect (10.0f, 90.0f, 400.0f, 40.0f), "Left Control/Left Trigger - Slow Down", textStyle);
-        GUI.Box(new Rect(10.0f, 130.0f, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
-    }
-
-    private void FixedUpdate()
-    {
-        speed = GetWantedSpeed(inputHandler.SpeedControl);
-
-        // Forward velocity
-        Vector3 moveVector = transform.forward * speed;
-        Vector3 yaw = inputHandler.Steer * transform.right * rotattionSpeedX * Time.deltaTime;
-        Vector3 pitch = -(inputHandler.Pitch) * transform.up * rotattionSpeedY * Time.deltaTime; // Need to negate pitch input to meet design doc specifications
-        Vector3 dir = yaw + pitch;
-
-        // Limit rotation
-
-        float maxX = (moveVector + dir != Vector3.zero) ? Quaternion.LookRotation(moveVector + dir).eulerAngles.x : 0; // Need to get rid of that annoying debug from Quaternion.LookRotation taking in a 0 vector
-        
-
-
-        if(speed != 0)
-        {
-            this.transform.position += moveVector * Time.deltaTime;
-            if (maxX < 90 && maxX > 70 || maxX > 270 && maxX < 290)
-            {
-                // TODO: Maybe to some sort of falloff if angle is exceeded to add difficulty?
-            }
-            else
-            {
-                moveVector += dir;
-                transform.rotation = Quaternion.LookRotation(moveVector);
-            }
-        }
-        else if(speed == 0)
-        {
-            // Hover noise
-            this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(this.transform.position.y - stoppedHoverNoiseAmount, this.transform.position.y + stoppedHoverNoiseAmount, Mathf.PingPong(Time.time, 1)), this.transform.position.z);
-        }
-
-        RotateChildTowardSteer();
+        //GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
+        //textStyle.fontSize = 22;
+        //GUI.color = Color.black;
+        //GUI.Box (new Rect (10.0f, 10.0f, 400.0f, 40.0f), "A,W,S,D/Left Stick - Main Control", textStyle);
+        //GUI.Box (new Rect (10.0f, 50.0f, 400.0f, 40.0f), "Left Shift/Right Trigger - Speed up", textStyle);
+        //GUI.Box (new Rect (10.0f, 90.0f, 400.0f, 40.0f), "Left Control/Left Trigger - Slow Down", textStyle);
+        //GUI.Box(new Rect(10.0f, 130.0f, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
     }
 
     private void Update()
     {
-        // Reset the player to the origin - will be removed in the future
-        if (Input.GetKeyDown(KeyCode.R))
+		FlightMechanics();
+
+		// Reset the player to the origin - will be removed in the future
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			this.gameObject.transform.position = playerStartingPosition;
+		}
+	}
+
+    private void FlightMechanics()
+	{
+        if (!stopPlayer)
         {
-            this.gameObject.transform.position = new Vector3(0, 2, 0);
+            speed = GetWantedSpeed(inputHandler.SpeedControl);
         }
-    }
+        else
+        {
+            speed = 0;
+        }
+
+		// Forward velocity
+		Vector3 moveVector = transform.forward * speed;
+		Vector3 yaw = inputHandler.Steer * transform.right * rotattionSpeedX * Time.deltaTime;
+		Vector3 pitch = -(inputHandler.Pitch) * transform.up * rotattionSpeedY * Time.deltaTime; // Need to negate pitch input to meet design doc specifications
+		Vector3 dir = yaw + pitch;
+
+		// Limit rotation
+
+		float maxX = (moveVector + dir != Vector3.zero) ? Quaternion.LookRotation(moveVector + dir).eulerAngles.x : 0; // Need to get rid of that annoying debug from Quaternion.LookRotation taking in a 0 vector
+
+
+
+		if (speed != 0)
+		{
+			this.transform.position += moveVector * Time.deltaTime;
+			if (maxX < 90 && maxX > 70 || maxX > 270 && maxX < 290)
+			{
+				// TODO: Maybe to some sort of falloff if angle is exceeded to add difficulty?
+			}
+			else
+			{
+				moveVector += dir;
+				transform.rotation = Quaternion.LookRotation(moveVector);
+			}
+		}
+		else if (speed == 0)
+		{
+			// Hover noise
+			this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(this.transform.position.y - stoppedHoverNoiseAmount, this.transform.position.y + stoppedHoverNoiseAmount, Mathf.PingPong(Time.time, 1)), this.transform.position.z);
+		}
+
+		RotateChildTowardSteer();
+	}
+
+
 
     private float GetWantedSpeed(float _speedControlInput)
     {
@@ -110,12 +132,12 @@ public class PlayerController : MonoBehaviour
             _wantedSpeed = minimumSpeed;
         }
         // Go back to base speed
-        else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && inputHandler.Stop < inputHandler.controllerDeadZone)
+        else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = baseSpeed;
         }
 
-        else if(inputHandler.Stop > inputHandler.controllerDeadZone)
+        else if(inputHandler.Stop)
         {
             _wantedSpeed = 0;
         }
@@ -151,6 +173,14 @@ public class PlayerController : MonoBehaviour
         if(speed == 0)
         {
             this.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(this.transform.eulerAngles), Quaternion.Euler(0, this.transform.eulerAngles.y, this.transform.eulerAngles.z), Time.deltaTime * stoppedLevelingRotattionSpeed).eulerAngles;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (questController.countdownTimerIsActive)
+        {
+            questController.PlayerCollidedWithObjectDuringQuest();
         }
     }
 }
