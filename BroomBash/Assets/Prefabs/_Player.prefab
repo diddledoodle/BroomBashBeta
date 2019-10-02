@@ -151,6 +151,8 @@ MonoBehaviour:
     type: 3}
   inControl: {fileID: 7279247252426972244, guid: 4248ec95a44f5b04d8f557344bc2240b,
     type: 3}
+  postProcessing: {fileID: 3993690293116639773, guid: 1a4cbb8d094a13b458180feda1a7b18e,
+    type: 3}
 --- !u!114 &752601669522157329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
   stoppedLevelingRotattionSpeed: 1
   stoppedHoverNoiseAmount: 0.005
   childObjectToRotateTowardSteer: {fileID: 752601669811963281}
-  MoveVector: {x: 0, y: 0, z: 0}
+  stopPlayer: 0
 --- !u!114 &1707904220858327486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,19 +412,19 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 83821655dfe344600b60597c04674743, type: 2}
     - target: {fileID: 2300002, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 83821655dfe344600b60597c04674743, type: 2}
-    - target: {fileID: 2300004, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
+    - target: {fileID: 2300000, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 83821655dfe344600b60597c04674743, type: 2}
     - target: {fileID: 2300006, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83821655dfe344600b60597c04674743, type: 2}
+    - target: {fileID: 2300004, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 83821655dfe344600b60597c04674743, type: 2}
