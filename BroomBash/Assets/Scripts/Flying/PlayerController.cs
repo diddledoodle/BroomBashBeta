@@ -25,7 +25,10 @@ public class PlayerController : MonoBehaviour
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
 
-    public Vector3 MoveVector;
+    [HideInInspector]
+    public bool stopPlayer = false;
+
+    
 
     private float speed;
     private float lastSpeed;
@@ -66,15 +69,20 @@ public class PlayerController : MonoBehaviour
 
     private void FlightMechanics()
 	{
-		speed = GetWantedSpeed(inputHandler.SpeedControl);
+        if (!stopPlayer)
+        {
+            speed = GetWantedSpeed(inputHandler.SpeedControl);
+        }
+        else
+        {
+            speed = 0;
+        }
 
 		// Forward velocity
 		Vector3 moveVector = transform.forward * speed;
 		Vector3 yaw = inputHandler.Steer * transform.right * rotattionSpeedX * Time.deltaTime;
 		Vector3 pitch = -(inputHandler.Pitch) * transform.up * rotattionSpeedY * Time.deltaTime; // Need to negate pitch input to meet design doc specifications
 		Vector3 dir = yaw + pitch;
-
-		MoveVector = moveVector;
 
 		// Limit rotation
 

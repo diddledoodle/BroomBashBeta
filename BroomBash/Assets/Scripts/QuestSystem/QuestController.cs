@@ -10,6 +10,8 @@ public class QuestController : MonoBehaviour
     [HideInInspector]
     public GameObject player;
     [HideInInspector]
+    public PlayerController playerController;
+    [HideInInspector]
     public LevelSystem playerLevelSystem;
 
     [HideInInspector]
@@ -82,6 +84,7 @@ public class QuestController : MonoBehaviour
     {
         // Get the player object
         player = GameObject.FindObjectOfType<PlayerController>().gameObject;
+        playerController = player.GetComponent<PlayerController>();
         playerLevelSystem = player.GetComponent<LevelSystem>();
         // Initialize all of the pick up locations
         if(pickUps.Count > 0)
@@ -115,7 +118,11 @@ public class QuestController : MonoBehaviour
         }
 
         // FIX: Really dirty hardcode for player stop
-        
+        if (playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive)
+        {
+            playerController.stopPlayer = true;
+        }
+        else playerController.stopPlayer = false;
         
         // TODO: End the game when the timer hits zero
     }
@@ -123,6 +130,14 @@ public class QuestController : MonoBehaviour
     public void PlayerArrivedAtPickUpLocation(PickUp _pickUpLocation)
     {
         if(!playerHasQuest && !playerHasDelivery)
+        {
+            playerUIManager.RunDialogSystem(_pickUpLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.START);
+        }
+    }
+    
+    public void StartQuest()
+    {
+        if (!playerHasQuest && !playerHasDelivery)
         {
             playerHasDelivery = true;
             Debug.Log("<color=red>Player picked up a delivery!</color>");
@@ -152,17 +167,22 @@ public class QuestController : MonoBehaviour
 
     public void PlayerArrivedAtDeliveryLocation(DropOff _questLocation)
     {
-        if(_questLocation == currentQuest && playerHasQuest && playerHasDelivery)
+        if (_questLocation == currentQuest && playerHasQuest && playerHasDelivery)
         {
-            playerHasQuest = false;
-            playerHasDelivery = false;
             countdownTimerIsActive = false;
-            // Add XP to player leveling system
-            AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
-			// Csalculate the players current difficulty based on current level from xp gain
-			CalculatePlayersCurrentDifficulty(playerLevelSystem.currentLevel);
-            Debug.Log("<color=blue>Player made a delivery!</color>");
+            playerUIManager.RunDialogSystem(_questLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.END);
         }
+    }
+
+    public void EndQuest()
+    {
+        playerHasQuest = false;
+        playerHasDelivery = false;
+        // Add XP to player leveling system
+        AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
+        // Csalculate the players current difficulty based on current level from xp gain
+        CalculatePlayersCurrentDifficulty(playerLevelSystem.currentLevel);
+        Debug.Log("<color=blue>Player made a delivery!</color>");
     }
 
     public void AddXpToPlayerLevelingSystem(int _playerDifficulty)

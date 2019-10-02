@@ -11,15 +11,21 @@ public class PlayerUIManager : MonoBehaviour
     public GameObject miniMap;
     public GameObject notifcationPanel;
     public Text notifictionText;
+    public Text notificationDeclineText;
+    public Text notificationAcceptText;
     public GameObject dialogPanel;
     public Text dialogText;
     public Texture miniMapRenderTexture;
     private QuestController questController;
     private InputHandler inputHandler;
 
+    public enum QuestStatus { STANDBY, START, END}
     [HideInInspector]
+    public QuestStatus questStatus = QuestStatus.STANDBY;
+
+    //[HideInInspector]
     public bool dialogSystemIsActive = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool notificationSystemIsActive = false;
 
     private LevelSystem playerLevelSystem;
@@ -55,25 +61,92 @@ public class PlayerUIManager : MonoBehaviour
         // Update the xp and level text
         xpText.text = $"{playerLevelSystem.xp} XP";
         levelText.text = $"Level {playerLevelSystem.currentLevel}";
+
+        // Dialog System
+        CloseDialogSystem();
+        // Notification system
+        CloseNotificationSystem();
     }
 
-    public void RunDialogSystem(string _dialogMessage)
+    public void RunDialogSystem(string _dialogMessage, QuestStatus _qs)
     {
         dialogSystemIsActive = true;
         dialogPanel.SetActive(true);
         dialogText.text = _dialogMessage;
+        questStatus = _qs;
     }
 
     private void CloseDialogSystem()
     {
         if (dialogSystemIsActive)
         {
-            if(inputHandler.Accept > inputHandler.controllerDeadZone)
+            if(inputHandler.Accept)
             {
                 dialogText.text = string.Empty;
                 dialogPanel.SetActive(false);
                 // TODO: Bring up the notifiction system
+                Invoke("RunNotificationSystem", 0.1f); // Need to invoke because the accept was being passed to the notification syustem
             }
+        }
+    }
+
+    private void RunNotificationSystem()
+    {
+        dialogSystemIsActive = false;
+        notificationSystemIsActive = true;
+        notifcationPanel.SetActive(true);
+        switch (questStatus)
+        {
+            case QuestStatus.START:
+                notificationAcceptText.enabled = true;
+                notificationDeclineText.enabled = true;
+                notificationAcceptText.text = "<color=green>Accept -> A/Enter</color>";
+                notifictionText.text = "Do you want to accept this quest?";
+                break;
+            case QuestStatus.END:
+                notificationAcceptText.enabled = true;
+                notificationDeclineText.enabled = false;
+                notificationAcceptText.text = "<color=green>Collect -> A/Enter</color>";
+                notifictionText.text = "Collect Reward.";
+                break;
+        }
+        
+    }
+
+    private void CloseNotificationSystem()
+    {
+        if (notificationSystemIsActive)
+        {
+            switch (questStatus)
+            {
+                case QuestStatus.START:
+                    if (inputHandler.Accept)
+                    {
+                        notifictionText.text = string.Empty;
+                        notifcationPanel.SetActive(false);
+                        notificationSystemIsActive = false;
+                        // Start the quest
+                        questController.StartQuest();
+                    }
+                    else if (inputHandler.Decline)
+                    {
+                        notifictionText.text = string.Empty;
+                        notifcationPanel.SetActive(false);
+                        notificationSystemIsActive = false;
+                    }
+                    break;
+                case QuestStatus.END:
+                    if (inputHandler.Accept)
+                    {
+                        notifictionText.text = string.Empty;
+                        notifcationPanel.SetActive(false);
+                        notificationSystemIsActive = false;
+                        // End the quest
+                        questController.EndQuest();
+                    }
+                    break;
+            }
+           
         }
     }
 }

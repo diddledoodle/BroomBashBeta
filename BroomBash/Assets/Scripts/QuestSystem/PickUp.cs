@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
     private QuestController questController;
     private float timePlayerEnteredTrigger = -1;
+    private bool playerEnteredTrigger = false;
 
     public void Initialize(QuestController _qc)
     {
@@ -27,7 +28,11 @@ public class PickUp : MonoBehaviour
         {
             if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForPickUp)
             {
-                questController.PlayerArrivedAtPickUpLocation(this);
+                if(playerEnteredTrigger == false)
+                {
+                    questController.PlayerArrivedAtPickUpLocation(this);
+                    playerEnteredTrigger = true;
+                }
             }
         }
     }
@@ -37,6 +42,7 @@ public class PickUp : MonoBehaviour
         if (other.gameObject.GetComponent<PlayerController>())
         {
             timePlayerEnteredTrigger = -1;
+            playerEnteredTrigger = false;
         }
     }
 }

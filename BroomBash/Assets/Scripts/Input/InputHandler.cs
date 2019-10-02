@@ -13,8 +13,8 @@ public class InputHandler : MonoBehaviour {
     public float Steer = 0;
     public float SpeedControl = 0;
     public bool Stop = false;
-    public float Accept = 0;
-    public float Decline = 0;
+    public bool Accept = false;
+    public bool Decline = false;
    
     private PlayerControlActions playerControlActions;
     private InputDevice currentInputDevice;
@@ -57,8 +57,8 @@ public class InputHandler : MonoBehaviour {
         Pitch = playerControlActions.pitch.Value;
         Steer = playerControlActions.steer.Value;
         SpeedControl = playerControlActions.speedControl.Value;
-        Accept = playerControlActions.accept.Value;
-        Decline = playerControlActions.decline.Value;
+        Accept = playerControlActions.accept.WasPressed;//(playerControlActions.accept.Value > controllerDeadZone) ? true : false;
+        Decline = playerControlActions.decline.WasPressed;
         // Toggle stopped based on the stop button
         if (playerControlActions.stop.WasPressed)
         {
