@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     private GameObject titleMenuPanel;
     public void LoadGameScene()
     {
-        SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadSceneAsync(gameSceneName);
     }
     public void ShowCredits()
     {

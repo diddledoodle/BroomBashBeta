@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerUIManager : MonoBehaviour
 {
     public Text timer;
     public Text xpText;
     public Text levelText;
+    public Text livesText;
     public GameObject miniMap;
     public GameObject notifcationPanel;
     public Text notifictionText;
@@ -16,10 +18,10 @@ public class PlayerUIManager : MonoBehaviour
     public GameObject dialogPanel;
     public Text dialogText;
     public Texture miniMapRenderTexture;
-    public QuestController questController;
+    private QuestController questController;
     private InputHandler inputHandler;
 
-    public enum QuestStatus { STANDBY, START, END, FAIL}
+    public enum QuestStatus { STANDBY, START, END, FAIL, GAMEOVER}
     [HideInInspector]
     public QuestStatus questStatus = QuestStatus.STANDBY;
 
@@ -52,16 +54,16 @@ public class PlayerUIManager : MonoBehaviour
     {
         if (questController.countdownTimerIsActive)
         {
-            timer.text = $"{questController.timeLeft.ToString("F0")} seconds";
+            timer.text = $"<b>{questController.timeLeft.ToString("F0")} seconds</b>";
         }
         else
         {
             timer.text = string.Empty;
         }
         // Update the xp and level text
-        xpText.text = $"{playerLevelSystem.xp} XP";
-        levelText.text = $"Level {playerLevelSystem.currentLevel}";
-
+        xpText.text = $"<b>XP: {playerLevelSystem.xp}</b>";
+        levelText.text = $"<b>Level: {playerLevelSystem.currentLevel}</b>";
+        livesText.text = $"<b>Lives: {questController.currentPlayerFailedQuests}</b>";
         // Dialog System
         CloseDialogSystem();
         // Notification system
@@ -115,6 +117,12 @@ public class PlayerUIManager : MonoBehaviour
                 notificationAcceptText.text = "<color=green>OK -> A/Enter</color>";
                 notifictionText.text = "You lost some XP";
                 break;
+            case QuestStatus.GAMEOVER:
+                notificationAcceptText.enabled = true;
+                notificationDeclineText.enabled = false;
+                notificationAcceptText.text = "<color=green>OK -> A/Enter</color>";
+                notifictionText.text = $"<b>Game Over</b>\nYou finished the game with <i>{playerLevelSystem.xp}</i> XP and you were level <i>{playerLevelSystem.currentLevel}</i>!";
+                break;
         }
         
     }
@@ -157,6 +165,13 @@ public class PlayerUIManager : MonoBehaviour
                         notifictionText.text = string.Empty;
                         notifcationPanel.SetActive(false);
                         notificationSystemIsActive = false;
+                    }
+                    break;
+                // TODO: Do this the right way somewhere else. This is hella gross
+                case QuestStatus.GAMEOVER:
+                    if (inputHandler.Accept)
+                    {
+                        SceneManager.LoadSceneAsync("MainMenu");
                     }
                     break;
             }
