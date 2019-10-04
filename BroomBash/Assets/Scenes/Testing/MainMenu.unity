@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40c3bd03d0f98444849345be3e379c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Flying
+  gameSceneName: AdvancedGrayBox
   creditsMenuPanel: {fileID: 248269482}
   titleMenuPanel: {fileID: 1884743227}
 --- !u!1 &1280751267

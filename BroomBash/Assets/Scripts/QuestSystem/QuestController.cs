@@ -82,6 +82,7 @@ public class QuestController : MonoBehaviour
     private int lastQuestIndex = -1;
     private PickUp closestPickUp = null;
     private System.Random randomNumber = new System.Random();
+    private bool startOfGame = true;
 
     // Start is called before the first frame update
     void Start()
@@ -109,11 +110,35 @@ public class QuestController : MonoBehaviour
         // Set max failed quests and player collisions
         currentPlayerFailedQuests = maxPlayerFailedQuests;
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
+
+        // Stop the player
+        playerController.stopPlayer = true;
+        // Run the game instructions on start
+        Invoke("RunStartInstructions", 0.1f);
+    }
+
+    private void RunStartInstructions()
+    {
+        playerUIManager.RunDialogSystem(string.Empty, PlayerUIManager.QuestStatus.GAMESTART);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Check for start of game stopped player input
+        if ((playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive) && startOfGame)
+        {
+            playerController.stopPlayer = true;
+        }
+        if ((!playerUIManager.dialogSystemIsActive && !playerUIManager.notificationSystemIsActive) && startOfGame)
+        {
+            if (playerController.inputHandler.Stop || playerController.inputHandler.SpeedControl > playerController.inputHandler.controllerDeadZone || playerController.inputHandler.SpeedControl < -playerController.inputHandler.controllerDeadZone)
+            {
+                startOfGame = false;
+                playerController.stopPlayer = false;
+            }
+        }
+
         // Keep track of time since start
         CountupTimer();
         // Count down the time

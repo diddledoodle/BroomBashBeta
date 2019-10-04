@@ -34,7 +34,8 @@ public class PlayerController : MonoBehaviour
     private float lastSpeed;
     private Vector3 playerStartingPosition = Vector3.zero;
 
-    private InputHandler inputHandler;
+    [HideInInspector]
+    public InputHandler inputHandler;
     private QuestController questController;
 
     private void Start()
@@ -50,13 +51,18 @@ public class PlayerController : MonoBehaviour
     private void OnGUI()
     {
         // Print directions on the screen - temporary
-        //GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
-        //textStyle.fontSize = 22;
-        //GUI.color = Color.black;
-        //GUI.Box (new Rect (10.0f, 10.0f, 400.0f, 40.0f), "A,W,S,D/Left Stick - Main Control", textStyle);
-        //GUI.Box (new Rect (10.0f, 50.0f, 400.0f, 40.0f), "Left Shift/Right Trigger - Speed up", textStyle);
-        //GUI.Box (new Rect (10.0f, 90.0f, 400.0f, 40.0f), "Left Control/Left Trigger - Slow Down", textStyle);
-        //GUI.Box(new Rect(10.0f, 130.0f, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
+        if(!questController.playerUIManager.dialogSystemIsActive && !questController.playerUIManager.notificationSystemIsActive)
+        {
+            GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
+            textStyle.fontSize = 22;
+            GUI.color = Color.green;
+            GUI.Box(new Rect(10.0f, Screen.height - 240, 400.0f, 40.0f), "Left Stick - Flight Control", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 200, 400.0f, 40.0f), "Right Trigger - Speed up", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 160, 400.0f, 40.0f), "Left Trigger - Slow Down", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 120, 400.0f, 40.0f), "Left Bumper (L1) - Stop", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 80, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 40, 400.0f, 40.0f), "Esc - Exit to Main Menu", textStyle);
+        }
     }
 
     private void Update()
