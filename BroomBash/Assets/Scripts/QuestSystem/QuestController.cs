@@ -8,6 +8,10 @@ public class QuestController : MonoBehaviour
     [Header("Pick up and drop off scene objects")]
     public List<PickUp> pickUps = new List<PickUp>();
     public List<DropOff> dropOffs = new List<DropOff>();
+    [Header("Location Materials")]
+    public Material pickUpLocationMaterial;
+    public Material dropOffLocationMaterial;
+    public Material dropOffLocationActiveMaterial;
 
     [Header("Time Limits")]
     [Tooltip("The amount of time the player has to complete the [easy] quest in seconds")]
@@ -52,7 +56,8 @@ public class QuestController : MonoBehaviour
     public int maxPlayerFailedQuests = 3;
     [Tooltip("The amount of collisions the player can make with other objects during a quest")]
     public int maxPlayerCollisionsPerDelivery = 3;
-    private int currentPlayerFailedQuests = 3;
+    [HideInInspector]
+    public int currentPlayerFailedQuests = 3;
     private int currentPlayerCollisionsPerDelivery = 3;
 
     [HideInInspector]
@@ -104,8 +109,6 @@ public class QuestController : MonoBehaviour
         // Set max failed quests and player collisions
         currentPlayerFailedQuests = maxPlayerFailedQuests;
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
-        // Test get random quest
-        //AssignQuestToPlayer();
     }
 
     // Update is called once per frame
@@ -134,13 +137,19 @@ public class QuestController : MonoBehaviour
     {
         if((currentPlayerCollisionsPerDelivery <= 0 && countdownTimerIsActive)|| (timeLeft <= 0 && countdownTimerIsActive))
         {
-            EndQuestFromFailure();
+            // End the game if all lives are exhausted
+            if (currentPlayerFailedQuests < 1)
+            {
+                EndGameFromFailure();
+            }
+            // End the quest if lives > 1
+            else
+            {
+                EndQuestFromFailure();
+            }
+            // Change quest material back to idle
+            currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
         }
-    }
-
-    private void CheckForGameOver()
-    {
-
     }
 
     public void PlayerArrivedAtPickUpLocation(PickUp _pickUpLocation)
@@ -163,6 +172,8 @@ public class QuestController : MonoBehaviour
             // Start the countdown timer
             SetTimeLeftBasedOnPlayerDifficulty(currentPlayerDifficulty);
             countdownTimerIsActive = true;
+            // Change material of current quest
+            currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationActiveMaterial;
         }
     }
 
@@ -193,6 +204,7 @@ public class QuestController : MonoBehaviour
         {
             countdownTimerIsActive = false;
             playerUIManager.RunDialogSystem(_questLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.END);
+            currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
         }
     }
 
@@ -205,7 +217,7 @@ public class QuestController : MonoBehaviour
         // Add XP to player leveling system
         AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
         // Csalculate the players current difficulty based on current level from xp gain
-        CalculatePlayersCurrentDifficulty(playerLevelSystem.currentLevel);
+        CalculatePlayersCurrentDifficulty();
         Debug.Log("<color=blue>Player made a delivery!</color>");
     }
 
@@ -215,10 +227,34 @@ public class QuestController : MonoBehaviour
         playerHasQuest = false;
         playerHasDelivery = false;
         SubXpToPlayerLevelingSystem(currentPlayerDifficulty);
-        CalculatePlayersCurrentDifficulty(playerLevelSystem.currentLevel);
+        CalculatePlayersCurrentDifficulty();
         currentPlayerFailedQuests -= 1;
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
         playerUIManager.RunDialogSystem("You failed this quest! :(", PlayerUIManager.QuestStatus.FAIL);
+    }
+
+    public void EndGameFromFailure()
+    {
+        countdownTimerIsActive = false;
+        playerHasQuest = false;
+        playerHasDelivery = false;
+        playerUIManager.RunDialogSystem("<b>Game Over!</b>\n You failed too many quests.", PlayerUIManager.QuestStatus.GAMEOVER);
+    }
+
+    private void CalculatePlayersCurrentDifficulty()
+    {
+        if(playerLevelSystem.currentLevel < easyQuestLevelCap)
+        {
+            currentPlayerDifficulty = 0;
+        }
+        else if(playerLevelSystem.currentLevel >= easyQuestLevelCap && playerLevelSystem.currentLevel < mediumQuestLevelCap)
+        {
+            currentPlayerDifficulty = 1;
+        }
+        else if (playerLevelSystem.currentLevel >= mediumQuestLevelCap)
+        {
+            currentPlayerDifficulty = 2;
+        }
     }
 
     public void AddXpToPlayerLevelingSystem(int _playerDifficulty)
@@ -278,11 +314,6 @@ public class QuestController : MonoBehaviour
         float _timeLeft = timeLeft -= Time.deltaTime;
         return _timeLeft;
     }
-
-    private void CalculatePlayersCurrentDifficulty(int _difficulty)
-	{
-
-	}
 
     //private void AssignQuestToPlayer()
     //{
