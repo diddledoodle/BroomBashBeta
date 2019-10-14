@@ -12,6 +12,7 @@ public class QuestController : MonoBehaviour
     public Material pickUpLocationMaterial;
     public Material dropOffLocationMaterial;
     public Material dropOffLocationActiveMaterial;
+    public Material invisibleMaterial;
 
     [Header("Time Limits")]
     [Tooltip("The amount of time the player has to complete the [easy] quest in seconds")]
@@ -105,6 +106,8 @@ public class QuestController : MonoBehaviour
             foreach(DropOff d in dropOffs)
             {
                 d.Initialize(this);
+                // Make all frop offs invisible
+                d.gameObject.GetComponent<Renderer>().material = invisibleMaterial;
             }
         }
         // Set max failed quests and player collisions
@@ -199,6 +202,11 @@ public class QuestController : MonoBehaviour
             countdownTimerIsActive = true;
             // Change material of current quest
             currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationActiveMaterial;
+            // Make all pick up locations invisible during quest
+            foreach(PickUp p in pickUps)
+            {
+                p.GetComponent<Renderer>().material = invisibleMaterial;
+            }
         }
     }
 
@@ -229,7 +237,13 @@ public class QuestController : MonoBehaviour
         {
             countdownTimerIsActive = false;
             playerUIManager.RunDialogSystem(_questLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.END);
-            currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
+            // Make the current quest gameobject invisible
+            currentQuest.gameObject.GetComponent<Renderer>().material = invisibleMaterial;
+            // Make all pick up locations visible during quest
+            foreach (PickUp p in pickUps)
+            {
+                p.GetComponent<Renderer>().material = pickUpLocationMaterial;
+            }
         }
     }
 

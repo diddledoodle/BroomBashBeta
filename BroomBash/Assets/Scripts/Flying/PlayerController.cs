@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public InputHandler inputHandler;
-    private QuestController questController;
+    [HideInInspector]
+    public QuestController questController;
 
     private void Start()
     {
@@ -128,12 +129,12 @@ public class PlayerController : MonoBehaviour
         float _wantedSpeed = 0f;
 
         // Speed up
-        if(_speedControlInput > inputHandler.controllerDeadZone)
+        if(_speedControlInput > inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = maximumSpeed;
         }
         // Slow down
-        else if(_speedControlInput < -inputHandler.controllerDeadZone)
+        else if(_speedControlInput < -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = minimumSpeed;
         }
