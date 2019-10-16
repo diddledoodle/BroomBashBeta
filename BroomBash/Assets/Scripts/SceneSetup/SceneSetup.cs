@@ -38,4 +38,9 @@ public class SceneSetup : MonoBehaviour
         // Instantiate post processing
         GameObject _pp = Instantiate(postProcessing);
     }
+
+    public void TestPlayerEvent()
+    {
+        Debug.Log("Player accepted quest");
+    }
 }

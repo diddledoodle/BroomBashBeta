@@ -14,35 +14,35 @@ public class PickUp : MonoBehaviour
         questController = _qc;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            timePlayerEnteredTrigger = questController.timeSinceStart;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<PlayerController>())
+    //    {
+    //        timePlayerEnteredTrigger = questController.timeSinceStart;
+    //    }
+    //}
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForPickUp)
-            {
-                if(playerEnteredTrigger == false)
-                {
-                    questController.PlayerArrivedAtPickUpLocation(this);
-                    playerEnteredTrigger = true;
-                }
-            }
-        }
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<PlayerController>())
+    //    {
+    //        if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForPickUp)
+    //        {
+    //            if(playerEnteredTrigger == false)
+    //            {
+    //                questController.PlayerArrivedAtPickUpLocation(this);
+    //                playerEnteredTrigger = true;
+    //            }
+    //        }
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            timePlayerEnteredTrigger = -1;
-            playerEnteredTrigger = false;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<PlayerController>())
+    //    {
+    //        timePlayerEnteredTrigger = -1;
+    //        playerEnteredTrigger = false;
+    //    }
+    //}
 }

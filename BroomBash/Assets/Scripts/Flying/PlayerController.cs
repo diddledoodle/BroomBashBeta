@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool stopPlayer = false;
 
     
@@ -122,7 +122,17 @@ public class PlayerController : MonoBehaviour
 		RotateChildTowardSteer();
 	}
 
+    public void StopPlayer()
+    {
+        stopPlayer = true;
+        Debug.Log("The player was stopped", this.gameObject);
+    }
 
+    public void UnstopPlayer() // Lol is that even a word?
+    {
+        stopPlayer = false;
+        Debug.Log("The player was released", this.gameObject);
+    }
 
     private float GetWantedSpeed(float _speedControlInput)
     {
