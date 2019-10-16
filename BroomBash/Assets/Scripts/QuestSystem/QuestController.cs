@@ -12,6 +12,7 @@ public class QuestController : MonoBehaviour
     public Material pickUpLocationMaterial;
     public Material dropOffLocationMaterial;
     public Material dropOffLocationActiveMaterial;
+    public Material invisibleMaterial;
 
     [Header("Time Limits")]
     [Tooltip("The amount of time the player has to complete the [easy] quest in seconds")]
@@ -82,6 +83,7 @@ public class QuestController : MonoBehaviour
     private int lastQuestIndex = -1;
     private PickUp closestPickUp = null;
     private System.Random randomNumber = new System.Random();
+    private bool startOfGame = true;
 
     // Start is called before the first frame update
     void Start()
@@ -104,16 +106,44 @@ public class QuestController : MonoBehaviour
             foreach(DropOff d in dropOffs)
             {
                 d.Initialize(this);
+                // Make all frop offs invisible
+                d.gameObject.GetComponent<Renderer>().material = invisibleMaterial;
             }
         }
         // Set max failed quests and player collisions
         currentPlayerFailedQuests = maxPlayerFailedQuests;
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
+        // Enable/Disable gameobjects
+        NoQuestActiveGameObjects();
+
+        // Stop the player
+        //playerController.stopPlayer = true;
+        // Run the game instructions on start
+        //Invoke("RunStartInstructions", 0.1f);
+    }
+
+    private void RunStartInstructions()
+    {
+        playerUIManager.RunDialogSystem(string.Empty, PlayerUIManager.QuestStatus.GAMESTART);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Check for start of game stopped player input
+        if ((playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive) && startOfGame)
+        {
+            //playerController.stopPlayer = true;
+        }
+        if ((!playerUIManager.dialogSystemIsActive && !playerUIManager.notificationSystemIsActive) && startOfGame)
+        {
+            if (playerController.inputHandler.Stop || playerController.inputHandler.SpeedControl > playerController.inputHandler.controllerDeadZone || playerController.inputHandler.SpeedControl < -playerController.inputHandler.controllerDeadZone)
+            {
+                startOfGame = false;
+                //playerController.stopPlayer = false;
+            }
+        }
+
         // Keep track of time since start
         CountupTimer();
         // Count down the time
@@ -125,9 +155,9 @@ public class QuestController : MonoBehaviour
         // FIX: Really dirty hardcode for player stop
         if (playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive)
         {
-            playerController.stopPlayer = true;
+            //playerController.stopPlayer = true;
         }
-        else playerController.stopPlayer = false;
+        else //playerController.stopPlayer = false;
 
         // TODO: End the game when the timer hits zero
         CheckForEndQuestFromFailure();
@@ -174,6 +204,12 @@ public class QuestController : MonoBehaviour
             countdownTimerIsActive = true;
             // Change material of current quest
             currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationActiveMaterial;
+            // Enable/Disable gameobjects
+            ActiveQuestActiveGameObjects();
+        }
+        else
+        {
+            Debug.Log("Player already has a quest and/or delivery", this.gameObject);
         }
     }
 
@@ -203,8 +239,7 @@ public class QuestController : MonoBehaviour
         if (_questLocation == currentQuest && playerHasQuest && playerHasDelivery)
         {
             countdownTimerIsActive = false;
-            playerUIManager.RunDialogSystem(_questLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.END);
-            currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
+            //playerUIManager.RunDialogSystem(_questLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.END);
         }
     }
 
@@ -219,6 +254,8 @@ public class QuestController : MonoBehaviour
         // Csalculate the players current difficulty based on current level from xp gain
         CalculatePlayersCurrentDifficulty();
         Debug.Log("<color=blue>Player made a delivery!</color>");
+        // Enable/Disable gameobjects
+        NoQuestActiveGameObjects();
     }
 
     public void EndQuestFromFailure()
@@ -230,7 +267,9 @@ public class QuestController : MonoBehaviour
         CalculatePlayersCurrentDifficulty();
         currentPlayerFailedQuests -= 1;
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
-        playerUIManager.RunDialogSystem("You failed this quest! :(", PlayerUIManager.QuestStatus.FAIL);
+        //playerUIManager.RunDialogSystem("You failed this quest! :(", PlayerUIManager.QuestStatus.FAIL);
+        // Enable/Disable gameobjects
+        NoQuestActiveGameObjects();
     }
 
     public void EndGameFromFailure()
@@ -238,7 +277,42 @@ public class QuestController : MonoBehaviour
         countdownTimerIsActive = false;
         playerHasQuest = false;
         playerHasDelivery = false;
-        playerUIManager.RunDialogSystem("<b>Game Over!</b>\n You failed too many quests.", PlayerUIManager.QuestStatus.GAMEOVER);
+        //playerUIManager.RunDialogSystem("<b>Game Over!</b>\n You failed too many quests.", PlayerUIManager.QuestStatus.GAMEOVER);
+        // Enable/Disable gameobjects
+        NoQuestActiveGameObjects();
+    }
+
+    private void NoQuestActiveGameObjects()
+    {
+        // Disable all drop off locations
+        foreach(DropOff d in dropOffs)
+        {
+            d.GetComponent<Renderer>().material = invisibleMaterial;
+            d.gameObject.SetActive(false);
+        }
+        // Enable all pick up locations
+        foreach(PickUp p in pickUps)
+        {
+            p.gameObject.SetActive(true);
+        }
+    }
+
+    private void ActiveQuestActiveGameObjects()
+    {
+        // Enable current drop off location
+        foreach (DropOff d in dropOffs)
+        {
+            if(d == currentQuest)
+            {
+                d.GetComponent<Renderer>().material = dropOffLocationActiveMaterial;
+                d.gameObject.SetActive(true);
+            }
+        }
+        // Enable all pick up locations
+        foreach (PickUp p in pickUps)
+        {
+            p.gameObject.SetActive(false);
+        }
     }
 
     private void CalculatePlayersCurrentDifficulty()

@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6347000064917106398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766133642378491717}
+  - component: {fileID: 5414664530106806807}
+  m_Layer: 0
+  m_Name: _QuestController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766133642378491717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6347000064917106398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.960292, y: 6.2870626, z: 12.977182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5414664530106806807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6347000064917106398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feccaa86fe5276046a1c13482813e861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUps: []
+  dropOffs: []
+  pickUpLocationMaterial: {fileID: 2100000, guid: cef42ea0a48c75a47b43e78cf98705f4,
+    type: 2}
+  dropOffLocationMaterial: {fileID: 2100000, guid: c28b5dd122042ae4c91e30cc8f8f9833,
+    type: 2}
+  dropOffLocationActiveMaterial: {fileID: 2100000, guid: 064d929e7a00d4844adce4f2cf6cac83,
+    type: 2}
+  invisibleMaterial: {fileID: 2100000, guid: 5cfeebb2a7b6b453c8060f07f22fbdd2, type: 2}
+  easyQuestTimeLimit: 60
+  mediumQuestTimeLimit: 45
+  hardQuestTimeLimit: 30
+  easyQuestCompletionPoints: 10
+  mediumQuestCompletionPoints: 25
+  hardQuestCompletionPoints: 50
+  timeToStayForPickUp: 2
+  timeToStayForDelivery: 2
+  easyQuestDistance: 75
+  mediumQuestDistance: 150
+  hardQuestDistance: 300
+  easyQuestLevelCap: 3
+  mediumQuestLevelCap: 6
+  maxPlayerFailedQuests: 3
+  maxPlayerCollisionsPerDelivery: 3
+  currentPlayerFailedQuests: 3
+  player: {fileID: 0}
+  playerController: {fileID: 0}
+  playerLevelSystem: {fileID: 0}
+  playerUIManager: {fileID: 0}
+  timeSinceStart: 0
+  timeLeft: 0
+  countdownTimerIsActive: 0
+  currentQuest: {fileID: 0}

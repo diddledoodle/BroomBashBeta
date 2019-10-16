@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool stopPlayer = false;
 
     
@@ -34,8 +34,10 @@ public class PlayerController : MonoBehaviour
     private float lastSpeed;
     private Vector3 playerStartingPosition = Vector3.zero;
 
-    private InputHandler inputHandler;
-    private QuestController questController;
+    [HideInInspector]
+    public InputHandler inputHandler;
+    [HideInInspector]
+    public QuestController questController;
 
     private void Start()
     {
@@ -50,16 +52,21 @@ public class PlayerController : MonoBehaviour
     private void OnGUI()
     {
         // Print directions on the screen - temporary
-        //GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
-        //textStyle.fontSize = 22;
-        //GUI.color = Color.black;
-        //GUI.Box (new Rect (10.0f, 10.0f, 400.0f, 40.0f), "A,W,S,D/Left Stick - Main Control", textStyle);
-        //GUI.Box (new Rect (10.0f, 50.0f, 400.0f, 40.0f), "Left Shift/Right Trigger - Speed up", textStyle);
-        //GUI.Box (new Rect (10.0f, 90.0f, 400.0f, 40.0f), "Left Control/Left Trigger - Slow Down", textStyle);
-        //GUI.Box(new Rect(10.0f, 130.0f, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
+        if(!questController.playerUIManager.dialogSystemIsActive && !questController.playerUIManager.notificationSystemIsActive)
+        {
+            GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
+            textStyle.fontSize = 22;
+            GUI.color = Color.green;
+            GUI.Box(new Rect(10.0f, Screen.height - 240, 400.0f, 40.0f), "Left Stick - Flight Control", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 200, 400.0f, 40.0f), "Right Trigger - Speed up", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 160, 400.0f, 40.0f), "Left Trigger - Slow Down", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 120, 400.0f, 40.0f), "Left Bumper (L1) - Stop", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 80, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
+            GUI.Box(new Rect(10.0f, Screen.height - 40, 400.0f, 40.0f), "Esc - Exit to Main Menu", textStyle);
+        }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 		FlightMechanics();
 
@@ -115,19 +122,29 @@ public class PlayerController : MonoBehaviour
 		RotateChildTowardSteer();
 	}
 
+    public void StopPlayer()
+    {
+        stopPlayer = true;
+        Debug.Log("The player was stopped", this.gameObject);
+    }
 
+    public void UnstopPlayer() // Lol is that even a word?
+    {
+        stopPlayer = false;
+        Debug.Log("The player was released", this.gameObject);
+    }
 
     private float GetWantedSpeed(float _speedControlInput)
     {
         float _wantedSpeed = 0f;
 
         // Speed up
-        if(_speedControlInput > inputHandler.controllerDeadZone)
+        if(_speedControlInput > inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = maximumSpeed;
         }
         // Slow down
-        else if(_speedControlInput < -inputHandler.controllerDeadZone)
+        else if(_speedControlInput < -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = minimumSpeed;
         }

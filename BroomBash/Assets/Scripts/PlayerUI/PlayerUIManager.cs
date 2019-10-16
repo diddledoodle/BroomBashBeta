@@ -16,12 +16,13 @@ public class PlayerUIManager : MonoBehaviour
     public Text notificationDeclineText;
     public Text notificationAcceptText;
     public GameObject dialogPanel;
+    public GameObject startGameInstructions;
     public Text dialogText;
     public Texture miniMapRenderTexture;
     private QuestController questController;
     private InputHandler inputHandler;
 
-    public enum QuestStatus { STANDBY, START, END, FAIL, GAMEOVER}
+    public enum QuestStatus { GAMESTART, STANDBY, START, END, FAIL, GAMEOVER}
     [HideInInspector]
     public QuestStatus questStatus = QuestStatus.STANDBY;
 
@@ -68,6 +69,13 @@ public class PlayerUIManager : MonoBehaviour
         CloseDialogSystem();
         // Notification system
         CloseNotificationSystem();
+
+        // Go to main menu
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadSceneAsync("MainMenu");
+            Debug.Log("Okla");
+        }
     }
 
     public void RunDialogSystem(string _dialogMessage, QuestStatus _qs)
@@ -76,6 +84,14 @@ public class PlayerUIManager : MonoBehaviour
         dialogPanel.SetActive(true);
         dialogText.text = _dialogMessage;
         questStatus = _qs;
+        if(questStatus == QuestStatus.GAMESTART)
+        {
+            startGameInstructions.SetActive(true);
+        }
+        else
+        {
+            startGameInstructions.SetActive(false);
+        }
     }
 
     private void CloseDialogSystem()
@@ -99,6 +115,12 @@ public class PlayerUIManager : MonoBehaviour
         notifcationPanel.SetActive(true);
         switch (questStatus)
         {
+            case QuestStatus.GAMESTART:
+                notificationAcceptText.enabled = true;
+                notificationDeclineText.enabled = false;
+                notificationAcceptText.text = "<color=green>Start -> A/Enter</color>";
+                notifictionText.text = "Are you ready to start?";
+                break;
             case QuestStatus.START:
                 notificationAcceptText.enabled = true;
                 notificationDeclineText.enabled = true;
@@ -133,6 +155,14 @@ public class PlayerUIManager : MonoBehaviour
         {
             switch (questStatus)
             {
+                case QuestStatus.GAMESTART:
+                    if (inputHandler.Accept)
+                    {
+                        notifictionText.text = string.Empty;
+                        notifcationPanel.SetActive(false);
+                        notificationSystemIsActive = false;
+                    }
+                    break;
                 case QuestStatus.START:
                     if (inputHandler.Accept)
                     {

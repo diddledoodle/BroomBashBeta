@@ -60,7 +60,7 @@ public class InputHandler : MonoBehaviour {
         Accept = playerControlActions.accept.WasPressed;//(playerControlActions.accept.Value > controllerDeadZone) ? true : false;
         Decline = playerControlActions.decline.WasPressed;
         // Toggle stopped based on the stop button
-        if (playerControlActions.stop.WasPressed)
+        /*if (playerControlActions.stop.WasPressed)
         {
             Stop = (Stop == true) ? false : true;
         }
@@ -68,6 +68,16 @@ public class InputHandler : MonoBehaviour {
         if(SpeedControl > controllerDeadZone || SpeedControl < -controllerDeadZone)
         {
             Stop = false;
+        }*/
+        // Check for player stopped
+        if (this.SpeedControl > -0.9f)
+        {
+            Stop = false;
+        }
+        else
+        if (this.SpeedControl < -this.controllerDeadZone && this.SpeedControl < -0.9f)
+        {
+            Stop = true;
         }
     }
 }

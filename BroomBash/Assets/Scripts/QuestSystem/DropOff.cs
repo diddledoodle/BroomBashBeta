@@ -30,7 +30,7 @@ public class DropOff : MonoBehaviour
     void Update()
     {
         // Calculate the quest difficulty based on current distance from the player
-        CalculateQuestDifficulty(playerDistance = CalculateDistanceToPlayer());
+        //CalculateQuestDifficulty(playerDistance = CalculateDistanceToPlayer());
     }
 
     private float CalculateDistanceToPlayer()
@@ -55,35 +55,40 @@ public class DropOff : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void PlayerArrivedAtDeliveryLocation()
     {
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            timePlayerEnteredTrigger = questController.timeSinceStart;
-        }
+        questController.PlayerArrivedAtDeliveryLocation(this);
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForDelivery)
-            {
-                if(playerEnteredTrigger == false)
-                {
-                    questController.PlayerArrivedAtDeliveryLocation(this);
-                    playerEnteredTrigger = true;
-                }
-            }
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<PlayerController>())
+    //    {
+    //        timePlayerEnteredTrigger = questController.timeSinceStart;
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            timePlayerEnteredTrigger = -1;
-            playerEnteredTrigger = false;
-        }
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<PlayerController>())
+    //    {
+    //        if(questController.timeSinceStart - timePlayerEnteredTrigger >= questController.timeToStayForDelivery)
+    //        {
+    //            if(playerEnteredTrigger == false)
+    //            {
+    //                questController.PlayerArrivedAtDeliveryLocation(this);
+    //                playerEnteredTrigger = true;
+    //            }
+    //        }
+    //    }
+    //}
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<PlayerController>())
+    //    {
+    //        timePlayerEnteredTrigger = -1;
+    //        playerEnteredTrigger = false;
+    //    }
+    //}
 }
