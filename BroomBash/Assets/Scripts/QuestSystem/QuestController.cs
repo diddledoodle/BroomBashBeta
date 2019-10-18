@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using PixelCrushers.DialogueSystem;
 
 public class QuestController : MonoBehaviour
 {
@@ -21,6 +22,14 @@ public class QuestController : MonoBehaviour
     public float mediumQuestTimeLimit = 45f;
     [Tooltip("The amount of time the player has to complete the [hard] quest in seconds")]
     public float hardQuestTimeLimit = 30f;
+
+    [Header("Boss Quests")]
+    [Tooltip("Boss conversations list")]
+    public List<DialogueSystemTrigger> bossConversations = new List<DialogueSystemTrigger>();
+    [Tooltip("The frequency the boss asks you to do higher rated quests. Ex. For every x quest the boss asks the player")]
+    public int bossQuestInquiryRate = 3;
+    [Tooltip("The percent of the quest XP to be added on top.")]
+    public float bossQuestXpBonusPercent = 15f;
 
     [Header("Points for Deliveries")]
     [Tooltip("The amount of points the player receives for completing [easy] quests")]
@@ -84,6 +93,10 @@ public class QuestController : MonoBehaviour
     private PickUp closestPickUp = null;
     private System.Random randomNumber = new System.Random();
     private bool startOfGame = true;
+    [SerializeField]
+    private int completedQuests = 0;
+    private bool bossCanInquire = true;
+    private bool bossQuestIsActive = false;
 
     // Start is called before the first frame update
     void Start()
@@ -130,20 +143,6 @@ public class QuestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check for start of game stopped player input
-        if ((playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive) && startOfGame)
-        {
-            //playerController.stopPlayer = true;
-        }
-        if ((!playerUIManager.dialogSystemIsActive && !playerUIManager.notificationSystemIsActive) && startOfGame)
-        {
-            if (playerController.inputHandler.Stop || playerController.inputHandler.SpeedControl > playerController.inputHandler.controllerDeadZone || playerController.inputHandler.SpeedControl < -playerController.inputHandler.controllerDeadZone)
-            {
-                startOfGame = false;
-                //playerController.stopPlayer = false;
-            }
-        }
-
         // Keep track of time since start
         CountupTimer();
         // Count down the time
@@ -152,13 +151,8 @@ public class QuestController : MonoBehaviour
             CountdownTimer();
         }
 
-        // FIX: Really dirty hardcode for player stop
-        if (playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive)
-        {
-            //playerController.stopPlayer = true;
-        }
-        else //playerController.stopPlayer = false;
-
+        // Check for boss required quests
+        BossRelatedQuestAssignment();
         // TODO: End the game when the timer hits zero
         CheckForEndQuestFromFailure();
     }
@@ -179,6 +173,15 @@ public class QuestController : MonoBehaviour
             }
             // Change quest material back to idle
             currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
+        }
+    }
+
+    private void BossRelatedQuestAssignment()
+    {
+        if(completedQuests % bossQuestInquiryRate == 0 && bossCanInquire)
+        {
+            bossCanInquire = false;
+            Debug.Log("Boss can inquire");
         }
     }
 
@@ -210,7 +213,14 @@ public class QuestController : MonoBehaviour
         else
         {
             Debug.Log("Player already has a quest and/or delivery", this.gameObject);
+            return;
         }
+    }
+
+    public void StartBossQuest()
+    {
+        StartQuest();
+        bossQuestIsActive = true;
     }
 
     public void PlayerCollidedWithObjectDuringQuest()
@@ -253,9 +263,21 @@ public class QuestController : MonoBehaviour
         AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
         // Csalculate the players current difficulty based on current level from xp gain
         CalculatePlayersCurrentDifficulty();
+        // Add one completed quest to completed quests
+        completedQuests += 1;
+        // Make sure the boss can inquire
+        bossCanInquire = true;
         Debug.Log("<color=blue>Player made a delivery!</color>");
         // Enable/Disable gameobjects
         NoQuestActiveGameObjects();
+    }
+
+    public void EndBossQuest()
+    {
+        EndQuest();
+        // Add boss quest xp bonus
+        AddBossXpBonusToPlayerLevelingSystem(currentPlayerDifficulty);
+        bossQuestIsActive = false;
     }
 
     public void EndQuestFromFailure()
@@ -343,6 +365,22 @@ public class QuestController : MonoBehaviour
                 break;
             case 2:
                 playerLevelSystem.AddXpToPlayerLevel(hardQuestCompletionPoints);
+                break;
+        }
+    }
+
+    public void AddBossXpBonusToPlayerLevelingSystem(int _playerDifficulty)
+    {
+        switch (_playerDifficulty)
+        {
+            case 0:
+                playerLevelSystem.AddXpToPlayerLevel((int)(easyQuestCompletionPoints * bossQuestXpBonusPercent));
+                break;
+            case 1:
+                playerLevelSystem.AddXpToPlayerLevel((int)(mediumQuestCompletionPoints * bossQuestXpBonusPercent));
+                break;
+            case 2:
+                playerLevelSystem.AddXpToPlayerLevel((int)(hardQuestCompletionPoints * bossQuestXpBonusPercent));
                 break;
         }
     }
