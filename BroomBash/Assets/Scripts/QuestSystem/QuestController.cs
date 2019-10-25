@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using PixelCrushers.DialogueSystem;
 
 public class QuestController : MonoBehaviour
 {
     [Header("Pick up and drop off scene objects")]
     public List<PickUp> pickUps = new List<PickUp>();
     public List<DropOff> dropOffs = new List<DropOff>();
+
     [Header("Location Materials")]
     public Material pickUpLocationMaterial;
     public Material dropOffLocationMaterial;
@@ -21,6 +23,14 @@ public class QuestController : MonoBehaviour
     public float mediumQuestTimeLimit = 45f;
     [Tooltip("The amount of time the player has to complete the [hard] quest in seconds")]
     public float hardQuestTimeLimit = 30f;
+
+    [Header("Boss Quests")]
+    [Tooltip("Boss conversations list")]
+    public List<DialogueSystemTrigger> bossConversations = new List<DialogueSystemTrigger>();
+    [Tooltip("The frequency the boss asks you to do higher rated quests. Ex. For every x quest the boss asks the player")]
+    public int bossQuestInquiryRate = 3;
+    [Tooltip("The percent of the quest XP to be added on top. Ex. 0.15 is 15%")]
+    public float bossQuestXpBonusPercent = 0.15f;
 
     [Header("Points for Deliveries")]
     [Tooltip("The amount of points the player receives for completing [easy] quests")]
@@ -76,14 +86,20 @@ public class QuestController : MonoBehaviour
     [HideInInspector]
     public bool countdownTimerIsActive = false;
     [HideInInspector]
-    public DropOff currentQuest = null;
+    public GameObject currentQuest = null;
 
     private bool playerHasQuest = false;
+    private bool playerHasBossQuest = false;
     private bool playerHasDelivery = false;
+    private bool playerHassBossDelivery = false;
     private int lastQuestIndex = -1;
     private PickUp closestPickUp = null;
     private System.Random randomNumber = new System.Random();
     private bool startOfGame = true;
+    [SerializeField]
+    private int normalCompletedQuests = 0;
+    private bool bossCanInquire = true;
+    private bool bossQuestIsActive;
 
     // Start is called before the first frame update
     void Start()
@@ -92,6 +108,7 @@ public class QuestController : MonoBehaviour
         player = GameObject.FindObjectOfType<PlayerController>().gameObject;
         playerController = player.GetComponent<PlayerController>();
         playerLevelSystem = player.GetComponent<LevelSystem>();
+        currentPlayerDifficulty = 0;
         // Initialize all of the pick up locations
         if(pickUps.Count > 0)
         {
@@ -130,20 +147,6 @@ public class QuestController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check for start of game stopped player input
-        if ((playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive) && startOfGame)
-        {
-            //playerController.stopPlayer = true;
-        }
-        if ((!playerUIManager.dialogSystemIsActive && !playerUIManager.notificationSystemIsActive) && startOfGame)
-        {
-            if (playerController.inputHandler.Stop || playerController.inputHandler.SpeedControl > playerController.inputHandler.controllerDeadZone || playerController.inputHandler.SpeedControl < -playerController.inputHandler.controllerDeadZone)
-            {
-                startOfGame = false;
-                //playerController.stopPlayer = false;
-            }
-        }
-
         // Keep track of time since start
         CountupTimer();
         // Count down the time
@@ -152,14 +155,9 @@ public class QuestController : MonoBehaviour
             CountdownTimer();
         }
 
-        // FIX: Really dirty hardcode for player stop
-        if (playerUIManager.dialogSystemIsActive || playerUIManager.notificationSystemIsActive)
-        {
-            //playerController.stopPlayer = true;
-        }
-        else //playerController.stopPlayer = false;
-
-        // TODO: End the game when the timer hits zero
+        // Check for boss required quests
+        BossRelatedQuestAssignment();
+        // End the game when the timer hits zero
         CheckForEndQuestFromFailure();
     }
 
@@ -182,11 +180,62 @@ public class QuestController : MonoBehaviour
         }
     }
 
+    private void BossRelatedQuestAssignment()
+    {
+        if(normalCompletedQuests != 0 && normalCompletedQuests % bossQuestInquiryRate == 0 && bossCanInquire)
+        {
+            bossCanInquire = false;
+            Invoke("AskPlayerAboutBossQuest", 3f);
+        }
+    }
+
+    private void AskPlayerAboutBossQuest()
+    {
+        // TODO: Need to ask the player if they want to do a quest for a greater xp increase
+        int _randBossConversationIndex = randomNumber.Next(0, bossConversations.Count);
+
+        bossConversations[_randBossConversationIndex].OnUse();
+    }
+
+    public void CheckIfPlayerAcceptedBossQuest()
+    {
+        bool _playerChoice = DialogueLua.GetVariable("BossQuestIsActive").asBool;
+
+        if (_playerChoice == true)
+        {
+            // TODO: get the closest pick up location
+            GetClosestPickUpLocation();
+            // Set the current quest to the pick up location
+            currentQuest = closestPickUp.gameObject;
+            // Start the countdown timer
+            SetTimeLeftBasedOnPlayerDifficulty(currentPlayerDifficulty);
+            countdownTimerIsActive = true;
+        }
+        else if (_playerChoice == false)
+        {
+            Debug.Log("Player declined the boss quest");
+        }
+    }
+
     public void PlayerArrivedAtPickUpLocation(PickUp _pickUpLocation)
     {
         if(!playerHasQuest && !playerHasDelivery)
         {
             playerUIManager.RunDialogSystem(_pickUpLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.START);
+        }
+    }
+
+    public void CheckQuestType()
+    {
+        bool _playerChoice = DialogueLua.GetVariable("BossQuestIsActive").asBool;
+
+        if (_playerChoice == true)
+        {
+            StartBossQuest();
+        }
+        else if (_playerChoice == false)
+        {
+            StartQuest();
         }
     }
     
@@ -195,21 +244,32 @@ public class QuestController : MonoBehaviour
         if (!playerHasQuest && !playerHasDelivery)
         {
             playerHasDelivery = true;
-            Debug.Log("<color=red>Player picked up a delivery!</color>");
-            // Set the 
             // Assign drop off within player level difficulty range
             GetQuestBasedOnCurrentPlayerDifficulty(currentPlayerDifficulty);
             // Start the countdown timer
             SetTimeLeftBasedOnPlayerDifficulty(currentPlayerDifficulty);
             countdownTimerIsActive = true;
-            // Change material of current quest
-            currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationActiveMaterial;
             // Enable/Disable gameobjects
             ActiveQuestActiveGameObjects();
         }
         else
         {
             Debug.Log("Player already has a quest and/or delivery", this.gameObject);
+            return;
+        }
+    }
+
+    public void StartBossQuest()
+    {
+        if(!playerHasBossQuest && !playerHasDelivery)
+        {
+            bossQuestIsActive = true;
+            playerHasBossQuest = true;
+            playerHassBossDelivery = true;
+            // Assign drop off within player level difficulty range
+            GetQuestBasedOnCurrentPlayerDifficulty(currentPlayerDifficulty);
+            // Enable/Disable gameobjects
+            ActiveQuestActiveGameObjects();
         }
     }
 
@@ -236,7 +296,7 @@ public class QuestController : MonoBehaviour
 
     public void PlayerArrivedAtDeliveryLocation(DropOff _questLocation)
     {
-        if (_questLocation == currentQuest && playerHasQuest && playerHasDelivery)
+        if (_questLocation.gameObject == currentQuest && ((playerHasQuest && playerHasDelivery) || playerHasBossQuest && playerHassBossDelivery))
         {
             countdownTimerIsActive = false;
             //playerUIManager.RunDialogSystem(_questLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.END);
@@ -244,18 +304,44 @@ public class QuestController : MonoBehaviour
     }
 
     public void EndQuest()
-    {
-        playerHasQuest = false;
-        playerHasDelivery = false;
+    { 
+        bool _playerChoice = DialogueLua.GetVariable("BossQuestIsActive").asBool;
+
+        // Stuff for boss quest
+        if (_playerChoice == true)
+        {
+            playerHasBossQuest = false;
+            playerHassBossDelivery = false;
+            EndBossQuest();
+        }
+        // Stuff for normal quest
+        else if (_playerChoice == false)
+        {
+            playerHasQuest = false;
+            playerHasDelivery = false;
+            // Add XP to player leveling system
+            AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
+            // Add one completed quest to completed quests
+            normalCompletedQuests += 1;
+            // Make sure the boss can inquire only after normal quests
+            bossCanInquire = true;
+        }
+
         // Reset player collisions during quest
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
-        // Add XP to player leveling system
-        AddXpToPlayerLevelingSystem(currentPlayerDifficulty);
-        // Csalculate the players current difficulty based on current level from xp gain
+        // Calculate the players current difficulty based on current level from xp gain
         CalculatePlayersCurrentDifficulty();
-        Debug.Log("<color=blue>Player made a delivery!</color>");
         // Enable/Disable gameobjects
         NoQuestActiveGameObjects();
+    }
+
+    public void EndBossQuest()
+    {
+        // Add boss quest xp bonus
+        AddBossXpBonusToPlayerLevelingSystem(currentPlayerDifficulty);
+        bossQuestIsActive = false;
+        // Need to make sure the boss quest is not active in the dialogue system
+        DialogueLua.SetVariable("BossQuestIsActive", false);
     }
 
     public void EndQuestFromFailure()
@@ -302,7 +388,7 @@ public class QuestController : MonoBehaviour
         // Enable current drop off location
         foreach (DropOff d in dropOffs)
         {
-            if(d == currentQuest)
+            if(d.gameObject == currentQuest)
             {
                 d.GetComponent<Renderer>().material = dropOffLocationActiveMaterial;
                 d.gameObject.SetActive(true);
@@ -343,6 +429,22 @@ public class QuestController : MonoBehaviour
                 break;
             case 2:
                 playerLevelSystem.AddXpToPlayerLevel(hardQuestCompletionPoints);
+                break;
+        }
+    }
+
+    public void AddBossXpBonusToPlayerLevelingSystem(int _playerDifficulty)
+    {
+        switch (_playerDifficulty)
+        {
+            case 0:
+                playerLevelSystem.AddXpToPlayerLevel((int)((easyQuestCompletionPoints * bossQuestXpBonusPercent) + easyQuestCompletionPoints));
+                break;
+            case 1:
+                playerLevelSystem.AddXpToPlayerLevel((int)((mediumQuestCompletionPoints * bossQuestXpBonusPercent) + mediumQuestCompletionPoints));
+                break;
+            case 2:
+                playerLevelSystem.AddXpToPlayerLevel((int)((hardQuestCompletionPoints * bossQuestXpBonusPercent) + hardQuestCompletionPoints ));
                 break;
         }
     }
@@ -415,6 +517,11 @@ public class QuestController : MonoBehaviour
                 _d = MeasureDropOffDistances(mediumQuestDistance, hardQuestDistance);
                 break;
         }
+        // If there are no drop offs within range then randomly choose one from all of them
+        if(_d.Count == 0)
+        {
+            _d = dropOffs;
+        }
         // Assign a random drop off within the difficulty distance
         GetRandomQuestInDistance(_d);
     }
@@ -456,12 +563,12 @@ public class QuestController : MonoBehaviour
                     _questAssignmentIndex = (_flipCoin == 1) ? _questAssignmentIndex += 1 : _questAssignmentIndex -= 1;
                 }
             }
-            currentQuest = _dropOffList[_questAssignmentIndex];
+            currentQuest = _dropOffList[_questAssignmentIndex].gameObject;
             lastQuestIndex = _questAssignmentIndex;
         }
         else if(_dropOffList.Count == 1)
         {
-            currentQuest = _dropOffList[0];
+            currentQuest = _dropOffList[0].gameObject;
             // Set the last quest so we can't get it next time
             lastQuestIndex = 0;
         }
