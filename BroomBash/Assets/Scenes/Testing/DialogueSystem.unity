@@ -215,6 +215,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 148419581}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &327096755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2095712489, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1435323383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &843898848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424,6 +430,67 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 966251716, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
+      propertyPath: meshes
+      value: 
+      objectReference: {fileID: 327096755}
+    - target: {fileID: 762916493, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 762916495, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d059aeee5f34e9eb055564fdde24a7, type: 2}
+    - target: {fileID: 2095712489, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3727586
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9197686
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.11344119
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.046988882
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676751458015749802, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4967121927454416997, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 253a4cbf0e658ec48b34b82a138c2ef5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
 --- !u!4 &1435323384 stripped
@@ -568,7 +635,7 @@ MonoBehaviour:
   hardQuestTimeLimit: 30
   bossConversations:
   - {fileID: 1372876379}
-  bossQuestInquiryRate: 3
+  bossQuestInquiryRate: 1
   bossQuestXpBonusPercent: 0.5
   easyQuestCompletionPoints: 10
   mediumQuestCompletionPoints: 25
@@ -845,6 +912,11 @@ PrefabInstance:
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 1435323384}
+    - target: {fileID: 1413055359456688728, guid: 38e091d30e5724410b97933cf9824b11,
+        type: 3}
+      propertyPath: trigger
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 1413055359456688734, guid: 38e091d30e5724410b97933cf9824b11,
         type: 3}
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
