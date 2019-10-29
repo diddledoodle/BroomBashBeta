@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}" SchemaVersion="94">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="bb_sx_game_amb_crowds_large_01" ID="{278D7501-9ABE-4102-BC10-FFF5D4E44CE1}" ShortID="380093241">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_crowds_large_01" ID="{308F9D4A-2E8C-4B6F-AAC1-1BD1F7B0766B}" ShortID="428513919">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_crowds_large_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_crowds_large_01" ID="{308F9D4A-2E8C-4B6F-AAC1-1BD1F7B0766B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_crowds_small_01" ID="{C8E010F4-E853-4FFA-A30F-190309934C89}" ShortID="381637584">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_crowds_small_01" ID="{92DD2E54-37BE-4722-A090-C6313A1A17D0}" ShortID="221538678">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_crowds_small_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_crowds_small_01" ID="{92DD2E54-37BE-4722-A090-C6313A1A17D0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_meowing_ 01" ID="{4EAE15B0-DE46-4B18-AF9F-E362559E6B61}" ShortID="670794780">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_meowing_ 01" ID="{5C3979EB-3361-4CB0-B73C-6852A54999BA}" ShortID="567678985">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_meowing_ 01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_meowing_ 01" ID="{5C3979EB-3361-4CB0-B73C-6852A54999BA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_meowing_ 02" ID="{77319F23-DE2F-4856-A3E5-6CD4F63014B4}" ShortID="326212866">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_meowing_ 02" ID="{F53C5CD8-120C-4C1B-AB36-EF6C4BC5EDC2}" ShortID="1057942891">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_meowing_ 02.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_meowing_ 02" ID="{F53C5CD8-120C-4C1B-AB36-EF6C4BC5EDC2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_meowing_ 03" ID="{51C34847-CCEA-4D97-BFBA-6F18C77D3F59}" ShortID="180342991">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_meowing_ 03" ID="{3DCDA4BA-EE5A-4C46-9649-7C7512EF6828}" ShortID="706487621">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_meowing_ 03.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_meowing_ 03" ID="{3DCDA4BA-EE5A-4C46-9649-7C7512EF6828}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_meowing_ 04" ID="{72D68915-73D0-468E-A2A2-3BB148A46F4F}" ShortID="697135631">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_meowing_ 04" ID="{7FE54D6B-2D4E-49F3-B34E-FF563A89F183}" ShortID="115949722">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_meowing_ 04.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_meowing_ 04" ID="{7FE54D6B-2D4E-49F3-B34E-FF563A89F183}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_seagulls_01" ID="{08B93383-80A8-43E0-BC60-92DF9E308C87}" ShortID="251785206">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_seagulls_01" ID="{2593B380-D9E0-463E-A43A-84E57DB76D9C}" ShortID="744161537">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_seagulls_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_seagulls_01" ID="{2593B380-D9E0-463E-A43A-84E57DB76D9C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_water_lap_stone_01" ID="{0DC9C571-1B5D-437D-ADB4-76B7AF8DE0A0}" ShortID="31150943">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_water_lap_stone_01" ID="{B3C4272B-65B3-450A-99FE-DDF27E4F7447}" ShortID="554871751">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_water_lap_stone_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_water_lap_stone_01" ID="{B3C4272B-65B3-450A-99FE-DDF27E4F7447}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_amb_water_waves_01" ID="{4BB5780D-1593-40A3-830E-AE6B49056E66}" ShortID="281338506">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_amb_water_waves_01" ID="{EF4FAE1B-445F-4977-A6CA-75B3E2409E6B}" ShortID="957189257">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_amb_water_waves_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_amb_water_waves_01" ID="{EF4FAE1B-445F-4977-A6CA-75B3E2409E6B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_int_enter_active_pickup_01" ID="{C60C6FE4-D779-4C9D-8384-5B0DBC756A0B}" ShortID="393631162">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_int_enter_active_pickup_01" ID="{7A088B78-FF6C-4316-B52A-564D82A937E3}" ShortID="177912085">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_int_enter_active_pickup_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_int_enter_active_pickup_01" ID="{7A088B78-FF6C-4316-B52A-564D82A937E3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_int_exit_active_pickup_01" ID="{105B41FE-BD00-4AE8-A8F9-002FCE3E8AB5}" ShortID="694595851">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_int_exit_active_pickup_01" ID="{F825E125-CCC0-4952-B6C1-6DFA2FE5CCE4}" ShortID="809968592">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_int_exit_active_pickup_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_int_exit_active_pickup_01" ID="{F825E125-CCC0-4952-B6C1-6DFA2FE5CCE4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_broom_accelerating_01" ID="{79A909F1-A62D-4864-BBF4-1C7A72D3CEA4}" ShortID="188719565">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_broom_accelerating_01" ID="{6D82CA91-25D2-415D-B00C-CEC441B78C01}" ShortID="409495696">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_broom_accelerating_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_broom_accelerating_01" ID="{6D82CA91-25D2-415D-B00C-CEC441B78C01}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_broom_decelerating_01" ID="{A73990B8-18E4-4CF4-A120-45FA751A6747}" ShortID="183841847">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_broom_decelerating_01" ID="{CEC37020-B570-458B-9EC1-14A3EFAAB5D4}" ShortID="577212252">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_broom_decelerating_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_broom_decelerating_01" ID="{CEC37020-B570-458B-9EC1-14A3EFAAB5D4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_broom_stop_01" ID="{7016CF98-A7E6-4F57-ABC3-FC38F3F43099}" ShortID="1003127850">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_broom_stop_01" ID="{61015D6D-5BE2-4A6F-A4DA-CC0444FB9B8C}" ShortID="266986133">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_broom_stop_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_broom_stop_01" ID="{61015D6D-5BE2-4A6F-A4DA-CC0444FB9B8C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_broom_takeoff_01" ID="{FEF16770-B539-48A7-A816-1E9CDADD9FAB}" ShortID="990106314">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_broom_takeoff_01" ID="{1A902D9A-6384-4ACD-8587-2980670C692C}" ShortID="137337356">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_broom_takeoff_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_broom_takeoff_01" ID="{1A902D9A-6384-4ACD-8587-2980670C692C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_impact_building_01" ID="{23A3A71D-66C3-4F5D-A27D-5A93E88E25F5}" ShortID="868559180">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_impact_building_01" ID="{9138912C-5BEE-4106-A3BF-3566A6131937}" ShortID="622998680">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_impact_building_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_impact_building_01" ID="{9138912C-5BEE-4106-A3BF-3566A6131937}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_impact_ground_01" ID="{B9D6791C-4510-4071-A937-E016CCF37B16}" ShortID="913047223">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_impact_ground_01" ID="{B9676061-43DB-412F-B7C2-BEE8A307A61B}" ShortID="697122386">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_impact_ground_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_impact_ground_01" ID="{B9676061-43DB-412F-B7C2-BEE8A307A61B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_impact_water_01" ID="{138F05DD-B827-415D-9C9E-56E3E7FBE168}" ShortID="284827974">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_impact_water_01" ID="{47BA036D-0CB1-40EF-A3E9-8F3EE8C4B4A6}" ShortID="484478066">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_impact_water_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_impact_water_01" ID="{47BA036D-0CB1-40EF-A3E9-8F3EE8C4B4A6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_skim_ground_01" ID="{AFF09259-B3FA-42DD-BC6A-727226F2B1F9}" ShortID="426727538">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_skim_ground_01" ID="{AE414881-DA97-4216-807F-ED55372A5ABF}" ShortID="147733778">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_skim_ground_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_skim_ground_01" ID="{AE414881-DA97-4216-807F-ED55372A5ABF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_plr_skim_water_01" ID="{7F57984E-2D48-4C41-8CA0-033E4D771061}" ShortID="8160385">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_skim_water_01" ID="{2593B8EA-0882-4E74-B38B-5228D5E67D7D}" ShortID="943147279">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_skim_water_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_skim_water_01" ID="{2593B8EA-0882-4E74-B38B-5228D5E67D7D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_delivery_accept_01" ID="{0B2A17A4-D816-495A-93AD-4CA4C2E7BDC5}" ShortID="368434204">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_delivery_accept_01" ID="{7A5DC459-5D28-4534-976E-F9B8EFC4219D}" ShortID="202134121">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_delivery_accept_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_delivery_accept_01" ID="{7A5DC459-5D28-4534-976E-F9B8EFC4219D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_delivery_decline_01" ID="{C5738D46-097B-4304-B26B-637053AAF7DB}" ShortID="630695420">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_delivery_decline_01" ID="{6B980EC5-D78A-4AD2-A284-E46B91CEE560}" ShortID="127903617">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_delivery_decline_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_delivery_decline_01" ID="{6B980EC5-D78A-4AD2-A284-E46B91CEE560}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_delivery_dropoff_01" ID="{2FFEB5AC-2ECE-487C-A9B7-8E77C94BEE89}" ShortID="929663334">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_delivery_dropoff_01" ID="{4CE0D09C-FB9E-42AE-96E6-EA9C7895D8DC}" ShortID="188002564">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_delivery_dropoff_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_delivery_dropoff_01" ID="{4CE0D09C-FB9E-42AE-96E6-EA9C7895D8DC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_delivery_new_01" ID="{C31927A6-FD8E-4C86-99C9-1D73B6041A5D}" ShortID="814983741">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_delivery_new_01" ID="{9F43394B-D8ED-4D42-91E3-58F2D2AF4ABF}" ShortID="96364987">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_delivery_new_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_delivery_new_01" ID="{9F43394B-D8ED-4D42-91E3-58F2D2AF4ABF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_delivery_pickup_01" ID="{B8CA4AFF-7FA5-4505-89BB-25FAF957539E}" ShortID="298705820">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_delivery_pickup_01" ID="{C7E75AE4-B79D-4F67-9489-39E63427DDF2}" ShortID="941153672">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_delivery_pickup_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_delivery_pickup_01" ID="{C7E75AE4-B79D-4F67-9489-39E63427DDF2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_exitgame_01" ID="{79BC0194-56E5-413E-8E56-186099A2B0AB}" ShortID="265528960">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_exitgame_01" ID="{01FD7AAA-235B-4175-B3DC-CB7ABC3FC7EA}" ShortID="880489173">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_exitgame_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_exitgame_01" ID="{01FD7AAA-235B-4175-B3DC-CB7ABC3FC7EA}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_text_advance_01" ID="{DBEDF63C-903E-4308-9DB2-CE1B33327786}" ShortID="909157340">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_text_advance_01" ID="{2DB08E30-FE77-4DBF-9584-E00DF9365C02}" ShortID="831713450">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_text_advance_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_text_advance_01" ID="{2DB08E30-FE77-4DBF-9584-E00DF9365C02}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_text_close_01" ID="{9212AF1F-1365-4B69-988F-0CC49C3FDC60}" ShortID="990082490">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_text_close_01" ID="{31D1EFB7-A45B-48CC-A4B3-257649B8D7E7}" ShortID="1070545309">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_text_close_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_text_close_01" ID="{31D1EFB7-A45B-48CC-A4B3-257649B8D7E7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_timer_low_01" ID="{E70A9501-F508-4709-A3AF-2AFC9B92ECBC}" ShortID="268888984">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_timer_low_01" ID="{4D1C0289-0547-447F-AD50-11B80B5C233D}" ShortID="508665990">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_timer_low_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_timer_low_01" ID="{4D1C0289-0547-447F-AD50-11B80B5C233D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_timer_out_01" ID="{30670D33-4ADE-4C66-8850-C2A7155C4266}" ShortID="139598274">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_timer_out_01" ID="{01AFC532-9296-4290-8C04-42C4DA105AB2}" ShortID="345245048">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_timer_out_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_timer_out_01" ID="{01AFC532-9296-4290-8C04-42C4DA105AB2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_xp_gain_01" ID="{D6FB6DAE-DB45-43F2-AE43-4E35AF492C7B}" ShortID="582851112">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_xp_gain_01" ID="{293E7F43-B225-47B3-A5B8-75DBBC1B788C}" ShortID="993673285">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_xp_gain_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_xp_gain_01" ID="{293E7F43-B225-47B3-A5B8-75DBBC1B788C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_game_ui_xp_lose_01" ID="{FB94E7FE-306C-4AFB-B93F-567E8501738B}" ShortID="357519193">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_ui_xp_lose_01" ID="{7B23F980-CBE7-44E5-9604-44DB33ABB5FC}" ShortID="27990012">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_ui_xp_lose_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_ui_xp_lose_01" ID="{7B23F980-CBE7-44E5-9604-44DB33ABB5FC}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_menu_ui_main_navigation_01" ID="{103E07B6-E745-4E31-AD22-B1935DEF2BA9}" ShortID="366288809">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_menu_ui_main_navigation_01" ID="{DBA9F3D6-CD7C-4A25-BDB4-37A020205FE2}" ShortID="154523416">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_menu_ui_main_navigation_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_menu_ui_main_navigation_01" ID="{DBA9F3D6-CD7C-4A25-BDB4-37A020205FE2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="bb_sx_menu_ui_main_start_01" ID="{EF83A56A-8502-4509-A55D-60EFA9C51E4E}" ShortID="335137399">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_menu_ui_main_start_01" ID="{9B0BAD63-952B-4CFE-AF3F-49F5A4F7FCD8}" ShortID="371167224">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_menu_ui_main_start_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_menu_ui_main_start_01" ID="{9B0BAD63-952B-4CFE-AF3F-49F5A4F7FCD8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

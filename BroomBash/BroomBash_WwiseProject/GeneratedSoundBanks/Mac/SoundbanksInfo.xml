@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1551306167" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\UI</ObjectPath>
+			<ShortName>UI</ShortName>
+			<Path>UI.bnk</Path>
+			<IncludedEvents>
+				<Event Id="661752896" Name="play_bb_sx_menu_ui_main_start" ObjectPath="\Events\Default Work Unit\play_bb_sx_menu_ui_main_start" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="371167224" Language="SFX">
+					<ShortName>bb_sx_menu_ui_main_start_01.wav</ShortName>
+					<Path>SFX\bb_sx_menu_ui_main_start_01_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
