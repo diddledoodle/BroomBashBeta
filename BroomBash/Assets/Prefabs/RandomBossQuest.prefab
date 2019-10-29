@@ -77,7 +77,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: BossConversation
+  conversation: BossConversations
   conversationConversant: {fileID: 1413055359456688729}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -100,7 +100,7 @@ MonoBehaviour:
   useConversationTitlePicker: 1
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: c92cf7471290b5644a18eacd42d3b70c, type: 2}
+  selectedDatabase: {fileID: 11400000, guid: 7a709848469acb74789fc93d9e56ef42, type: 2}
 --- !u!114 &1413055359456688734
 MonoBehaviour:
   m_ObjectHideFlags: 0

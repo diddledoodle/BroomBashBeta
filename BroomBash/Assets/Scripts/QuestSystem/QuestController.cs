@@ -479,15 +479,15 @@ public class QuestController : MonoBehaviour
         return _timeLeft;
     }
 
-    //private void AssignQuestToPlayer()
-    //{
+    // private void AssignQuestToPlayer()
+    // {
     //    // Get random quest from available quests that wasn't the last quest
     //    GetRandomQuest();
     //    // Get the closest pick up location from list of pick up locations
     //    GetClosestPickUpLocation();
     //    // Tell the manager that the player does have a quest
     //    playerHasQuest = true;
-    //}
+    // }
 
     private void GetQuestBasedOnCurrentPlayerDifficulty(int _difficulty)
     {
