@@ -10,6 +10,23 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Ambience" ID="{59729497-566C-43D6-A182-4F3617B49D37}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Environment" ID="{673AB352-7824-47BE-812E-C4E6B16A2EAC}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Player" ID="{376C5CFF-85D0-48F8-B65E-1E51707C0666}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_bb_sx_game_plr_broom_accelerate" ID="{49CD7115-0296-4CD9-B098-1FE28BB2ACE2}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

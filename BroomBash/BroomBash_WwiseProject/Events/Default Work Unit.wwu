@@ -14,6 +14,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="play_bb_sx_game_plr_broom_accelerate" ID="{49CD7115-0296-4CD9-B098-1FE28BB2ACE2}">
+					<ChildrenList>
+						<Action Name="" ID="{5E2C3375-8614-4E62-AEEF-7D4F32D6C6C7}" ShortID="430516661">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_accelerating_01" ID="{79A909F1-A62D-4864-BBF4-1C7A72D3CEA4}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_int_enter_active_pickup" ID="{14D620C5-8C03-43B4-843F-1116A209AF94}">
+					<ChildrenList>
+						<Action Name="" ID="{F42188C8-B524-439C-BE1B-2027428CA916}" ShortID="491012290">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_int_enter_active_pickup_01" ID="{C60C6FE4-D779-4C9D-8384-5B0DBC756A0B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
