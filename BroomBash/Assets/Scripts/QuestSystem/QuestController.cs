@@ -91,7 +91,7 @@ public class QuestController : MonoBehaviour
     private bool playerHasQuest = false;
     private bool playerHasBossQuest = false;
     private bool playerHasDelivery = false;
-    private bool playerHassBossDelivery = false;
+    private bool playerHasBossDelivery = false;
     private int lastQuestIndex = -1;
     private PickUp closestPickUp = null;
     private System.Random randomNumber = new System.Random();
@@ -261,11 +261,10 @@ public class QuestController : MonoBehaviour
 
     public void StartBossQuest()
     {
-        if(!playerHasBossQuest && !playerHasDelivery)
+        if(!playerHasBossQuest && !playerHasBossDelivery)
         {
             bossQuestIsActive = true;
-            playerHasBossQuest = true;
-            playerHassBossDelivery = true;
+            playerHasBossDelivery = true;
             // Assign drop off within player level difficulty range
             GetQuestBasedOnCurrentPlayerDifficulty(currentPlayerDifficulty);
             // Enable/Disable gameobjects
@@ -296,7 +295,7 @@ public class QuestController : MonoBehaviour
 
     public void PlayerArrivedAtDeliveryLocation(DropOff _questLocation)
     {
-        if (_questLocation.gameObject == currentQuest && ((playerHasQuest && playerHasDelivery) || playerHasBossQuest && playerHassBossDelivery))
+        if (_questLocation.gameObject == currentQuest && ((playerHasQuest && playerHasDelivery) || playerHasBossQuest && playerHasBossDelivery))
         {
             countdownTimerIsActive = false;
             //playerUIManager.RunDialogSystem(_questLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.END);
@@ -311,7 +310,7 @@ public class QuestController : MonoBehaviour
         if (_playerChoice == true)
         {
             playerHasBossQuest = false;
-            playerHassBossDelivery = false;
+            playerHasBossDelivery = false;
             EndBossQuest();
         }
         // Stuff for normal quest
@@ -348,7 +347,9 @@ public class QuestController : MonoBehaviour
     {
         countdownTimerIsActive = false;
         playerHasQuest = false;
+        playerHasBossQuest = false;
         playerHasDelivery = false;
+        playerHasBossDelivery = false;
         SubXpToPlayerLevelingSystem(currentPlayerDifficulty);
         CalculatePlayersCurrentDifficulty();
         currentPlayerFailedQuests -= 1;
@@ -572,7 +573,18 @@ public class QuestController : MonoBehaviour
             // Set the last quest so we can't get it next time
             lastQuestIndex = 0;
         }
-        playerHasQuest = true;
+
+        // Set player has quest type
+        bool _playerChoice = DialogueLua.GetVariable("BossQuestIsActive").asBool;
+
+        if (_playerChoice == true)
+        {
+            playerHasBossQuest = true;
+        }
+        else if (_playerChoice == false)
+        {
+            playerHasQuest = true;
+        }
     }
 
     private void GetClosestPickUpLocation()
