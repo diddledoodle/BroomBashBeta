@@ -139,11 +139,6 @@ public class QuestController : MonoBehaviour
         //Invoke("RunStartInstructions", 0.1f);
     }
 
-    private void RunStartInstructions()
-    {
-        playerUIManager.RunDialogSystem(string.Empty, PlayerUIManager.QuestStatus.GAMESTART);
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -214,14 +209,6 @@ public class QuestController : MonoBehaviour
         else if (_playerChoice == false)
         {
             Debug.Log("Player declined the boss quest");
-        }
-    }
-
-    public void PlayerArrivedAtPickUpLocation(PickUp _pickUpLocation)
-    {
-        if(!playerHasQuest && !playerHasDelivery)
-        {
-            playerUIManager.RunDialogSystem(_pickUpLocation.GetComponent<DialogSystem>().GetRandomQuestDialog(), PlayerUIManager.QuestStatus.START);
         }
     }
 
