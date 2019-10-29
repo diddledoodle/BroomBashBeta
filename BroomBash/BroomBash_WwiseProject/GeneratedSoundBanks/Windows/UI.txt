@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	661752896	play_bb_sx_menu_ui_main_start			\Default Work Unit\play_bb_sx_menu_ui_main_start	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	371167224	bb_sx_menu_ui_main_start_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_menu_ui_main_start_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_menu_ui_main_start_01		192064
+

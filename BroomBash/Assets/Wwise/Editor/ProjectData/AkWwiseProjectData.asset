@@ -12,14 +12,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bd88f35bb105449bff57061afc6859, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 491764a6f034ec4585cae2096a58c890
+    GuidInternal: 
+    m_lastTime: -8586292201491641450
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 4f1dd2631564934cb609a948656a43e4
+    GuidInternal: 
+    m_lastTime: -8586292201492090017
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 5c5f342fa653a04694f8cd30fd9bc0b0
+    GuidInternal: 
+    m_lastTime: -8586292182982261111
+    List:
+    - name: UI
+      guid: 761dc88f52d65840b5f258455109a0c0
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 7
+      Path: Default Work Unit\UI
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: c0c75d85be846a449bbfe40563d82e33
+    GuidInternal: 
+    m_lastTime: -8586292182982301002
+    List:
+    - name: play_bb_sx_menu_ui_main_start
+      guid: 26aec89db4540748b26c6699a11c261a
+      id: 661752896
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_menu_ui_main_start
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_menu_ui_main_start
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 776b7eb674891140866e835fe249c15d
+    GuidInternal: 
+    m_lastTime: -8586292201492150089
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: b837ae81aa2516488c41a8e9bcb816df
+    GuidInternal: 
+    m_lastTime: -8586292201491681344
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 3aaeb8bd512de04c9f75cfdc7fbe1384
+    GuidInternal: 
+    m_lastTime: -8586292201492429350
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: f8da1479159c8e46bdc05c7b3d476ad3
+    GuidInternal: 
+    m_lastTime: -8586292201492399421
+    List: []
+  ExpandedItems:
+  - /BroomBash_WwiseProject
+  - /BroomBash_WwiseProject/SoundBanks
+  - /BroomBash_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

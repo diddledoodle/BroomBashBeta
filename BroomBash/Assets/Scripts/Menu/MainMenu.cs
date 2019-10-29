@@ -28,4 +28,11 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+    /*jpost audio*/
+    //play start game sound
+    public void PlayStartSound()
+    {
+        //plays the wwise event at the location of the second argument (gameObject)
+        AkSoundEngine.PostEvent("play_bb_sx_menu_ui_main_start", gameObject);
+    }
 }
