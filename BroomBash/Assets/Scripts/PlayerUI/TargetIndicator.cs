@@ -25,7 +25,12 @@ public class TargetIndicator : MonoBehaviour
         {
             meshes.SetActive(true);
             target = questController.currentQuest.gameObject.transform;
-            transform.LookAt(target.transform.position);
+            /*Vector3 targetPosition = target.transform.position;
+            targetPosition.z = 0;
+            */
+            Vector3 targetPosition = new Vector3(target.position.x, meshes.transform.position.y, target.position.z);
+            transform.LookAt(targetPosition);
+
         }
         else
         {
