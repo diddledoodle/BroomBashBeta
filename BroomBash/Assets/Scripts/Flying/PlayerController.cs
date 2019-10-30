@@ -237,18 +237,35 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*jpost audio*/
-        //collision sounds for buildings
-        if (collision.gameObject.GetComponent<MeshCollider>().name == "polySurface99" )
-        {
-            //debug test
-            //Debug.Log("player hit building");
-            AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_building", gameObject);
-        }
-
         if (questController.countdownTimerIsActive)
         {
             questController.PlayerCollidedWithObjectDuringQuest();
-        }        
+        }
+
+        /*jpost audio*/
+        //collision sounds for buildings
+        if (collision.gameObject.GetComponent<MeshCollider>())
+        {
+            if(collision.gameObject.GetComponent<MeshCollider>().name == "polySurface99")
+            {
+                //play wwise sound for building collision at location of collision
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_building", collision.gameObject);
+            }                
+        }
+        //collision sounds for water
+        if (collision.gameObject.name == "Water")
+        {
+            //play wwise sound for water collision at location of collision
+            AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_water", collision.gameObject);
+        }
+        //collision sounds for ground
+        if (collision.gameObject.tag == "Ground")
+        {
+            //play wwise sound for water collision at location of collision
+            AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_ground", gameObject);
+            //debug test
+            Debug.Log("hitting ground!");
+        }
+            
     }
 }

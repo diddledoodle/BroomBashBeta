@@ -508,14 +508,21 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{69E1C15B-3F23-4C3B-96BC-D04FE7868785}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{A8321117-2529-43C7-A08D-6446C85C5A02}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="150"/>
-											<Property Name="Min" Type="Real64" Value="-150"/>
+											<Property Name="Max" Type="Real64" Value="250"/>
+											<Property Name="Min" Type="Real64" Value="-250"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -523,7 +530,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-18</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
