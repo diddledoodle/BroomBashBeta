@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     private bool hasAccelerated = false;
     private bool hasSlowedDown = false;
     private bool hasStopped = false;
+    private bool isFlyingNormal = false;
 
     private void Start()
     {
@@ -117,7 +118,8 @@ public class PlayerController : MonoBehaviour
 			{
 				moveVector += dir;
 				transform.rotation = Quaternion.LookRotation(moveVector);
-			}
+                
+            }
 		}
 		else if (speed == 0)
 		{
@@ -154,9 +156,11 @@ public class PlayerController : MonoBehaviour
             {
                 //play the broom accelerate sound from wwise
                 AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_accelerate", gameObject);
-                //stop the sound from triggering more than once per acceleration
+                //stop the flying normal sound
+                AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
                 hasAccelerated = true;
                 hasSlowedDown = false;
+                isFlyingNormal = false;
             }
             
         }
@@ -183,6 +187,13 @@ public class PlayerController : MonoBehaviour
             hasSlowedDown = true;
             //reset hasStopped
             hasStopped = false;
+            /*jpost audio*/
+            if (!isFlyingNormal)
+            {
+                //play normal flying sound
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_flying", gameObject);
+                isFlyingNormal = true;
+            }
         }
 
         else if(inputHandler.Stop)
@@ -196,6 +207,9 @@ public class PlayerController : MonoBehaviour
                 AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_stop", gameObject);
                 //set hasStopped to true
                 hasStopped = true;
+                //stop the flying normal sound
+                AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
+                isFlyingNormal = false;
             }
 
 
@@ -262,9 +276,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             //play wwise sound for water collision at location of collision
-            AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_ground", gameObject);
-            //debug test
-            Debug.Log("hitting ground!");
+            AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_ground", gameObject);            
         }
             
     }

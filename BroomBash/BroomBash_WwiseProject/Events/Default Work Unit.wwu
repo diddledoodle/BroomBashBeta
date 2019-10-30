@@ -50,6 +50,9 @@
 				<Event Name="play_bb_sx_game_plr_broom_flying" ID="{0F62E85F-7A0B-41B7-8DD3-509A0E19BB23}">
 					<ChildrenList>
 						<Action Name="" ID="{85254C3C-E3E9-489A-9579-890532A4B498}" ShortID="900415918">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="bb_sx_game_plr_broom_flying_01" ID="{744B48A1-6716-47EB-AFB8-DD0CB4010C9B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
@@ -350,6 +353,21 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="bb_sx_game_amb_crowds_small_01" ID="{C8E010F4-E853-4FFA-A30F-190309934C89}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_sx_game_plr_broom_flying" ID="{B6F51522-A2B2-4288-99B7-174DF30105B4}">
+					<ChildrenList>
+						<Action Name="" ID="{F75DAAAE-683E-408B-B7FB-B46F72495FDA}" ShortID="923070467">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_flying_01" ID="{744B48A1-6716-47EB-AFB8-DD0CB4010C9B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

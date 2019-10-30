@@ -43,6 +43,7 @@
 						<ObjectRef Name="play_bb_sx_game_plr_broom_takeoff" ID="{028A5463-C911-408E-8A35-1A85708A9734}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_impact_ground" ID="{F8580E3F-C3CD-417C-8DC0-A327231425AB}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_broom_flying" ID="{0F62E85F-7A0B-41B7-8DD3-509A0E19BB23}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_game_plr_broom_flying" ID="{B6F51522-A2B2-4288-99B7-174DF30105B4}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_skim_water" ID="{EFD5A123-8CCE-479E-AFAF-4DEA31A65947}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_impact_water" ID="{4470A3C3-A6E6-4844-A731-142C2867DDF7}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_impact_building" ID="{DF495CE1-B1CE-48B0-A3D1-A714170E5C18}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
