@@ -67,7 +67,7 @@
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
 			<IncludedEvents>
-				<Event Id="291020428" Name="play_bb_sx_game_plr_broom_accelerate" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_accelerate" DurationType="OneShot" DurationMin="1.487313" DurationMax="1.487313"/>
+				<Event Id="291020428" Name="play_bb_sx_game_plr_broom_accelerate" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_accelerate" DurationType="OneShot" DurationMin="1.363872" DurationMax="1.621926"/>
 				<Event Id="3485431345" Name="play_bb_sx_game_plr_broom_decelerate" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_decelerate" DurationType="OneShot" DurationMin="1.480396" DurationMax="1.480396"/>
 				<Event Id="3676326078" Name="play_bb_sx_game_plr_broom_flying" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_flying" DurationType="Infinite"/>
 				<Event Id="2441865659" Name="play_bb_sx_game_plr_broom_stop" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_stop" DurationType="OneShot" DurationMin="1.949875" DurationMax="1.949875"/>

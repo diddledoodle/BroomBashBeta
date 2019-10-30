@@ -39,6 +39,10 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public QuestController questController;
 
+    /*jpost audio*/
+    //audio related fields
+    private bool hasAccelerated = false;
+
     private void Start()
     {
         // Get the input handler
@@ -142,6 +146,16 @@ public class PlayerController : MonoBehaviour
         if(_speedControlInput > inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = maximumSpeed;
+
+            /*jpost audio*/
+            if (!hasAccelerated)
+            {
+                //play the broom accelerate sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_accelerate", gameObject);
+                //stop the sound from triggering more than once per acceleration
+                hasAccelerated = true;
+            }
+            
         }
         // Slow down
         else if(_speedControlInput < -inputHandler.controllerDeadZone && !inputHandler.Stop)
@@ -152,6 +166,9 @@ public class PlayerController : MonoBehaviour
         else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = baseSpeed;
+            /*jpost audio*/
+            //reset hasAccelerated
+            hasAccelerated = false;
         }
 
         else if(inputHandler.Stop)
