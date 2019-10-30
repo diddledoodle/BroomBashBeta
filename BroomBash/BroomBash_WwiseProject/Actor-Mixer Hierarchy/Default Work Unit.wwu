@@ -4,7 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="bb_sx_game_amb_crowds_large_01" ID="{278D7501-9ABE-4102-BC10-FFF5D4E44CE1}" ShortID="380093241">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Ambient Environmental Sound" ID="{076BB5D6-A42A-4685-931D-085011FCED13}" WorkUnitID="{DD5A4AFA-2963-4A2A-A8DC-3E0B72A2E02D}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
 						</Reference>
@@ -23,7 +29,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_amb_crowds_small_01" ID="{C8E010F4-E853-4FFA-A30F-190309934C89}" ShortID="381637584">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Ambient Environmental Sound" ID="{076BB5D6-A42A-4685-931D-085011FCED13}" WorkUnitID="{DD5A4AFA-2963-4A2A-A8DC-3E0B72A2E02D}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
 						</Reference>
@@ -41,84 +53,27 @@
 						<ActiveSource Name="bb_sx_game_amb_crowds_small_01" ID="{92DD2E54-37BE-4722-A090-C6313A1A17D0}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="bb_sx_game_amb_meowing_ 01" ID="{4EAE15B0-DE46-4B18-AF9F-E362559E6B61}" ShortID="670794780">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="bb_sx_game_amb_meowing_ 01" ID="{5C3979EB-3361-4CB0-B73C-6852A54999BA}" ShortID="567678985">
-							<Language>SFX</Language>
-							<AudioFile>bb_sx_game_amb_meowing_ 01.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="bb_sx_game_amb_meowing_ 01" ID="{5C3979EB-3361-4CB0-B73C-6852A54999BA}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="bb_sx_game_amb_meowing_ 02" ID="{77319F23-DE2F-4856-A3E5-6CD4F63014B4}" ShortID="326212866">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="bb_sx_game_amb_meowing_ 02" ID="{F53C5CD8-120C-4C1B-AB36-EF6C4BC5EDC2}" ShortID="1057942891">
-							<Language>SFX</Language>
-							<AudioFile>bb_sx_game_amb_meowing_ 02.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="bb_sx_game_amb_meowing_ 02" ID="{F53C5CD8-120C-4C1B-AB36-EF6C4BC5EDC2}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="bb_sx_game_amb_meowing_ 03" ID="{51C34847-CCEA-4D97-BFBA-6F18C77D3F59}" ShortID="180342991">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="bb_sx_game_amb_meowing_ 03" ID="{3DCDA4BA-EE5A-4C46-9649-7C7512EF6828}" ShortID="706487621">
-							<Language>SFX</Language>
-							<AudioFile>bb_sx_game_amb_meowing_ 03.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="bb_sx_game_amb_meowing_ 03" ID="{3DCDA4BA-EE5A-4C46-9649-7C7512EF6828}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="bb_sx_game_amb_meowing_ 04" ID="{72D68915-73D0-468E-A2A2-3BB148A46F4F}" ShortID="697135631">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="bb_sx_game_amb_meowing_ 04" ID="{7FE54D6B-2D4E-49F3-B34E-FF563A89F183}" ShortID="115949722">
-							<Language>SFX</Language>
-							<AudioFile>bb_sx_game_amb_meowing_ 04.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="bb_sx_game_amb_meowing_ 04" ID="{7FE54D6B-2D4E-49F3-B34E-FF563A89F183}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="bb_sx_game_amb_seagulls_01" ID="{08B93383-80A8-43E0-BC60-92DF9E308C87}" ShortID="251785206">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A390A3C5-EA5A-472E-8915-E5DDA9C2011A}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-6"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Ambient Environmental Sound" ID="{076BB5D6-A42A-4685-931D-085011FCED13}" WorkUnitID="{DD5A4AFA-2963-4A2A-A8DC-3E0B72A2E02D}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
 						</Reference>
@@ -137,7 +92,26 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_amb_water_lap_stone_01" ID="{0DC9C571-1B5D-437D-ADB4-76B7AF8DE0A0}" ShortID="31150943">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{51655E32-C06E-4662-AA9E-3052BAABDA8B}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-6"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Ambient Environmental Sound" ID="{076BB5D6-A42A-4685-931D-085011FCED13}" WorkUnitID="{DD5A4AFA-2963-4A2A-A8DC-3E0B72A2E02D}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
 						</Reference>
@@ -156,7 +130,26 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_amb_water_waves_01" ID="{4BB5780D-1593-40A3-830E-AE6B49056E66}" ShortID="281338506">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{CAFF2194-E7D2-4A39-A420-16B1F51FD33C}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Ambient Environmental Sound" ID="{076BB5D6-A42A-4685-931D-085011FCED13}" WorkUnitID="{DD5A4AFA-2963-4A2A-A8DC-3E0B72A2E02D}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
 						</Reference>
@@ -251,6 +244,23 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_plr_broom_stop_01" ID="{7016CF98-A7E6-4F57-ABC3-FC38F3F43099}" ShortID="1003127850">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>36</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{23DC083D-007C-46E4-A033-7F3575319486}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="17"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -270,6 +280,57 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_plr_broom_takeoff_01" ID="{FEF16770-B539-48A7-A816-1E9CDADD9FAB}" ShortID="990106314">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{6AAF31C8-A8E5-452C-98FF-5EF2AF24C3AD}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="25"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{19F0B7D2-7F0E-4772-96DB-4A778FBEEAE3}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="25"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0E262546-D9E3-4408-BCD4-57CB8FFB9E29}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A4D8A5B1-C17B-4CD0-A160-153B2DECB19C}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -289,6 +350,49 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_plr_impact_building_01" ID="{23A3A71D-66C3-4F5D-A27D-5A93E88E25F5}" ShortID="868559180">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D192216F-C57E-4A45-A7E6-35529ED30D24}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="20"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{8A555766-7A18-4388-BECE-C8592BE82EEC}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1D1296B3-9E81-4D06-8BBA-867C27449056}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="3"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -308,6 +412,49 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_plr_impact_ground_01" ID="{B9D6791C-4510-4071-A937-E016CCF37B16}" ShortID="913047223">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1DE6834D-7251-4008-BACD-C2F4E01B0FE1}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="20"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A8321117-2529-43C7-A08D-6446C85C5A02}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C500E25E-4180-4E76-A25D-06EC9EDAB00F}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="3"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -327,6 +474,49 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_plr_impact_water_01" ID="{138F05DD-B827-415D-9C9E-56E3E7FBE168}" ShortID="284827974">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{42B29081-8A23-4A31-BA7D-149EB0462223}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="15"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{4496B29A-BDF6-4C79-A926-7B822951CB7B}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{11B86F02-0CD6-4E8B-A530-E1FA0101FBFE}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="3"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -346,6 +536,45 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_plr_skim_ground_01" ID="{AFF09259-B3FA-42DD-BC6A-727226F2B1F9}" ShortID="426727538">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1037547A-4B82-4CDE-B520-204B48B4C00A}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="20"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D19BEE68-3249-4ECC-894F-C2B27C446A51}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{762009FB-D17B-44B1-8DB8-C9628C2676B3}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -365,6 +594,46 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_plr_skim_water_01" ID="{7F57984E-2D48-4C41-8CA0-033E4D771061}" ShortID="8160385">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{EB483331-300F-4285-B40E-303EFFCFE5DD}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="20"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{3F0F59F7-C3BE-44AC-839D-77CC4DA32C61}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="150"/>
+											<Property Name="Min" Type="Real64" Value="-150"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7BB5B5E8-3653-4A84-A4F4-3445AC70439D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -536,6 +805,9 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="bb_sx_game_ui_timer_low_01" ID="{E70A9501-F508-4709-A3AF-2AFC9B92ECBC}" ShortID="268888984">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
@@ -649,6 +921,172 @@
 						<ActiveSource Name="bb_sx_menu_ui_main_start_01" ID="{9B0BAD63-952B-4CFE-AF3F-49F5A4F7FCD8}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="bb_sx_game_plr_broom_flying_01" ID="{744B48A1-6716-47EB-AFB8-DD0CB4010C9B}" ShortID="165314002">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="bb_sx_game_plr_broom_flying_01" ID="{A52B583A-6777-452A-9A4D-6B3BBD55434E}" ShortID="969169617">
+							<Language>SFX</Language>
+							<AudioFile>bb_sx_game_plr_broom_flying_01.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="bb_sx_game_plr_broom_flying_01" ID="{A52B583A-6777-452A-9A4D-6B3BBD55434E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Meowing" ID="{E2ECDBED-8404-48B5-BDDC-A7AAAFAD27ED}" ShortID="481699463">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="bb_sx_game_amb_meowing_ 01" ID="{4EAE15B0-DE46-4B18-AF9F-E362559E6B61}" ShortID="670794780">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C69A8A91-4D48-436F-99E7-9BE82CCD4199}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-6"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bb_sx_game_amb_meowing_ 01" ID="{5C3979EB-3361-4CB0-B73C-6852A54999BA}" ShortID="567678985">
+									<Language>SFX</Language>
+									<AudioFile>bb_sx_game_amb_meowing_ 01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bb_sx_game_amb_meowing_ 01" ID="{5C3979EB-3361-4CB0-B73C-6852A54999BA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bb_sx_game_amb_meowing_ 02" ID="{77319F23-DE2F-4856-A3E5-6CD4F63014B4}" ShortID="326212866">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{96EB6EE2-94B3-41C2-A675-911B173C37BD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-6"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bb_sx_game_amb_meowing_ 02" ID="{F53C5CD8-120C-4C1B-AB36-EF6C4BC5EDC2}" ShortID="1057942891">
+									<Language>SFX</Language>
+									<AudioFile>bb_sx_game_amb_meowing_ 02.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bb_sx_game_amb_meowing_ 02" ID="{F53C5CD8-120C-4C1B-AB36-EF6C4BC5EDC2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bb_sx_game_amb_meowing_ 03" ID="{51C34847-CCEA-4D97-BFBA-6F18C77D3F59}" ShortID="180342991">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{740962E6-4319-4113-9ED6-2FD0ABB5087B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-6"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bb_sx_game_amb_meowing_ 03" ID="{3DCDA4BA-EE5A-4C46-9649-7C7512EF6828}" ShortID="706487621">
+									<Language>SFX</Language>
+									<AudioFile>bb_sx_game_amb_meowing_ 03.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bb_sx_game_amb_meowing_ 03" ID="{3DCDA4BA-EE5A-4C46-9649-7C7512EF6828}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="bb_sx_game_amb_meowing_ 04" ID="{72D68915-73D0-468E-A2A2-3BB148A46F4F}" ShortID="697135631">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4D47B660-0638-4875-A380-8EFBB1F8BC86}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-6"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="bb_sx_game_amb_meowing_ 04" ID="{7FE54D6B-2D4E-49F3-B34E-FF563A89F183}" ShortID="115949722">
+									<Language>SFX</Language>
+									<AudioFile>bb_sx_game_amb_meowing_ 04.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="bb_sx_game_amb_meowing_ 04" ID="{7FE54D6B-2D4E-49F3-B34E-FF563A89F183}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
