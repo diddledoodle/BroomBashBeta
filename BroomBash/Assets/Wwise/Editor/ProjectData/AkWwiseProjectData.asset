@@ -154,7 +154,7 @@ MonoBehaviour:
       - ElementName: play_bb_sx_game_amb_water_waves
         ObjectType: 3
       Path: Default Work Unit\play_bb_sx_game_amb_water_waves
-      maxAttenuation: 50
+      maxAttenuation: 150
       maxDuration: 34.896248
       minDuration: 29.34413
     - name: play_bb_sx_game_int_delivery_dropoff

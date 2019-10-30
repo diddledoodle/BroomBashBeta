@@ -131,7 +131,7 @@
 				</Sound>
 				<Sound Name="bb_sx_game_amb_water_waves_01" ID="{4BB5780D-1593-40A3-830E-AE6B49056E66}" ShortID="281338506">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -148,7 +148,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="Ambient Environmental Sound" ID="{076BB5D6-A42A-4685-931D-085011FCED13}" WorkUnitID="{DD5A4AFA-2963-4A2A-A8DC-3E0B72A2E02D}"/>
+							<ObjectRef Name="Open Water Waves" ID="{F29DBCCD-6C22-4379-B707-D6F3EFADEA0C}" WorkUnitID="{DD5A4AFA-2963-4A2A-A8DC-3E0B72A2E02D}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>

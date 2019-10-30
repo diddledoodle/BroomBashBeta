@@ -21,7 +21,7 @@
 				<Event Id="3417746653" Name="play_bb_sx_game_amb_meowing" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_meowing" DurationType="OneShot" DurationMin="0.672021" DurationMax="1.000000"/>
 				<Event Id="2968948371" Name="play_bb_sx_game_amb_seagulls" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_seagulls" MaxAttenuation="50.000000" DurationType="Infinite"/>
 				<Event Id="758436608" Name="play_bb_sx_game_amb_water_lap_stone" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_lap_stone" MaxAttenuation="50.000000" DurationType="Infinite"/>
-				<Event Id="260817731" Name="play_bb_sx_game_amb_water_waves" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_waves" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="29.344130" DurationMax="34.896248"/>
+				<Event Id="260817731" Name="play_bb_sx_game_amb_water_waves" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_waves" MaxAttenuation="150.000000" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="115949722" Language="SFX">
@@ -54,7 +54,7 @@
 				</File>
 				<File Id="957189257" Language="SFX">
 					<ShortName>bb_sx_game_amb_water_waves_01.wav</ShortName>
-					<Path>SFX\bb_sx_game_amb_water_waves_01_10C4C929.wem</Path>
+					<Path>SFX\bb_sx_game_amb_water_waves_01_D79FB2B7.wem</Path>
 				</File>
 				<File Id="1057942891" Language="SFX">
 					<ShortName>bb_sx_game_amb_meowing_ 02.wav</ShortName>
