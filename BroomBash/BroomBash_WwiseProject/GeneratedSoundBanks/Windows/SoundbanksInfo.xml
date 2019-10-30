@@ -72,8 +72,8 @@
 				<Event Id="3676326078" Name="play_bb_sx_game_plr_broom_flying" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_flying" DurationType="Infinite"/>
 				<Event Id="2441865659" Name="play_bb_sx_game_plr_broom_stop" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_stop" DurationType="OneShot" DurationMin="1.788043" DurationMax="2.126354"/>
 				<Event Id="2242722565" Name="play_bb_sx_game_plr_broom_takeoff" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_takeoff" DurationType="OneShot" DurationMin="2.663553" DurationMax="3.167516"/>
-				<Event Id="3843282546" Name="play_bb_sx_game_plr_impact_building" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_building" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
-				<Event Id="2876800831" Name="play_bb_sx_game_plr_impact_ground" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_ground" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
+				<Event Id="3843282546" Name="play_bb_sx_game_plr_impact_building" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_building" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
+				<Event Id="2876800831" Name="play_bb_sx_game_plr_impact_ground" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_ground" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
 				<Event Id="3283685423" Name="play_bb_sx_game_plr_impact_water" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_water" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
 				<Event Id="3817973033" Name="play_bb_sx_game_plr_skim_ground" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_skim_ground" DurationType="OneShot" DurationMin="3.067875" DurationMax="3.648339"/>
 				<Event Id="789946661" Name="play_bb_sx_game_plr_skim_water" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_skim_water" DurationType="Infinite"/>
