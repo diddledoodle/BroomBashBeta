@@ -241,5 +241,14 @@ public class PlayerController : MonoBehaviour
         {
             questController.PlayerCollidedWithObjectDuringQuest();
         }
+
+        /*jpost audio*/
+        //collision sounds for buildings
+        if(collision.gameObject.tag == "Building")
+        {
+            //debug test
+            Debug.Log("player hit building");
+
+        }
     }
 }
