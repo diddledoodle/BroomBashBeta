@@ -381,7 +381,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: randomValue == math.random(2)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
