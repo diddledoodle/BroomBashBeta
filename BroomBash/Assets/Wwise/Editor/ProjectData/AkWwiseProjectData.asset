@@ -17,22 +17,58 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 491764a6f034ec4585cae2096a58c890
     GuidInternal: 
-    m_lastTime: -8586292201491641450
+    m_lastTime: -8586291662354926780
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4f1dd2631564934cb609a948656a43e4
     GuidInternal: 
-    m_lastTime: -8586292201492090017
+    m_lastTime: -8586291662408145884
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 5c5f342fa653a04694f8cd30fd9bc0b0
     GuidInternal: 
-    m_lastTime: -8586292182982261111
+    m_lastTime: -8586291459699289575
     List:
+    - name: Ambience
+      guid: 979472596c56d643a1824f3617b49d37
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambience
+        ObjectType: 7
+      Path: Default Work Unit\Ambience
+    - name: Environment
+      guid: 52b33a672478be47812ec4e6b16a2eac
+      id: 1229948536
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Environment
+        ObjectType: 7
+      Path: Default Work Unit\Environment
+    - name: Interactibles
+      guid: 7593c30299369240be96c67838ac5622
+      id: 2987141838
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Interactibles
+        ObjectType: 7
+      Path: Default Work Unit\Interactibles
+    - name: Player
+      guid: ff5c6c37d085f848b65e1e51707c0666
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 7
+      Path: Default Work Unit\Player
     - name: UI
       guid: 761dc88f52d65840b5f258455109a0c0
       id: 1551306167
@@ -47,8 +83,380 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: c0c75d85be846a449bbfe40563d82e33
     GuidInternal: 
-    m_lastTime: -8586292182982301002
+    m_lastTime: -8586291458376601071
     List:
+    - name: play_bb_sx_game_amb_crowd_large
+      guid: 09cf31e3dd5be747915e4b711c0a6e7f
+      id: 2811784222
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_amb_crowd_large
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_amb_crowd_large
+      maxAttenuation: 50
+      maxDuration: 19
+      minDuration: 19
+    - name: play_bb_sx_game_amb_crowd_small
+      guid: 72f8641ee5eb2545829f41554df76e08
+      id: 374084730
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_amb_crowd_small
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_amb_crowd_small
+      maxAttenuation: 50
+      maxDuration: 22
+      minDuration: 22
+    - name: play_bb_sx_game_amb_meowing
+      guid: 35021b90454e3643923f91dea392abbd
+      id: 3417746653
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_amb_meowing
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_amb_meowing
+      maxAttenuation: 50
+      maxDuration: 1
+      minDuration: 0.672021
+    - name: play_bb_sx_game_amb_seagulls
+      guid: dd5587b60610144f8e0e2f01abc81407
+      id: 2968948371
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_amb_seagulls
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_amb_seagulls
+      maxAttenuation: 50
+      maxDuration: -1
+      minDuration: -1
+    - name: play_bb_sx_game_amb_water_lap_stone
+      guid: bda2d7eb4510fe4b93a958c736f0ae24
+      id: 758436608
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_amb_water_lap_stone
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_amb_water_lap_stone
+      maxAttenuation: 50
+      maxDuration: -1
+      minDuration: -1
+    - name: play_bb_sx_game_amb_water_waves
+      guid: c5243c6b1300374cbb9f1a2582bfdef2
+      id: 260817731
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_amb_water_waves
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_amb_water_waves
+      maxAttenuation: 200
+      maxDuration: -1
+      minDuration: -1
+    - name: play_bb_sx_game_int_delivery_dropoff
+      guid: 25ddd53443326a4ebefb3ebd4a2dfe60
+      id: 1048965709
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_int_delivery_dropoff
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_int_delivery_dropoff
+      maxAttenuation: 0
+      maxDuration: 2.392875
+      minDuration: 2.392875
+    - name: play_bb_sx_game_int_delivery_pickup
+      guid: 840d2bd09651384eab3ec6f1fa90487c
+      id: 628949193
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_int_delivery_pickup
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_int_delivery_pickup
+      maxAttenuation: 0
+      maxDuration: 1.75
+      minDuration: 1.75
+    - name: play_bb_sx_game_int_enter_active_pickup
+      guid: c520d614038cb443843f1116a209af94
+      id: 3783710516
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_int_enter_active_pickup
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_int_enter_active_pickup
+      maxAttenuation: 0
+      maxDuration: 6.724604
+      minDuration: 6.724604
+    - name: play_bb_sx_game_int_exit_active_pickup
+      guid: e3b1c7c2ac94994e8fbad463fb62b9d9
+      id: 1170827374
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_int_exit_active_pickup
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_int_exit_active_pickup
+      maxAttenuation: 0
+      maxDuration: 2.625
+      minDuration: 2.625
+    - name: play_bb_sx_game_plr_broom_accelerate
+      guid: 1571cd499602d94cb0981fe28bb2ace2
+      id: 291020428
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_broom_accelerate
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_broom_accelerate
+      maxAttenuation: 0
+      maxDuration: 1.621926
+      minDuration: 1.363872
+    - name: play_bb_sx_game_plr_broom_decelerate
+      guid: 95f5e6800078684a9bbbb15a2d4c3aa4
+      id: 3485431345
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_broom_decelerate
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_broom_decelerate
+      maxAttenuation: 0
+      maxDuration: 1.614383
+      minDuration: 1.357529
+    - name: play_bb_sx_game_plr_broom_flying
+      guid: 5fe8620f0b7ab7418dd3509a0e19bb23
+      id: 3676326078
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_broom_flying
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_broom_flying
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: play_bb_sx_game_plr_broom_stop
+      guid: c2defdcb79f2b74abc4be9d689f50cca
+      id: 2441865659
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_broom_stop
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_broom_stop
+      maxAttenuation: 0
+      maxDuration: 2.126354
+      minDuration: 1.788043
+    - name: play_bb_sx_game_plr_broom_takeoff
+      guid: 63548a0211c98e408a351a85708a9734
+      id: 2242722565
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_broom_takeoff
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_broom_takeoff
+      maxAttenuation: 0
+      maxDuration: 3.167516
+      minDuration: 2.663553
+    - name: play_bb_sx_game_plr_impact_building
+      guid: e15c49dfceb1b048a3d1a714170e5c18
+      id: 3843282546
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_impact_building
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_impact_building
+      maxAttenuation: 50
+      maxDuration: 1.090508
+      minDuration: 0.917004
+    - name: play_bb_sx_game_plr_impact_ground
+      guid: 3f0e58f8cdc37c418dc0a327231425ab
+      id: 2876800831
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_impact_ground
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_impact_ground
+      maxAttenuation: 50
+      maxDuration: 1.155353
+      minDuration: 0.865537
+    - name: play_bb_sx_game_plr_impact_water
+      guid: c3a37044e6a64448a731142c2867ddf7
+      id: 3283685423
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_impact_water
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_impact_water
+      maxAttenuation: 0
+      maxDuration: 1.090508
+      minDuration: 0.917004
+    - name: play_bb_sx_game_plr_skim_ground
+      guid: 3541d0f52c142449b8b8479fded3be34
+      id: 3817973033
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_skim_ground
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_skim_ground
+      maxAttenuation: 0
+      maxDuration: 3.648339
+      minDuration: 3.067875
+    - name: play_bb_sx_game_plr_skim_water
+      guid: 23a1d5efce8c9e47afaf4dea31a65947
+      id: 789946661
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_plr_skim_water
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_plr_skim_water
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: play_bb_sx_game_ui_delivery_accept
+      guid: 49b72ad7192952419285ffd275678fa8
+      id: 1095623268
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_delivery_accept
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_delivery_accept
+      maxAttenuation: 0
+      maxDuration: 1.294958
+      minDuration: 1.294958
+    - name: play_bb_sx_game_ui_delivery_decline
+      guid: 825fd5e3b18a8e4c8bcac4f15df96588
+      id: 4291039282
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_delivery_decline
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_delivery_decline
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: play_bb_sx_game_ui_delivery_new
+      guid: 9cfcae207ba1624dac3e5f82fa5ddc4c
+      id: 1081189030
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_delivery_new
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_delivery_new
+      maxAttenuation: 0
+      maxDuration: 1.310979
+      minDuration: 1.310979
+    - name: play_bb_sx_game_ui_exitgame
+      guid: d342efa0f332004baeb7e85ef9a5e645
+      id: 1359399331
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_exitgame
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_exitgame
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: play_bb_sx_game_ui_text_advance
+      guid: 6192282f49a39048b4fbd0b820b682b7
+      id: 4043862979
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_text_advance
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_text_advance
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: play_bb_sx_game_ui_text_close
+      guid: e632c5b6d879a84f9a06185d8286eef0
+      id: 1303049037
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_text_close
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_text_close
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: play_bb_sx_game_ui_timer_low
+      guid: aee751736dec6347a41166c39bcfb123
+      id: 2394352179
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_timer_low
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_timer_low
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: play_bb_sx_game_ui_timer_out
+      guid: 26a77770a4ba0c48892eb4392a5dd12a
+      id: 2562275565
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_timer_out
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_timer_out
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: play_bb_sx_game_ui_xp_gained
+      guid: fc5cba7a0874ed4f8e9eaf5eb25d7a7a
+      id: 3865043706
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_xp_gained
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_xp_gained
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: play_bb_sx_game_ui_xp_lost
+      guid: e6b6ea1d53cd7d4c92d04f144092cb2d
+      id: 214100990
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_game_ui_xp_lost
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_game_ui_xp_lost
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: play_bb_sx_menu_ui_main_navigation
+      guid: e1d1d05c33e2234595cd680e8d99aa35
+      id: 1875305114
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_sx_menu_ui_main_navigation
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_sx_menu_ui_main_navigation
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: play_bb_sx_menu_ui_main_start
       guid: 26aec89db4540748b26c6699a11c261a
       id: 661752896
@@ -61,36 +469,62 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
+    - name: stop_bb_sx_game_amb_water_lap_stone
+      guid: d8a4abffc3cf0e4aba191e352b28e708
+      id: 2971162542
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_sx_game_amb_water_lap_stone
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_sx_game_amb_water_lap_stone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: stop_bb_sx_game_plr_broom_flying
+      guid: 2215f5b6b2a2884299b7174df30105b4
+      id: 764517844
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_sx_game_plr_broom_flying
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_sx_game_plr_broom_flying
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 776b7eb674891140866e835fe249c15d
     GuidInternal: 
-    m_lastTime: -8586292201492150089
+    m_lastTime: -8586291662408577389
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: b837ae81aa2516488c41a8e9bcb816df
     GuidInternal: 
-    m_lastTime: -8586292201491681344
+    m_lastTime: -8586291662354982791
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 3aaeb8bd512de04c9f75cfdc7fbe1384
     GuidInternal: 
-    m_lastTime: -8586292201492429350
+    m_lastTime: -8586291662354961980
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f8da1479159c8e46bdc05c7b3d476ad3
     GuidInternal: 
-    m_lastTime: -8586292201492399421
+    m_lastTime: -8586291662354941024
     List: []
   ExpandedItems:
   - /BroomBash_WwiseProject
+  - /BroomBash_WwiseProject/Events
+  - /BroomBash_WwiseProject/Events/Default Work Unit
   - /BroomBash_WwiseProject/SoundBanks
   - /BroomBash_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1

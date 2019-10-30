@@ -11,6 +11,123 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="85412153" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
+			<ShortName>Ambience</ShortName>
+			<Path>Ambience.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2811784222" Name="play_bb_sx_game_amb_crowd_large" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_crowd_large" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="19.000000" DurationMax="19.000000"/>
+				<Event Id="374084730" Name="play_bb_sx_game_amb_crowd_small" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_crowd_small" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="22.000000" DurationMax="22.000000"/>
+				<Event Id="3417746653" Name="play_bb_sx_game_amb_meowing" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_meowing" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.672021" DurationMax="1.000000"/>
+				<Event Id="2968948371" Name="play_bb_sx_game_amb_seagulls" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_seagulls" MaxAttenuation="50.000000" DurationType="Infinite"/>
+				<Event Id="758436608" Name="play_bb_sx_game_amb_water_lap_stone" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_lap_stone" MaxAttenuation="50.000000" DurationType="Infinite"/>
+				<Event Id="260817731" Name="play_bb_sx_game_amb_water_waves" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_waves" MaxAttenuation="200.000000" DurationType="Infinite"/>
+				<Event Id="2971162542" Name="stop_bb_sx_game_amb_water_lap_stone" ObjectPath="\Events\Default Work Unit\stop_bb_sx_game_amb_water_lap_stone" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="115949722" Language="SFX">
+					<ShortName>bb_sx_game_amb_meowing_ 04.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_meowing_ 04_10C4C929.wem</Path>
+				</File>
+				<File Id="221538678" Language="SFX">
+					<ShortName>bb_sx_game_amb_crowds_small_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_crowds_small_01_10C4C929.wem</Path>
+				</File>
+				<File Id="428513919" Language="SFX">
+					<ShortName>bb_sx_game_amb_crowds_large_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_crowds_large_01_10C4C929.wem</Path>
+				</File>
+				<File Id="554871751" Language="SFX">
+					<ShortName>bb_sx_game_amb_water_lap_stone_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_water_lap_stone_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="567678985" Language="SFX">
+					<ShortName>bb_sx_game_amb_meowing_ 01.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_meowing_ 01_10C4C929.wem</Path>
+				</File>
+				<File Id="706487621" Language="SFX">
+					<ShortName>bb_sx_game_amb_meowing_ 03.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_meowing_ 03_10C4C929.wem</Path>
+				</File>
+				<File Id="744161537" Language="SFX">
+					<ShortName>bb_sx_game_amb_seagulls_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_seagulls_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="957189257" Language="SFX">
+					<ShortName>bb_sx_game_amb_water_waves_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_water_waves_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1057942891" Language="SFX">
+					<ShortName>bb_sx_game_amb_meowing_ 02.wav</ShortName>
+					<Path>SFX\bb_sx_game_amb_meowing_ 02_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1069431850" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Player</ObjectPath>
+			<ShortName>Player</ShortName>
+			<Path>Player.bnk</Path>
+			<IncludedEvents>
+				<Event Id="291020428" Name="play_bb_sx_game_plr_broom_accelerate" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_accelerate" DurationType="OneShot" DurationMin="1.363872" DurationMax="1.621926"/>
+				<Event Id="3485431345" Name="play_bb_sx_game_plr_broom_decelerate" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_decelerate" DurationType="OneShot" DurationMin="1.357529" DurationMax="1.614383"/>
+				<Event Id="3676326078" Name="play_bb_sx_game_plr_broom_flying" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_flying" DurationType="Infinite"/>
+				<Event Id="2441865659" Name="play_bb_sx_game_plr_broom_stop" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_stop" DurationType="OneShot" DurationMin="1.788043" DurationMax="2.126354"/>
+				<Event Id="2242722565" Name="play_bb_sx_game_plr_broom_takeoff" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_broom_takeoff" DurationType="OneShot" DurationMin="2.663553" DurationMax="3.167516"/>
+				<Event Id="3843282546" Name="play_bb_sx_game_plr_impact_building" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_building" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
+				<Event Id="2876800831" Name="play_bb_sx_game_plr_impact_ground" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_ground" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.865537" DurationMax="1.155353"/>
+				<Event Id="3283685423" Name="play_bb_sx_game_plr_impact_water" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_water" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
+				<Event Id="3817973033" Name="play_bb_sx_game_plr_skim_ground" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_skim_ground" DurationType="OneShot" DurationMin="3.067875" DurationMax="3.648339"/>
+				<Event Id="789946661" Name="play_bb_sx_game_plr_skim_water" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_skim_water" DurationType="Infinite"/>
+				<Event Id="764517844" Name="stop_bb_sx_game_plr_broom_flying" ObjectPath="\Events\Default Work Unit\stop_bb_sx_game_plr_broom_flying" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="137337356" Language="SFX">
+					<ShortName>bb_sx_game_plr_broom_takeoff_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_broom_takeoff_01_10C4C929.wem</Path>
+				</File>
+				<File Id="147733778" Language="SFX">
+					<ShortName>bb_sx_game_plr_skim_ground_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_skim_ground_01_10C4C929.wem</Path>
+				</File>
+				<File Id="266986133" Language="SFX">
+					<ShortName>bb_sx_game_plr_broom_stop_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_broom_stop_01_10C4C929.wem</Path>
+				</File>
+				<File Id="409495696" Language="SFX">
+					<ShortName>bb_sx_game_plr_broom_accelerating_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_broom_accelerating_01_10C4C929.wem</Path>
+				</File>
+				<File Id="484478066" Language="SFX">
+					<ShortName>bb_sx_game_plr_impact_water_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_impact_water_01_10C4C929.wem</Path>
+				</File>
+				<File Id="577212252" Language="SFX">
+					<ShortName>bb_sx_game_plr_broom_decelerating_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_broom_decelerating_01_10C4C929.wem</Path>
+				</File>
+				<File Id="622998680" Language="SFX">
+					<ShortName>bb_sx_game_plr_impact_building_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_impact_building_01_10C4C929.wem</Path>
+				</File>
+				<File Id="697122386" Language="SFX">
+					<ShortName>bb_sx_game_plr_impact_ground_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_impact_ground_01_10C4C929.wem</Path>
+				</File>
+				<File Id="943147279" Language="SFX">
+					<ShortName>bb_sx_game_plr_skim_water_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_skim_water_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="969169617" Language="SFX">
+					<ShortName>bb_sx_game_plr_broom_flying_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_plr_broom_flying_01_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1229948536" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
+			<ShortName>Environment</ShortName>
+			<Path>Environment.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -21,12 +138,96 @@
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1095623268" Name="play_bb_sx_game_ui_delivery_accept" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_delivery_accept" DurationType="OneShot" DurationMin="1.294958" DurationMax="1.294958"/>
+				<Event Id="4291039282" Name="play_bb_sx_game_ui_delivery_decline" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_delivery_decline" DurationType="OneShot" DurationMin="1.500000" DurationMax="1.500000"/>
+				<Event Id="1081189030" Name="play_bb_sx_game_ui_delivery_new" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_delivery_new" DurationType="OneShot" DurationMin="1.310979" DurationMax="1.310979"/>
+				<Event Id="1359399331" Name="play_bb_sx_game_ui_exitgame" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_exitgame" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="4043862979" Name="play_bb_sx_game_ui_text_advance" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_text_advance" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="1303049037" Name="play_bb_sx_game_ui_text_close" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_text_close" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="2394352179" Name="play_bb_sx_game_ui_timer_low" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_timer_low" DurationType="Infinite"/>
+				<Event Id="2562275565" Name="play_bb_sx_game_ui_timer_out" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_timer_out" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="3865043706" Name="play_bb_sx_game_ui_xp_gained" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_xp_gained" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="214100990" Name="play_bb_sx_game_ui_xp_lost" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_xp_lost" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="1875305114" Name="play_bb_sx_menu_ui_main_navigation" ObjectPath="\Events\Default Work Unit\play_bb_sx_menu_ui_main_navigation" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
 				<Event Id="661752896" Name="play_bb_sx_menu_ui_main_start" ObjectPath="\Events\Default Work Unit\play_bb_sx_menu_ui_main_start" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="27990012" Language="SFX">
+					<ShortName>bb_sx_game_ui_xp_lose_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_xp_lose_01_10C4C929.wem</Path>
+				</File>
+				<File Id="96364987" Language="SFX">
+					<ShortName>bb_sx_game_ui_delivery_new_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_delivery_new_01_10C4C929.wem</Path>
+				</File>
+				<File Id="127903617" Language="SFX">
+					<ShortName>bb_sx_game_ui_delivery_decline_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_delivery_decline_01_10C4C929.wem</Path>
+				</File>
+				<File Id="154523416" Language="SFX">
+					<ShortName>bb_sx_menu_ui_main_navigation_01.wav</ShortName>
+					<Path>SFX\bb_sx_menu_ui_main_navigation_01_10C4C929.wem</Path>
+				</File>
+				<File Id="202134121" Language="SFX">
+					<ShortName>bb_sx_game_ui_delivery_accept_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_delivery_accept_01_10C4C929.wem</Path>
+				</File>
+				<File Id="345245048" Language="SFX">
+					<ShortName>bb_sx_game_ui_timer_out_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_timer_out_01_10C4C929.wem</Path>
+				</File>
 				<File Id="371167224" Language="SFX">
 					<ShortName>bb_sx_menu_ui_main_start_01.wav</ShortName>
 					<Path>SFX\bb_sx_menu_ui_main_start_01_10C4C929.wem</Path>
+				</File>
+				<File Id="508665990" Language="SFX">
+					<ShortName>bb_sx_game_ui_timer_low_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_timer_low_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="831713450" Language="SFX">
+					<ShortName>bb_sx_game_ui_text_advance_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_text_advance_01_10C4C929.wem</Path>
+				</File>
+				<File Id="880489173" Language="SFX">
+					<ShortName>bb_sx_game_ui_exitgame_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_exitgame_01_10C4C929.wem</Path>
+				</File>
+				<File Id="993673285" Language="SFX">
+					<ShortName>bb_sx_game_ui_xp_gain_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_xp_gain_01_10C4C929.wem</Path>
+				</File>
+				<File Id="1070545309" Language="SFX">
+					<ShortName>bb_sx_game_ui_text_close_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_text_close_01_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2987141838" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Interactibles</ObjectPath>
+			<ShortName>Interactibles</ShortName>
+			<Path>Interactibles.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1048965709" Name="play_bb_sx_game_int_delivery_dropoff" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_int_delivery_dropoff" DurationType="OneShot" DurationMin="2.392875" DurationMax="2.392875"/>
+				<Event Id="628949193" Name="play_bb_sx_game_int_delivery_pickup" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_int_delivery_pickup" DurationType="OneShot" DurationMin="1.750000" DurationMax="1.750000"/>
+				<Event Id="3783710516" Name="play_bb_sx_game_int_enter_active_pickup" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_int_enter_active_pickup" DurationType="OneShot" DurationMin="6.724604" DurationMax="6.724604"/>
+				<Event Id="1170827374" Name="play_bb_sx_game_int_exit_active_pickup" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_int_exit_active_pickup" DurationType="OneShot" DurationMin="2.625000" DurationMax="2.625000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="177912085" Language="SFX">
+					<ShortName>bb_sx_game_int_enter_active_pickup_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_int_enter_active_pickup_01_10C4C929.wem</Path>
+				</File>
+				<File Id="188002564" Language="SFX">
+					<ShortName>bb_sx_game_ui_delivery_dropoff_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_delivery_dropoff_01_10C4C929.wem</Path>
+				</File>
+				<File Id="809968592" Language="SFX">
+					<ShortName>bb_sx_game_int_exit_active_pickup_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_int_exit_active_pickup_01_10C4C929.wem</Path>
+				</File>
+				<File Id="941153672" Language="SFX">
+					<ShortName>bb_sx_game_ui_delivery_pickup_01.wav</ShortName>
+					<Path>SFX\bb_sx_game_ui_delivery_pickup_01_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

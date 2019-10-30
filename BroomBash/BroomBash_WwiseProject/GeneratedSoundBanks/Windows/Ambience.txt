@@ -1,0 +1,20 @@
+Event	ID	Name			Wwise Object Path	Notes
+	260817731	play_bb_sx_game_amb_water_waves			\Default Work Unit\play_bb_sx_game_amb_water_waves	
+	374084730	play_bb_sx_game_amb_crowd_small			\Default Work Unit\play_bb_sx_game_amb_crowd_small	
+	758436608	play_bb_sx_game_amb_water_lap_stone			\Default Work Unit\play_bb_sx_game_amb_water_lap_stone	
+	2811784222	play_bb_sx_game_amb_crowd_large			\Default Work Unit\play_bb_sx_game_amb_crowd_large	
+	2968948371	play_bb_sx_game_amb_seagulls			\Default Work Unit\play_bb_sx_game_amb_seagulls	
+	2971162542	stop_bb_sx_game_amb_water_lap_stone			\Default Work Unit\stop_bb_sx_game_amb_water_lap_stone	
+	3417746653	play_bb_sx_game_amb_meowing			\Default Work Unit\play_bb_sx_game_amb_meowing	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	115949722	bb_sx_game_amb_meowing_ 04	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_meowing_ 04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meowing\bb_sx_game_amb_meowing_ 04		133744
+	221538678	bb_sx_game_amb_crowds_small_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_crowds_small_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_amb_crowds_small_01		4224064
+	428513919	bb_sx_game_amb_crowds_large_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_crowds_large_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_amb_crowds_large_01		3648064
+	554871751	bb_sx_game_amb_water_lap_stone_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_water_lap_stone_01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_amb_water_lap_stone_01		3168064
+	567678985	bb_sx_game_amb_meowing_ 01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_meowing_ 01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meowing\bb_sx_game_amb_meowing_ 01		192064
+	706487621	bb_sx_game_amb_meowing_ 03	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_meowing_ 03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meowing\bb_sx_game_amb_meowing_ 03		129092
+	744161537	bb_sx_game_amb_seagulls_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_seagulls_01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_amb_seagulls_01		6144064
+	957189257	bb_sx_game_amb_water_waves_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_water_waves_01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_amb_water_waves_01		6144064
+	1057942891	bb_sx_game_amb_meowing_ 02	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Windows\SFX\bb_sx_game_amb_meowing_ 02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Meowing\bb_sx_game_amb_meowing_ 02		192064
+
