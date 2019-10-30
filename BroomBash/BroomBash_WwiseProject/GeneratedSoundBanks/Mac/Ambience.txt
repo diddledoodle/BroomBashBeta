@@ -2,9 +2,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	260817731	play_bb_sx_game_amb_water_waves			\Default Work Unit\play_bb_sx_game_amb_water_waves	
 	374084730	play_bb_sx_game_amb_crowd_small			\Default Work Unit\play_bb_sx_game_amb_crowd_small	
 	758436608	play_bb_sx_game_amb_water_lap_stone			\Default Work Unit\play_bb_sx_game_amb_water_lap_stone	
-	764517844	stop_bb_sx_game_plr_broom_flying			\Default Work Unit\stop_bb_sx_game_plr_broom_flying	
 	2811784222	play_bb_sx_game_amb_crowd_large			\Default Work Unit\play_bb_sx_game_amb_crowd_large	
 	2968948371	play_bb_sx_game_amb_seagulls			\Default Work Unit\play_bb_sx_game_amb_seagulls	
+	2971162542	stop_bb_sx_game_amb_water_lap_stone			\Default Work Unit\stop_bb_sx_game_amb_water_lap_stone	
 	3417746653	play_bb_sx_game_amb_meowing			\Default Work Unit\play_bb_sx_game_amb_meowing	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
