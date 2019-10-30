@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
     /*jpost audio*/
     //audio related fields
     private bool hasAccelerated = false;
+    private bool hasSlowedDown = false;
+    private bool hasStopped = false;
 
     private void Start()
     {
@@ -154,6 +156,7 @@ public class PlayerController : MonoBehaviour
                 AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_accelerate", gameObject);
                 //stop the sound from triggering more than once per acceleration
                 hasAccelerated = true;
+                hasSlowedDown = false;
             }
             
         }
@@ -161,6 +164,13 @@ public class PlayerController : MonoBehaviour
         else if(_speedControlInput < -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = minimumSpeed;
+            /*jpost audio*/
+            if (!hasSlowedDown)
+            {
+                //play the broom deccelerate sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_decelerate", gameObject);
+                hasSlowedDown = true;
+            }
         }
         // Go back to base speed
         else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && !inputHandler.Stop)
@@ -169,11 +179,26 @@ public class PlayerController : MonoBehaviour
             /*jpost audio*/
             //reset hasAccelerated
             hasAccelerated = false;
+            //reset hasSlowedDown
+            hasSlowedDown = true;
+            //reset hasStopped
+            hasStopped = false;
         }
 
         else if(inputHandler.Stop)
         {
             _wantedSpeed = 0;
+            /*jpost audio*/
+            //if the player hasn't stopped
+            if (!hasStopped)
+            {
+                //play the broom stop sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_stop", gameObject);
+                //set hasStopped to true
+                hasStopped = true;
+            }
+
+
         }
 
         return _wantedSpeed;
