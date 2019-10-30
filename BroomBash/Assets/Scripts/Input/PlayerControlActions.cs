@@ -14,6 +14,11 @@ public class PlayerControlActions : PlayerActionSet
     public PlayerAction accept;
     public PlayerAction decline;
 
+    // Menu navigation Actions
+    public PlayerAction menuUp;
+    public PlayerAction menuDown;
+    public PlayerAction pause;
+
     // Player action axes
     public PlayerOneAxisAction steer;
     public PlayerOneAxisAction pitch;
@@ -32,6 +37,10 @@ public class PlayerControlActions : PlayerActionSet
         accept = CreatePlayerAction("Accept");
         decline = CreatePlayerAction("Decline");
 
+        // Create menu navigation actions
+        menuUp = CreatePlayerAction("MenuUp");
+        menuDown = CreatePlayerAction("MenuDown");
+        pause = CreatePlayerAction("Pause");
 
         // Create the player action axes
         steer = CreateOneAxisPlayerAction(steerLeft, steerRight);

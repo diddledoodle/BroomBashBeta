@@ -22,15 +22,6 @@ public class PlayerUIManager : MonoBehaviour
     private QuestController questController;
     private InputHandler inputHandler;
 
-    public enum QuestStatus { GAMESTART, STANDBY, START, END, FAIL, GAMEOVER}
-    [HideInInspector]
-    public QuestStatus questStatus = QuestStatus.STANDBY;
-
-    //[HideInInspector]
-    public bool dialogSystemIsActive = false;
-    //[HideInInspector]
-    public bool notificationSystemIsActive = false;
-
     private LevelSystem playerLevelSystem;
 
     // Start is called before the first frame update
@@ -65,12 +56,5 @@ public class PlayerUIManager : MonoBehaviour
         xpText.text = $"<b>XP: {playerLevelSystem.xp}</b>";
         levelText.text = $"<b>Level: {playerLevelSystem.currentLevel}</b>";
         livesText.text = $"<b>Lives: {questController.currentPlayerFailedQuests}</b>";
-
-        // Go to main menu
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadSceneAsync("MainMenu");
-            Debug.Log("Okla");
-        }
     }
 }
