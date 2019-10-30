@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5c5f342fa653a04694f8cd30fd9bc0b0
     GuidInternal: 
-    m_lastTime: -8586291554538852328
+    m_lastTime: -8586291459699289575
     List:
     - name: Ambience
       guid: 979472596c56d643a1824f3617b49d37
@@ -83,7 +83,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: c0c75d85be846a449bbfe40563d82e33
     GuidInternal: 
-    m_lastTime: -8586291546135281998
+    m_lastTime: -8586291458376601071
     List:
     - name: play_bb_sx_game_amb_crowd_large
       guid: 09cf31e3dd5be747915e4b711c0a6e7f
@@ -118,7 +118,7 @@ MonoBehaviour:
       - ElementName: play_bb_sx_game_amb_meowing
         ObjectType: 3
       Path: Default Work Unit\play_bb_sx_game_amb_meowing
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: 1
       minDuration: 0.672021
     - name: play_bb_sx_game_amb_seagulls
@@ -154,9 +154,9 @@ MonoBehaviour:
       - ElementName: play_bb_sx_game_amb_water_waves
         ObjectType: 3
       Path: Default Work Unit\play_bb_sx_game_amb_water_waves
-      maxAttenuation: 150
-      maxDuration: 34.896248
-      minDuration: 29.34413
+      maxAttenuation: 200
+      maxDuration: -1
+      minDuration: -1
     - name: play_bb_sx_game_int_delivery_dropoff
       guid: 25ddd53443326a4ebefb3ebd4a2dfe60
       id: 1048965709
@@ -469,6 +469,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
+    - name: stop_bb_sx_game_amb_water_lap_stone
+      guid: d8a4abffc3cf0e4aba191e352b28e708
+      id: 2971162542
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_sx_game_amb_water_lap_stone
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_sx_game_amb_water_lap_stone
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: stop_bb_sx_game_plr_broom_flying
       guid: 2215f5b6b2a2884299b7174df30105b4
       id: 764517844

@@ -363,11 +363,25 @@
 						<Action Name="" ID="{F75DAAAE-683E-408B-B7FB-B46F72495FDA}" ShortID="923070467">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="bb_sx_game_plr_broom_flying_01" ID="{744B48A1-6716-47EB-AFB8-DD0CB4010C9B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_sx_game_amb_water_lap_stone" ID="{FFABA4D8-CFC3-4A0E-BA19-1E352B28E708}">
+					<ChildrenList>
+						<Action Name="" ID="{65BA9864-3B3D-4C67-B5DF-A353A3B8836C}" ShortID="1060977067">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_amb_water_lap_stone_01" ID="{0DC9C571-1B5D-437D-ADB4-76B7AF8DE0A0}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

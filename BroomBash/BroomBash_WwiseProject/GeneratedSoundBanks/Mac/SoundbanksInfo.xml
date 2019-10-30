@@ -21,7 +21,8 @@
 				<Event Id="3417746653" Name="play_bb_sx_game_amb_meowing" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_meowing" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.672021" DurationMax="1.000000"/>
 				<Event Id="2968948371" Name="play_bb_sx_game_amb_seagulls" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_seagulls" MaxAttenuation="50.000000" DurationType="Infinite"/>
 				<Event Id="758436608" Name="play_bb_sx_game_amb_water_lap_stone" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_lap_stone" MaxAttenuation="50.000000" DurationType="Infinite"/>
-				<Event Id="260817731" Name="play_bb_sx_game_amb_water_waves" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_waves" MaxAttenuation="150.000000" DurationType="Infinite"/>
+				<Event Id="260817731" Name="play_bb_sx_game_amb_water_waves" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_waves" MaxAttenuation="200.000000" DurationType="Infinite"/>
+				<Event Id="764517844" Name="stop_bb_sx_game_plr_broom_flying" ObjectPath="\Events\Default Work Unit\stop_bb_sx_game_plr_broom_flying" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="115949722" Language="SFX">

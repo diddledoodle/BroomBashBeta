@@ -23,6 +23,7 @@
 				</SoundBank>
 				<SoundBank Name="Ambience" ID="{59729497-566C-43D6-A182-4F3617B49D37}">
 					<ObjectInclusionList>
+						<ObjectRef Name="stop_bb_sx_game_plr_broom_flying" ID="{B6F51522-A2B2-4288-99B7-174DF30105B4}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_amb_meowing" ID="{901B0235-4E45-4336-923F-91DEA392ABBD}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_amb_crowd_small" ID="{1E64F872-EBE5-4525-829F-41554DF76E08}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_amb_crowd_large" ID="{E331CF09-5BDD-47E7-915E-4B711C0A6E7F}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>

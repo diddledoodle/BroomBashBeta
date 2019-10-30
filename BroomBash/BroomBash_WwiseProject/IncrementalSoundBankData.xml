@@ -3,34 +3,34 @@
 	<Platform GUID="{F31DD48A-3437-4B06-8C9D-09B3F4260DE9}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Ambience" Hash="3041768306" Timestamp="1572456359"/>
+				<File Name="Ambience" Hash="3131591884" Timestamp="1572461050"/>
 				<File Name="Environment" Hash="3467641318" Timestamp="1572444391"/>
 				<File Name="Init" Hash="2279659568" Timestamp="1572444392"/>
 				<File Name="Interactibles" Hash="920750821" Timestamp="1572444392"/>
-				<File Name="Player" Hash="3565501125" Timestamp="1572452269"/>
+				<File Name="Player" Hash="2056406955" Timestamp="1572461050"/>
 				<File Name="UI" Hash="564292607" Timestamp="1572444391"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1727340734" Timestamp="1572456359"/>
+				<File Name="" Hash="919116227" Timestamp="1572461050"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{89B05F2A-AF85-4B5B-848D-2E95C98A133C}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Ambience" Hash="3041768306" Timestamp="1572456360"/>
+				<File Name="Ambience" Hash="3131591884" Timestamp="1572461050"/>
 				<File Name="Environment" Hash="3467641318" Timestamp="1572444367"/>
 				<File Name="Init" Hash="1182415902" Timestamp="1572444369"/>
 				<File Name="Interactibles" Hash="920750821" Timestamp="1572444369"/>
-				<File Name="Player" Hash="3565501125" Timestamp="1572452269"/>
+				<File Name="Player" Hash="2056406955" Timestamp="1572461050"/>
 				<File Name="UI" Hash="564292607" Timestamp="1572444369"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1877750624" Timestamp="1572456360"/>
+				<File Name="" Hash="2962155229" Timestamp="1572461050"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
