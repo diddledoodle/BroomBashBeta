@@ -389,6 +389,21 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="stop_bb_sx_game_int_enter_active_pickup" ID="{10C80DC5-704B-4E07-9930-834AEA4BB590}">
+					<ChildrenList>
+						<Action Name="" ID="{34513D6F-5540-4180-8483-933D6C79BEE7}" ShortID="525666657">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_int_enter_active_pickup_01" ID="{C60C6FE4-D779-4C9D-8384-5B0DBC756A0B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

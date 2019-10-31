@@ -211,6 +211,7 @@
 				<Event Id="628949193" Name="play_bb_sx_game_int_delivery_pickup" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_int_delivery_pickup" DurationType="OneShot" DurationMin="1.750000" DurationMax="1.750000"/>
 				<Event Id="3783710516" Name="play_bb_sx_game_int_enter_active_pickup" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_int_enter_active_pickup" DurationType="OneShot" DurationMin="6.724604" DurationMax="6.724604"/>
 				<Event Id="1170827374" Name="play_bb_sx_game_int_exit_active_pickup" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_int_exit_active_pickup" DurationType="OneShot" DurationMin="2.625000" DurationMax="2.625000"/>
+				<Event Id="823679326" Name="stop_bb_sx_game_int_enter_active_pickup" ObjectPath="\Events\Default Work Unit\stop_bb_sx_game_int_enter_active_pickup" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="177912085" Language="SFX">

@@ -59,6 +59,7 @@
 				<SoundBank Name="Interactibles" ID="{02C39375-3699-4092-BE96-C67838AC5622}">
 					<ObjectInclusionList>
 						<ObjectRef Name="play_bb_sx_game_int_enter_active_pickup" ID="{14D620C5-8C03-43B4-843F-1116A209AF94}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_game_int_enter_active_pickup" ID="{10C80DC5-704B-4E07-9930-834AEA4BB590}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_int_delivery_pickup" ID="{D02B0D84-5196-4E38-AB3E-C6F1FA90487C}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_int_delivery_dropoff" ID="{34D5DD25-3243-4E6A-BEFB-3EBD4A2DFE60}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_int_exit_active_pickup" ID="{C2C7B1E3-94AC-4E99-8FBA-D463FB62B9D9}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
