@@ -4,6 +4,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1081189030	play_bb_sx_game_ui_delivery_new			\Default Work Unit\play_bb_sx_game_ui_delivery_new	
 	1095623268	play_bb_sx_game_ui_delivery_accept			\Default Work Unit\play_bb_sx_game_ui_delivery_accept	
 	1303049037	play_bb_sx_game_ui_text_close			\Default Work Unit\play_bb_sx_game_ui_text_close	
+	1317511485	stop_bb_sx_game_ui_timer_low			\Default Work Unit\stop_bb_sx_game_ui_timer_low	
 	1359399331	play_bb_sx_game_ui_exitgame			\Default Work Unit\play_bb_sx_game_ui_exitgame	
 	1875305114	play_bb_sx_menu_ui_main_navigation			\Default Work Unit\play_bb_sx_menu_ui_main_navigation	
 	2394352179	play_bb_sx_game_ui_timer_low			\Default Work Unit\play_bb_sx_game_ui_timer_low	

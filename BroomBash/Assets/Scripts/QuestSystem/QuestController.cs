@@ -101,6 +101,9 @@ public class QuestController : MonoBehaviour
     private bool bossCanInquire = true;
     private bool bossQuestIsActive;
 
+    /*jpost audio*/
+    bool hasRunOutOfTime = false;
+    bool timerIsLow = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -148,6 +151,25 @@ public class QuestController : MonoBehaviour
         if (countdownTimerIsActive)
         {
             CountdownTimer();
+
+            /*jpost audio*/
+            if(timeLeft < 10 )
+            {
+                if (!timerIsLow)
+                {
+                    //debug
+                    Debug.Log("timer low");
+                    //play the timer is low sound from wwise
+                    AkSoundEngine.PostEvent("play_bb_sx_game_ui_timer_low", gameObject);
+                    timerIsLow = true;
+                }
+            }
+            if(timeLeft < 1)
+            {
+                //stop the low timer sound from looping
+                AkSoundEngine.PostEvent("stop_bb_sx_game_ui_timer_low", gameObject);
+            }
+            
         }
 
         // Check for boss required quests
@@ -172,6 +194,13 @@ public class QuestController : MonoBehaviour
             }
             // Change quest material back to idle
             currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
+            
+            /*jpost audio*/ 
+            if (!hasRunOutOfTime)
+            {
+                //play the timer out sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_ui_timer_out", gameObject);
+            }
         }
     }
 
@@ -238,6 +267,10 @@ public class QuestController : MonoBehaviour
             countdownTimerIsActive = true;
             // Enable/Disable gameobjects
             ActiveQuestActiveGameObjects();
+
+            /*jpost audio*/
+            //play the accept quest sound from wwise
+            AkSoundEngine.PostEvent("play_bb_sx_game_int_delivery_pickup", gameObject);
         }
         else
         {
@@ -311,6 +344,12 @@ public class QuestController : MonoBehaviour
             normalCompletedQuests += 1;
             // Make sure the boss can inquire only after normal quests
             bossCanInquire = true;
+
+            /*jpost audio*/
+            //play add xp sound from wwise
+            AkSoundEngine.PostEvent("play_bb_sx_game_ui_xp_gained", gameObject);
+            //debug
+            Debug.Log("xp sound should play");
         }
 
         // Reset player collisions during quest

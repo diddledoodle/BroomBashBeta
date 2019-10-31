@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	628949193	play_bb_sx_game_int_delivery_pickup			\Default Work Unit\play_bb_sx_game_int_delivery_pickup	
+	823679326	stop_bb_sx_game_int_enter_active_pickup			\Default Work Unit\stop_bb_sx_game_int_enter_active_pickup	
 	1048965709	play_bb_sx_game_int_delivery_dropoff			\Default Work Unit\play_bb_sx_game_int_delivery_dropoff	
 	1170827374	play_bb_sx_game_int_exit_active_pickup			\Default Work Unit\play_bb_sx_game_int_exit_active_pickup	
 	3783710516	play_bb_sx_game_int_enter_active_pickup			\Default Work Unit\play_bb_sx_game_int_enter_active_pickup	

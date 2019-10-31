@@ -157,7 +157,7 @@ public class PlayerController : MonoBehaviour
                 //play the broom accelerate sound from wwise
                 AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_accelerate", gameObject);
                 //stop the flying normal sound
-                AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
+                //AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
                 hasAccelerated = true;
                 hasSlowedDown = false;
                 isFlyingNormal = false;

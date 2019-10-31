@@ -71,6 +71,9 @@ public class PlayerUIManager : MonoBehaviour
         {
             SceneManager.LoadSceneAsync("MainMenu");
             Debug.Log("Okla");
+            /*jpost audio*/
+            //play the exit game sound from wwise
+            AkSoundEngine.PostEvent("play_bb_sx_game_ui_exitgame", gameObject);
         }
     }
 }
