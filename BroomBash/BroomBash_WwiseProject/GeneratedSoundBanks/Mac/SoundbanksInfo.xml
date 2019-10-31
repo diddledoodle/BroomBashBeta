@@ -150,6 +150,7 @@
 				<Event Id="214100990" Name="play_bb_sx_game_ui_xp_lost" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_ui_xp_lost" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
 				<Event Id="1875305114" Name="play_bb_sx_menu_ui_main_navigation" ObjectPath="\Events\Default Work Unit\play_bb_sx_menu_ui_main_navigation" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
 				<Event Id="661752896" Name="play_bb_sx_menu_ui_main_start" ObjectPath="\Events\Default Work Unit\play_bb_sx_menu_ui_main_start" DurationType="OneShot" DurationMin="1.000000" DurationMax="1.000000"/>
+				<Event Id="1317511485" Name="stop_bb_sx_game_ui_timer_low" ObjectPath="\Events\Default Work Unit\stop_bb_sx_game_ui_timer_low" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="27990012" Language="SFX">

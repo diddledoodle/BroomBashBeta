@@ -404,6 +404,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="stop_bb_sx_game_ui_timer_low" ID="{FE8E8D76-5FE5-46D7-A6FC-D9EAB7AEC112}">
+					<ChildrenList>
+						<Action Name="" ID="{6D9BBD59-EDFC-4943-8F41-87B7C6E2A77A}" ShortID="11061643">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_timer_low_01" ID="{E70A9501-F508-4709-A3AF-2AFC9B92ECBC}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

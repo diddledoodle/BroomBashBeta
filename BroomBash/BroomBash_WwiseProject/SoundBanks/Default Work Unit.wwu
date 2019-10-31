@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="play_bb_sx_game_ui_delivery_accept" ID="{D72AB749-2919-4152-9285-FFD275678FA8}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_menu_ui_main_navigation" ID="{5CD0D1E1-E233-4523-95CD-680E8D99AA35}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_game_ui_timer_low" ID="{FE8E8D76-5FE5-46D7-A6FC-D9EAB7AEC112}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_ui_timer_low" ID="{7351E7AE-EC6D-4763-A411-66C39BCFB123}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_menu_ui_main_start" ID="{9DC8AE26-54B4-4807-B26C-6699A11C261A}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_ui_timer_out" ID="{7077A726-BAA4-480C-892E-B4392A5DD12A}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>

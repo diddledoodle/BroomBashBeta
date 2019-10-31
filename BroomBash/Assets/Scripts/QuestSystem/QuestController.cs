@@ -103,6 +103,7 @@ public class QuestController : MonoBehaviour
 
     /*jpost audio*/
     bool hasRunOutOfTime = false;
+    bool timerIsLow = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -150,6 +151,25 @@ public class QuestController : MonoBehaviour
         if (countdownTimerIsActive)
         {
             CountdownTimer();
+
+            /*jpost audio*/
+            if(timeLeft < 10 )
+            {
+                if (!timerIsLow)
+                {
+                    //debug
+                    Debug.Log("timer low");
+                    //play the timer is low sound from wwise
+                    AkSoundEngine.PostEvent("play_bb_sx_game_ui_timer_low", gameObject);
+                    timerIsLow = true;
+                }
+            }
+            if(timeLeft < 1)
+            {
+                //stop the low timer sound from looping
+                AkSoundEngine.PostEvent("stop_bb_sx_game_ui_timer_low", gameObject);
+            }
+            
         }
 
         // Check for boss required quests
