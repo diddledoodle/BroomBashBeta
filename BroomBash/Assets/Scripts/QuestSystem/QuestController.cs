@@ -67,6 +67,13 @@ public class QuestController : MonoBehaviour
     public int maxPlayerFailedQuests = 3;
     [Tooltip("The amount of collisions the player can make with other objects during a quest")]
     public int maxPlayerCollisionsPerDelivery = 3;
+
+    [HideInInspector]
+    public string currentQuestDifficulty = string.Empty;
+    [HideInInspector]
+    public float currentQuestTimeLimit;
+    [HideInInspector]
+    public int currentQuestXPAmount;
     [HideInInspector]
     public int currentPlayerFailedQuests = 3;
     private int currentPlayerCollisionsPerDelivery = 3;
@@ -184,6 +191,11 @@ public class QuestController : MonoBehaviour
         }
     }
 
+    public void GetQuestDetails()
+    {
+
+    }
+
     private void AskPlayerAboutBossQuest()
     {
         // TODO: Need to ask the player if they want to do a quest for a greater xp increase
@@ -219,10 +231,36 @@ public class QuestController : MonoBehaviour
         if (_playerChoice == true)
         {
             StartBossQuest();
+            // Set current quest xp for UI use
+            switch (currentPlayerDifficulty)
+            {
+                case 0:
+                    currentQuestXPAmount = easyQuestCompletionPoints + (int)(easyQuestCompletionPoints * bossQuestXpBonusPercent);
+                    break;
+                case 1:
+                    currentQuestXPAmount = mediumQuestCompletionPoints + (int)(mediumQuestCompletionPoints * bossQuestXpBonusPercent);
+                    break;
+                case 2:
+                    currentQuestXPAmount = hardQuestCompletionPoints + (int)(hardQuestCompletionPoints * bossQuestXpBonusPercent);
+                    break;
+            }
         }
         else if (_playerChoice == false)
         {
             StartQuest();
+            // Set current quest xp for UI use
+            switch (currentPlayerDifficulty)
+            {
+                case 0:
+                    currentQuestXPAmount = easyQuestCompletionPoints;
+                    break;
+                case 1:
+                    currentQuestXPAmount = mediumQuestCompletionPoints;
+                    break;
+                case 2:
+                    currentQuestXPAmount = hardQuestCompletionPoints;
+                    break;
+            }
         }
     }
     
@@ -266,18 +304,23 @@ public class QuestController : MonoBehaviour
 
     private void SetTimeLeftBasedOnPlayerDifficulty(int _difficulty)
     {
+        float _timeLeft = 0;
         switch (_difficulty)
         {
             case 0:
-                timeLeft = easyQuestTimeLimit;
+                _timeLeft = easyQuestTimeLimit;
                 break;
             case 1:
-                timeLeft = mediumQuestTimeLimit;
+                _timeLeft = mediumQuestTimeLimit;
                 break;
             case 2:
-                timeLeft = hardQuestTimeLimit;
+                _timeLeft = hardQuestTimeLimit;
                 break;
         }
+        // Set the timer
+        timeLeft = _timeLeft;
+        // Set the current Quest time limit for UI
+        currentQuestTimeLimit = _timeLeft;
     }
 
     public void PlayerArrivedAtDeliveryLocation(DropOff _questLocation)
@@ -394,14 +437,17 @@ public class QuestController : MonoBehaviour
         if(playerLevelSystem.currentLevel < easyQuestLevelCap)
         {
             currentPlayerDifficulty = 0;
+            currentQuestDifficulty = "Easy";
         }
         else if(playerLevelSystem.currentLevel >= easyQuestLevelCap && playerLevelSystem.currentLevel < mediumQuestLevelCap)
         {
             currentPlayerDifficulty = 1;
+            currentQuestDifficulty = "Medium";
         }
         else if (playerLevelSystem.currentLevel >= mediumQuestLevelCap)
         {
             currentPlayerDifficulty = 2;
+            currentQuestDifficulty = "Hard";
         }
     }
 
