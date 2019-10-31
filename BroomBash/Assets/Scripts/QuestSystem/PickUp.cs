@@ -18,7 +18,7 @@ public class PickUp : MonoBehaviour
     //re-enabling this ontrigger enter for audio purposes
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<PlayerController>())
+        if (other.gameObject.GetComponent<SphereCollider>())
         {
             //debug
             Debug.Log("player has entered pickup zone");
@@ -46,7 +46,7 @@ public class PickUp : MonoBehaviour
     /*jpost audio*/
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.GetComponent<PlayerController>())
+        if (other.gameObject.GetComponent<SphereCollider>())
         {
             //debug
             Debug.Log("exited the pickupzone");
