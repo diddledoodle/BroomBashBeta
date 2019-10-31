@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerUIManager : MonoBehaviour
 {
-    public Text timer;
+
+    public TextMeshProUGUI timer;
     public Text xpText;
-    public Text levelText;
-    public Text livesText;
+    //public Text levelText;
+    //public Text livesText;
+    public List<Image> starImages = new List<Image>();
+
     public GameObject miniMap;
     public GameObject notifcationPanel;
     public Text notifictionText;
@@ -27,6 +31,8 @@ public class PlayerUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         // Assign the render texture to the mini-map
         miniMap.GetComponent<RawImage>().texture = miniMapRenderTexture;
         // Turn off all components that arent used at the start of the game
@@ -54,7 +60,17 @@ public class PlayerUIManager : MonoBehaviour
         }
         // Update the xp and level text
         xpText.text = $"<b>XP: {playerLevelSystem.xp}</b>";
-        levelText.text = $"<b>Level: {playerLevelSystem.currentLevel}</b>";
-        livesText.text = $"<b>Lives: {questController.currentPlayerFailedQuests}</b>";
+        //levelText.text = $"<b>Level: {playerLevelSystem.currentLevel}</b>";
+        //livesText.text = $"<b>Lives: {questController.currentPlayerFailedQuests}</b>";
+        // Enable/Diable life stars
+        for (int i = 0; i < starImages.Count; i++)
+        {
+            if (i <= questController.currentPlayerFailedQuests)
+            {
+                starImages[i].enabled = true;
+
+
+            }
+        }
     }
 }
