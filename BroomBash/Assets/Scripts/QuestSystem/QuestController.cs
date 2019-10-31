@@ -101,6 +101,8 @@ public class QuestController : MonoBehaviour
     private bool bossCanInquire = true;
     private bool bossQuestIsActive;
 
+    /*jpost audio*/
+    bool hasRunOutOfTime = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -172,6 +174,13 @@ public class QuestController : MonoBehaviour
             }
             // Change quest material back to idle
             currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
+            
+            /*jpost audio*/ 
+            if (!hasRunOutOfTime)
+            {
+                //play the timer out sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_ui_timer_out", gameObject);
+            }
         }
     }
 
@@ -241,7 +250,7 @@ public class QuestController : MonoBehaviour
 
             /*jpost audio*/
             //play the accept quest sound from wwise
-            AkSoundEngine.PostEvent("play_bb_sx_game_ui_delivery_accept", gameObject);
+            AkSoundEngine.PostEvent("play_bb_sx_game_int_delivery_pickup", gameObject);
         }
         else
         {

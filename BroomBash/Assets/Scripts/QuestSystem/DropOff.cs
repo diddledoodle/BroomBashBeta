@@ -22,7 +22,7 @@ public class DropOff : MonoBehaviour
     /*jpost audio*/
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<PlayerController>())
+        if (other.gameObject.GetComponent<SphereCollider>())
         {
             //debug
             Debug.Log("player has entered dropoff zone");
