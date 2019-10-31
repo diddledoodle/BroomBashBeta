@@ -6,6 +6,7 @@
 				<Sound Name="bb_sx_game_amb_crowds_large_01" ID="{278D7501-9ABE-4102-BC10-FFF5D4E44CE1}" ShortID="380093241">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -31,6 +32,7 @@
 				<Sound Name="bb_sx_game_amb_crowds_small_01" ID="{C8E010F4-E853-4FFA-A30F-190309934C89}" ShortID="381637584">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">

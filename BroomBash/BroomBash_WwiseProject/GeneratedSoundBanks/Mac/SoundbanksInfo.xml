@@ -16,8 +16,8 @@
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2811784222" Name="play_bb_sx_game_amb_crowd_large" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_crowd_large" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="19.000000" DurationMax="19.000000"/>
-				<Event Id="374084730" Name="play_bb_sx_game_amb_crowd_small" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_crowd_small" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="22.000000" DurationMax="22.000000"/>
+				<Event Id="2811784222" Name="play_bb_sx_game_amb_crowd_large" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_crowd_large" MaxAttenuation="50.000000" DurationType="Infinite"/>
+				<Event Id="374084730" Name="play_bb_sx_game_amb_crowd_small" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_crowd_small" MaxAttenuation="50.000000" DurationType="Infinite"/>
 				<Event Id="3417746653" Name="play_bb_sx_game_amb_meowing" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_meowing" MaxAttenuation="50.000000" DurationType="OneShot" DurationMin="0.672021" DurationMax="1.000000"/>
 				<Event Id="2968948371" Name="play_bb_sx_game_amb_seagulls" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_seagulls" MaxAttenuation="50.000000" DurationType="Infinite"/>
 				<Event Id="758436608" Name="play_bb_sx_game_amb_water_lap_stone" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_amb_water_lap_stone" MaxAttenuation="50.000000" DurationType="Infinite"/>
@@ -31,11 +31,11 @@
 				</File>
 				<File Id="221538678" Language="SFX">
 					<ShortName>bb_sx_game_amb_crowds_small_01.wav</ShortName>
-					<Path>SFX\bb_sx_game_amb_crowds_small_01_10C4C929.wem</Path>
+					<Path>SFX\bb_sx_game_amb_crowds_small_01_D79FB2B7.wem</Path>
 				</File>
 				<File Id="428513919" Language="SFX">
 					<ShortName>bb_sx_game_amb_crowds_large_01.wav</ShortName>
-					<Path>SFX\bb_sx_game_amb_crowds_large_01_10C4C929.wem</Path>
+					<Path>SFX\bb_sx_game_amb_crowds_large_01_D79FB2B7.wem</Path>
 				</File>
 				<File Id="554871751" Language="SFX">
 					<ShortName>bb_sx_game_amb_water_lap_stone_01.wav</ShortName>

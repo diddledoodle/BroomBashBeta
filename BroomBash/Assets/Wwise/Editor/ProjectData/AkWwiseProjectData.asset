@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5c5f342fa653a04694f8cd30fd9bc0b0
     GuidInternal: 
-    m_lastTime: -8586291459699289575
+    m_lastTime: -8586291139429262881
     List:
     - name: Ambience
       guid: 979472596c56d643a1824f3617b49d37
@@ -83,7 +83,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: c0c75d85be846a449bbfe40563d82e33
     GuidInternal: 
-    m_lastTime: -8586291458376601071
+    m_lastTime: -8586291139429310906
     List:
     - name: play_bb_sx_game_amb_crowd_large
       guid: 09cf31e3dd5be747915e4b711c0a6e7f
@@ -479,8 +479,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\stop_bb_sx_game_amb_water_lap_stone
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
+    - name: stop_bb_sx_game_int_enter_active_pickup
+      guid: c50dc8104b70074e9930834aea4bb590
+      id: 823679326
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_sx_game_int_enter_active_pickup
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_sx_game_int_enter_active_pickup
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: stop_bb_sx_game_plr_broom_flying
       guid: 2215f5b6b2a2884299b7174df30105b4
       id: 764517844
@@ -490,6 +502,18 @@ MonoBehaviour:
       - ElementName: stop_bb_sx_game_plr_broom_flying
         ObjectType: 3
       Path: Default Work Unit\stop_bb_sx_game_plr_broom_flying
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: stop_bb_sx_game_ui_timer_low
+      guid: 768d8efee55fd746a6fcd9eab7aec112
+      id: 1317511485
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_sx_game_ui_timer_low
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_sx_game_ui_timer_low
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
