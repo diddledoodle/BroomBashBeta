@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -361,11 +361,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: _PlayerUI
       objectReference: {fileID: 0}
-    - target: {fileID: 6912106911742556547, guid: 1486256fa4f30ed499c719a83dd42104,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7978240512896666663, guid: 1486256fa4f30ed499c719a83dd42104,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -469,21 +464,6 @@ PrefabInstance:
     - target: {fileID: 7978240512896666663, guid: 1486256fa4f30ed499c719a83dd42104,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7324173074631685466, guid: 1486256fa4f30ed499c719a83dd42104,
-        type: 3}
-      propertyPath: m_Text
-      value: 9999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4669429591072561846, guid: 1486256fa4f30ed499c719a83dd42104,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4501994544923622701, guid: 1486256fa4f30ed499c719a83dd42104,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
