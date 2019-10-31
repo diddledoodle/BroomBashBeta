@@ -238,6 +238,10 @@ public class QuestController : MonoBehaviour
             countdownTimerIsActive = true;
             // Enable/Disable gameobjects
             ActiveQuestActiveGameObjects();
+
+            /*jpost audio*/
+            //play the accept quest sound from wwise
+            AkSoundEngine.PostEvent("play_bb_sx_game_ui_delivery_accept", gameObject);
         }
         else
         {
@@ -311,6 +315,12 @@ public class QuestController : MonoBehaviour
             normalCompletedQuests += 1;
             // Make sure the boss can inquire only after normal quests
             bossCanInquire = true;
+
+            /*jpost audio*/
+            //play add xp sound from wwise
+            AkSoundEngine.PostEvent("play_bb_sx_game_ui_xp_gained", gameObject);
+            //debug
+            Debug.Log("xp sound should play");
         }
 
         // Reset player collisions during quest
