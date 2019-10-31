@@ -14,13 +14,19 @@ public class PickUp : MonoBehaviour
         questController = _qc;
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.GetComponent<PlayerController>())
-    //    {
-    //        timePlayerEnteredTrigger = questController.timeSinceStart;
-    //    }
-    //}
+    /*jpost audio*/
+    //re-enabling this ontrigger enter for audio purposes
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            //debug
+            Debug.Log("player has entered pickup zone");
+            //play the enter active pickup wwise sound
+            AkSoundEngine.PostEvent("play_bb_sx_game_int_enter_active_pickup", gameObject);
+            //timePlayerEnteredTrigger = questController.timeSinceStart; legacy trigger for quest controller?
+        }
+    }
 
     //private void OnTriggerStay(Collider other)
     //{
