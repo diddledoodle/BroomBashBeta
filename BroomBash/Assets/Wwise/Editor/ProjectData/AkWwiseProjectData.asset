@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5c5f342fa653a04694f8cd30fd9bc0b0
     GuidInternal: 
-    m_lastTime: -8586290346919820441
+    m_lastTime: -8586290343436646148
     List:
     - name: Ambience
       guid: 979472596c56d643a1824f3617b49d37
@@ -92,7 +92,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: c0c75d85be846a449bbfe40563d82e33
     GuidInternal: 
-    m_lastTime: -8586290346919930666
+    m_lastTime: -8586290344576353160
     List:
     - name: play_bb_mx_level
       guid: fb0ebb91547b6646a65f6bd298aef333
@@ -512,8 +512,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\stop_bb_mx_menu
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: stop_bb_sx_game_amb_water_lap_stone
       guid: d8a4abffc3cf0e4aba191e352b28e708
       id: 2971162542
@@ -592,6 +592,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /BroomBash_WwiseProject
+  - /BroomBash_WwiseProject/Events
+  - /BroomBash_WwiseProject/Events/Default Work Unit
   - /BroomBash_WwiseProject/SoundBanks
   - /BroomBash_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
