@@ -7,14 +7,14 @@
 				<File Name="Environment" Hash="3467641318" Timestamp="1572484557"/>
 				<File Name="Init" Hash="2279659568" Timestamp="1572444392"/>
 				<File Name="Interactibles" Hash="3717938025" Timestamp="1572484558"/>
-				<File Name="Music" Hash="961686717" Timestamp="1572572183"/>
+				<File Name="Music" Hash="2172335000" Timestamp="1572572536"/>
 				<File Name="Player" Hash="2203082392" Timestamp="1572484558"/>
 				<File Name="UI" Hash="325370099" Timestamp="1572492939"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="957736456" Timestamp="1572572184"/>
+				<File Name="" Hash="52540707" Timestamp="1572572536"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -25,14 +25,14 @@
 				<File Name="Environment" Hash="3467641318" Timestamp="1572484559"/>
 				<File Name="Init" Hash="1182415902" Timestamp="1572444369"/>
 				<File Name="Interactibles" Hash="3717938025" Timestamp="1572484560"/>
-				<File Name="Music" Hash="961686717" Timestamp="1572572184"/>
+				<File Name="Music" Hash="2172335000" Timestamp="1572572537"/>
 				<File Name="Player" Hash="2203082392" Timestamp="1572484559"/>
 				<File Name="UI" Hash="325370099" Timestamp="1572492939"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1861082194" Timestamp="1572572184"/>
+				<File Name="" Hash="4116156197" Timestamp="1572572537"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
