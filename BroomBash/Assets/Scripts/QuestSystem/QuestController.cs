@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
+using UnityEngine.SceneManagement;
 using PixelCrushers.DialogueSystem;
 
 public class QuestController : MonoBehaviour
@@ -31,6 +31,7 @@ public class QuestController : MonoBehaviour
     public int bossQuestInquiryRate = 3;
     [Tooltip("The percent of the quest XP to be added on top. Ex. 0.15 is 15%")]
     public float bossQuestXpBonusPercent = 0.15f;
+
 
     [Header("Points for Deliveries")]
     [Tooltip("The amount of points the player receives for completing [easy] quests")]
@@ -67,6 +68,8 @@ public class QuestController : MonoBehaviour
     public int maxPlayerFailedQuests = 3;
     [Tooltip("The amount of collisions the player can make with other objects during a quest")]
     public int maxPlayerCollisionsPerDelivery = 3;
+    public DialogueSystemTrigger failedDeliveryConvo;
+    public DialogueSystemTrigger gameOverConvo;
 
     [HideInInspector]
     public string currentQuestDifficulty = string.Empty;
@@ -119,6 +122,10 @@ public class QuestController : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         playerLevelSystem = player.GetComponent<LevelSystem>();
         currentPlayerDifficulty = 0;
+        playerHasQuest = false;
+        playerHasDelivery = false;
+        playerHasBossQuest = false;
+        playerHasBossDelivery = false;
         // Initialize all of the pick up locations
         if(pickUps.Count > 0)
         {
@@ -143,10 +150,8 @@ public class QuestController : MonoBehaviour
         // Enable/Disable gameobjects
         NoQuestActiveGameObjects();
 
-        // Stop the player
-        //playerController.stopPlayer = true;
-        // Run the game instructions on start
-        //Invoke("RunStartInstructions", 0.1f);
+        // Make sure the timer is not active
+        countdownTimerIsActive = false;
     }
 
     // Update is called once per frame
@@ -190,7 +195,7 @@ public class QuestController : MonoBehaviour
         if((currentPlayerCollisionsPerDelivery <= 0 && countdownTimerIsActive)|| (timeLeft <= 0 && countdownTimerIsActive))
         {
             // End the game if all lives are exhausted
-            if (currentPlayerFailedQuests < 1)
+            if (currentPlayerFailedQuests < 2)
             {
                 EndGameFromFailure();
             }
@@ -419,13 +424,15 @@ public class QuestController : MonoBehaviour
         playerHasBossQuest = false;
         playerHasDelivery = false;
         playerHasBossDelivery = false;
-        SubXpToPlayerLevelingSystem(currentPlayerDifficulty);
+        //SubXpToPlayerLevelingSystem(currentPlayerDifficulty);
         CalculatePlayersCurrentDifficulty();
         currentPlayerFailedQuests -= 1;
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
         //playerUIManager.RunDialogSystem("You failed this quest! :(", PlayerUIManager.QuestStatus.FAIL);
         // Enable/Disable gameobjects
         NoQuestActiveGameObjects();
+        failedDeliveryConvo.OnUse();
+        GameObject.FindObjectOfType<PlayerUIManager>().SubtractLiveStar();
     }
 
     public void EndGameFromFailure()
@@ -436,6 +443,13 @@ public class QuestController : MonoBehaviour
         //playerUIManager.RunDialogSystem("<b>Game Over!</b>\n You failed too many quests.", PlayerUIManager.QuestStatus.GAMEOVER);
         // Enable/Disable gameobjects
         NoQuestActiveGameObjects();
+        // Play game over convo
+        gameOverConvo.OnUse();
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 
     private void NoQuestActiveGameObjects()

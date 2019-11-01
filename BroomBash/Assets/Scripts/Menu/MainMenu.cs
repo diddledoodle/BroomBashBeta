@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string gameSceneName;
     public GameObject creditsMenuPanel;
     public GameObject titleMenuPanel;
 
-    public void LoadGameScene()
+    public void LoadGameScene(string _levelName)
     {
-        SceneManager.LoadSceneAsync(gameSceneName);
+        SceneManager.LoadSceneAsync(_levelName);
     }
     public void ShowCredits()
     {

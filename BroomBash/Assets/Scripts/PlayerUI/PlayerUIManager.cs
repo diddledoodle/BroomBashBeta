@@ -24,6 +24,7 @@ public class PlayerUIManager : MonoBehaviour
     private InputHandler inputHandler;
 
     private LevelSystem playerLevelSystem;
+    private int activeLiveStars = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -62,25 +63,30 @@ public class PlayerUIManager : MonoBehaviour
         // Update the xp and level text
         if(playerLevelSystem != null)
         {
-            xpText.text = $"<b>XP: {playerLevelSystem.xp}</b>";
+            xpText.text = $"<b>XP {playerLevelSystem.xp}</b>";
+            levelText.text = $"<b>Level {playerLevelSystem.currentLevel + 1}</b>";
         }
         else
         {
             xpText.text = string.Empty;
+            levelText.text = string.Empty;
         }
-        //levelText.text = $"<b>Level: {playerLevelSystem.currentLevel}</b>";
+        
         //livesText.text = $"<b>Lives: {questController.currentPlayerFailedQuests}</b>";
-        // Enable/Diable life stars
-        if(questController != null)
+    }
+
+    public void SubtractLiveStar()
+    {
+        activeLiveStars--;
+        for(int i = 0; i < starImages.Count; i++)
         {
-            for (int i = 0; i < starImages.Count; i++)
+            if(i <= activeLiveStars - 1)
             {
-                if (i <= questController.currentPlayerFailedQuests)
-                {
-                    starImages[i].enabled = true;
-
-
-                }
+                starImages[i].enabled = true;
+            }
+            else
+            {
+                starImages[i].enabled = false;
             }
         }
     }

@@ -25,7 +25,7 @@ public class TargetIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(questController != null)
+        if(questController != null && questController.currentQuest != null)
         {
             if (questController.countdownTimerIsActive)
             {

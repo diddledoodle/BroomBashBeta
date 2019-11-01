@@ -229,6 +229,7 @@ MonoBehaviour:
   target: {fileID: 0}
   meshes: {fileID: 2095712489}
   hideDistance: 0
+  tutorial: 0
 --- !u!1 &1199537931
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +537,7 @@ MonoBehaviour:
   childObjectToRotateTowardSteer: {fileID: 752601669811963281}
   stopPlayer: 0
   speed: 0
+  playerStartingPosition: {x: 0, y: 0, z: 0}
   inputHandler: {fileID: 0}
   questController: {fileID: 0}
 --- !u!114 &5204524461918749767
@@ -551,9 +553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundTag: Ground
-  maxHeightFromGround: 40
+  maxHeightFromGround: 60
   minHeightFromGround: 0.3
-  maxHeightFromGroundQuestNotActive: 70
+  maxHeightFromGroundQuestNotActive: 80
 --- !u!114 &1707904220858327486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,11 +1012,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2095712490}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b98da6effbc964d90a62b0170ba61066,
-        type: 3}
-      propertyPath: m_Name
-      value: Arrow
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b98da6effbc964d90a62b0170ba61066,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1084,6 +1081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b98da6effbc964d90a62b0170ba61066,
+        type: 3}
+      propertyPath: m_Name
+      value: Arrow
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: b98da6effbc964d90a62b0170ba61066,
         type: 3}

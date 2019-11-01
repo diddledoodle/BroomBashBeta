@@ -57,6 +57,10 @@ public class PlayerController : MonoBehaviour
         questController = GameObject.FindObjectOfType<QuestController>();
         // Get the players starting poosition
         playerStartingPosition = this.gameObject.transform.position;
+        // Stop the player on start so they dont go shooting off
+        StopPlayer();
+        // Release the player after a few seconds
+        Invoke("UnstopPlayer", 2f);
     }
 
     private void OnGUI()

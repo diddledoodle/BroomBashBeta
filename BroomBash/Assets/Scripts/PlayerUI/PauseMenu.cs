@@ -61,6 +61,9 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitToMainMenu()
     {
+        /*jpost audio*/
+        //play the exit game sound from wwise
+        AkSoundEngine.PostEvent("play_bb_sx_game_ui_exitgame", gameObject);
         SceneManager.LoadSceneAsync("MainMenu");
     }
 

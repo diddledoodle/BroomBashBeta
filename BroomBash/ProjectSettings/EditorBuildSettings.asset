@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Testing/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: dfd20322bf02699418359b4ac9a4dcce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Testing/AdvancedGrayBox.unity
     guid: f1cb4040c5e9e04459be3055f85a834c
   - enabled: 0
     path: Assets/Scenes/Testing/QuestSystem.unity
     guid: cc90eddc3643d2d42ab25fbd089e61b4
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: da10b816b06c8425ba0f50c72313f095
+  - enabled: 1
+    path: Assets/Scenes/MainLevel.unity
+    guid: 7680776b06c851541a7701f726167832
   m_configObjects: {}
