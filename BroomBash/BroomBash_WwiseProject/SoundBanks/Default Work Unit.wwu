@@ -68,6 +68,15 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Music" ID="{ECB24DC6-401E-445E-A266-DB011F0DF65A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_bb_mx_menu" ID="{8C69FE2E-8740-410E-9DE7-9CD835F64440}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_mx_level" ID="{91BB0EFB-7B54-4666-A65F-6BD298AEF333}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_mx_menu" ID="{76F33288-3085-4AE2-AB83-DB5F4B4AA12E}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

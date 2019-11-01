@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5c5f342fa653a04694f8cd30fd9bc0b0
     GuidInternal: 
-    m_lastTime: -8586291139429262881
+    m_lastTime: -8586290343436646148
     List:
     - name: Ambience
       guid: 979472596c56d643a1824f3617b49d37
@@ -60,6 +60,15 @@ MonoBehaviour:
       - ElementName: Interactibles
         ObjectType: 7
       Path: Default Work Unit\Interactibles
+    - name: Music
+      guid: c64db2ec1e405e44a266db011f0df65a
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 7
+      Path: Default Work Unit\Music
     - name: Player
       guid: ff5c6c37d085f848b65e1e51707c0666
       id: 1069431850
@@ -83,8 +92,32 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: c0c75d85be846a449bbfe40563d82e33
     GuidInternal: 
-    m_lastTime: -8586291139429310906
+    m_lastTime: -8586290344576353160
     List:
+    - name: play_bb_mx_level
+      guid: fb0ebb91547b6646a65f6bd298aef333
+      id: 749720245
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_mx_level
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_mx_level
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: play_bb_mx_menu
+      guid: 2efe698c40870e419de79cd835f64440
+      id: 3636228032
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: play_bb_mx_menu
+        ObjectType: 3
+      Path: Default Work Unit\play_bb_mx_menu
+      maxAttenuation: 0
+      maxDuration: 6.392063
+      minDuration: 6.392063
     - name: play_bb_sx_game_amb_crowd_large
       guid: 09cf31e3dd5be747915e4b711c0a6e7f
       id: 2811784222
@@ -95,8 +128,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\play_bb_sx_game_amb_crowd_large
       maxAttenuation: 50
-      maxDuration: 19
-      minDuration: 19
+      maxDuration: -1
+      minDuration: -1
     - name: play_bb_sx_game_amb_crowd_small
       guid: 72f8641ee5eb2545829f41554df76e08
       id: 374084730
@@ -107,8 +140,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\play_bb_sx_game_amb_crowd_small
       maxAttenuation: 50
-      maxDuration: 22
-      minDuration: 22
+      maxDuration: -1
+      minDuration: -1
     - name: play_bb_sx_game_amb_meowing
       guid: 35021b90454e3643923f91dea392abbd
       id: 3417746653
@@ -469,6 +502,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
+    - name: stop_bb_mx_menu
+      guid: 8832f3768530e24aab83db5f4b4aa12e
+      id: 1527761650
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_mx_menu
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_mx_menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: stop_bb_sx_game_amb_water_lap_stone
       guid: d8a4abffc3cf0e4aba191e352b28e708
       id: 2971162542
