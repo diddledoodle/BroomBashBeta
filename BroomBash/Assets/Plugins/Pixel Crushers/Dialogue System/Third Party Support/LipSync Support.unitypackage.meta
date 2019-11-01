@@ -1,8 +1,10 @@
 fileFormatVersion: 2
-guid: ec57ea441fa60d544a4f7908f75fa696
-NativeFormatImporter:
+guid: 14eb0de10b56d7d48aa47c34c085763a
+labels:
+- Rogo
+- Lipsync
+DefaultImporter:
   externalObjects: {}
-  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

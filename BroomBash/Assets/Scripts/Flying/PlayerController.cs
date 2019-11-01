@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour
     public bool stopPlayer = false;
 
     
-    [SerializeField]
-    private float speed;
+    
+    public float speed;
 
-    private Vector3 playerStartingPosition = Vector3.zero;
+    [HideInInspector]
+    public Vector3 playerStartingPosition = Vector3.zero;
 
     [HideInInspector]
     public InputHandler inputHandler;
@@ -139,13 +140,11 @@ public class PlayerController : MonoBehaviour
     public void StopPlayer()
     {
         stopPlayer = true;
-        Debug.Log("The player was stopped", this.gameObject);
     }
 
     public void UnstopPlayer() // Lol is that even a word?
     {
         stopPlayer = false;
-        Debug.Log("The player was released", this.gameObject);
     }
 
     private float GetWantedSpeed(float _speedControlInput)

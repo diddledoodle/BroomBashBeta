@@ -1,8 +1,10 @@
 fileFormatVersion: 2
-guid: ec57ea441fa60d544a4f7908f75fa696
-NativeFormatImporter:
+guid: 89c6283ed4a7a914db4ed32d9fe4be1b
+labels:
+- Cinema
+- Director
+DefaultImporter:
   externalObjects: {}
-  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

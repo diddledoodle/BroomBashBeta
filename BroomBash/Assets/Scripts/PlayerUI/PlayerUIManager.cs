@@ -9,6 +9,7 @@ public class PlayerUIManager : MonoBehaviour
 {
 
     public TextMeshProUGUI timer;
+    public Text levelText;
     public Text xpText;
     //public Text levelText;
     //public Text livesText;
@@ -16,12 +17,8 @@ public class PlayerUIManager : MonoBehaviour
 
     public GameObject miniMap;
     public GameObject notifcationPanel;
-    public Text notifictionText;
-    public Text notificationDeclineText;
-    public Text notificationAcceptText;
     public GameObject dialogPanel;
     public GameObject startGameInstructions;
-    public Text dialogText;
     public Texture miniMapRenderTexture;
     private QuestController questController;
     private InputHandler inputHandler;
@@ -35,22 +32,26 @@ public class PlayerUIManager : MonoBehaviour
 
         // Assign the render texture to the mini-map
         miniMap.GetComponent<RawImage>().texture = miniMapRenderTexture;
-        // Turn off all components that arent used at the start of the game
-        notifcationPanel.SetActive(false);
-        dialogPanel.SetActive(false);
-
         // Get the questController
         questController = GameObject.FindObjectOfType<QuestController>();
+        // Turn of text elements if the quest controller is null
+        if(questController == null)
+        {
+            timer.text = string.Empty;
+            foreach(Image s in starImages)
+            {
+                s.enabled = false;
+            }
+            levelText.text = string.Empty;
+        }
         // Get the player leveling system
-        playerLevelSystem = questController.player.GetComponent<LevelSystem>();
-        // Get the input handler
-        inputHandler = questController.player.GetComponent<InputHandler>();
+        playerLevelSystem = (questController != null) ? questController.player.GetComponent<LevelSystem>() : null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (questController.countdownTimerIsActive)
+        if (questController != null && questController.countdownTimerIsActive)
         {
             timer.text = $"<b>{questController.timeLeft.ToString("F0")} seconds</b>";
         }
@@ -59,17 +60,27 @@ public class PlayerUIManager : MonoBehaviour
             timer.text = string.Empty;
         }
         // Update the xp and level text
-        xpText.text = $"<b>XP: {playerLevelSystem.xp}</b>";
+        if(playerLevelSystem != null)
+        {
+            xpText.text = $"<b>XP: {playerLevelSystem.xp}</b>";
+        }
+        else
+        {
+            xpText.text = string.Empty;
+        }
         //levelText.text = $"<b>Level: {playerLevelSystem.currentLevel}</b>";
         //livesText.text = $"<b>Lives: {questController.currentPlayerFailedQuests}</b>";
         // Enable/Diable life stars
-        for (int i = 0; i < starImages.Count; i++)
+        if(questController != null)
         {
-            if (i <= questController.currentPlayerFailedQuests)
+            for (int i = 0; i < starImages.Count; i++)
             {
-                starImages[i].enabled = true;
+                if (i <= questController.currentPlayerFailedQuests)
+                {
+                    starImages[i].enabled = true;
 
 
+                }
             }
         }
     }

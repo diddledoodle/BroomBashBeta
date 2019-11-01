@@ -1,8 +1,10 @@
 fileFormatVersion: 2
-guid: ec57ea441fa60d544a4f7908f75fa696
-NativeFormatImporter:
+guid: 1f67bb1f7a0ccac4bacceb5680482ca2
+labels:
+- 2d
+- Tk2d
+DefaultImporter:
   externalObjects: {}
-  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
