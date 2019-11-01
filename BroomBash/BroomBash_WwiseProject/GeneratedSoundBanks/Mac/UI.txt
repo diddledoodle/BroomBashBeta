@@ -1,0 +1,29 @@
+Event	ID	Name			Wwise Object Path	Notes
+	214100990	play_bb_sx_game_ui_xp_lost			\Default Work Unit\play_bb_sx_game_ui_xp_lost	
+	661752896	play_bb_sx_menu_ui_main_start			\Default Work Unit\play_bb_sx_menu_ui_main_start	
+	1081189030	play_bb_sx_game_ui_delivery_new			\Default Work Unit\play_bb_sx_game_ui_delivery_new	
+	1095623268	play_bb_sx_game_ui_delivery_accept			\Default Work Unit\play_bb_sx_game_ui_delivery_accept	
+	1303049037	play_bb_sx_game_ui_text_close			\Default Work Unit\play_bb_sx_game_ui_text_close	
+	1317511485	stop_bb_sx_game_ui_timer_low			\Default Work Unit\stop_bb_sx_game_ui_timer_low	
+	1359399331	play_bb_sx_game_ui_exitgame			\Default Work Unit\play_bb_sx_game_ui_exitgame	
+	1875305114	play_bb_sx_menu_ui_main_navigation			\Default Work Unit\play_bb_sx_menu_ui_main_navigation	
+	2394352179	play_bb_sx_game_ui_timer_low			\Default Work Unit\play_bb_sx_game_ui_timer_low	
+	2562275565	play_bb_sx_game_ui_timer_out			\Default Work Unit\play_bb_sx_game_ui_timer_out	
+	3865043706	play_bb_sx_game_ui_xp_gained			\Default Work Unit\play_bb_sx_game_ui_xp_gained	
+	4043862979	play_bb_sx_game_ui_text_advance			\Default Work Unit\play_bb_sx_game_ui_text_advance	
+	4291039282	play_bb_sx_game_ui_delivery_decline			\Default Work Unit\play_bb_sx_game_ui_delivery_decline	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	27990012	bb_sx_game_ui_xp_lose_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_xp_lose_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_xp_lose_01		192064
+	96364987	bb_sx_game_ui_delivery_new_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_delivery_new_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_delivery_new_01		251772
+	127903617	bb_sx_game_ui_delivery_decline_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_delivery_decline_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_delivery_decline_01		288064
+	154523416	bb_sx_menu_ui_main_navigation_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_menu_ui_main_navigation_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_menu_ui_main_navigation_01		192064
+	202134121	bb_sx_game_ui_delivery_accept_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_delivery_accept_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_delivery_accept_01		248696
+	345245048	bb_sx_game_ui_timer_out_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_timer_out_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_timer_out_01		192064
+	371167224	bb_sx_menu_ui_main_start_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_menu_ui_main_start_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_menu_ui_main_start_01		192064
+	508665990	bb_sx_game_ui_timer_low_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_timer_low_01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_timer_low_01		192064
+	831713450	bb_sx_game_ui_text_advance_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_text_advance_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_text_advance_01		192064
+	880489173	bb_sx_game_ui_exitgame_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_exitgame_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_exitgame_01		192064
+	993673285	bb_sx_game_ui_xp_gain_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_xp_gain_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_xp_gain_01		192064
+	1070545309	bb_sx_game_ui_text_close_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_text_close_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_text_close_01		192064
+

@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	628949193	play_bb_sx_game_int_delivery_pickup			\Default Work Unit\play_bb_sx_game_int_delivery_pickup	
+	823679326	stop_bb_sx_game_int_enter_active_pickup			\Default Work Unit\stop_bb_sx_game_int_enter_active_pickup	
+	1048965709	play_bb_sx_game_int_delivery_dropoff			\Default Work Unit\play_bb_sx_game_int_delivery_dropoff	
+	1170827374	play_bb_sx_game_int_exit_active_pickup			\Default Work Unit\play_bb_sx_game_int_exit_active_pickup	
+	3783710516	play_bb_sx_game_int_enter_active_pickup			\Default Work Unit\play_bb_sx_game_int_enter_active_pickup	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	177912085	bb_sx_game_int_enter_active_pickup_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_int_enter_active_pickup_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_int_enter_active_pickup_01		1291188
+	188002564	bb_sx_game_ui_delivery_dropoff_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_delivery_dropoff_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_delivery_dropoff_01		459496
+	809968592	bb_sx_game_int_exit_active_pickup_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_int_exit_active_pickup_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_int_exit_active_pickup_01		504064
+	941153672	bb_sx_game_ui_delivery_pickup_01	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\bb_sx_game_ui_delivery_pickup_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\bb_sx_game_ui_delivery_pickup_01		336064
+

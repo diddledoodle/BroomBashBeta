@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2F345F5C-53A6-46A0-94F8-CD30FD9BC0B0}" SchemaVersion="94">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{2F345F5C-53A6-46A0-94F8-CD30FD9BC0B0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="UI" ID="{8FC81D76-D652-4058-B5F2-58455109A0C0}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_bb_sx_game_ui_delivery_accept" ID="{D72AB749-2919-4152-9285-FFD275678FA8}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_menu_ui_main_navigation" ID="{5CD0D1E1-E233-4523-95CD-680E8D99AA35}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_game_ui_timer_low" ID="{FE8E8D76-5FE5-46D7-A6FC-D9EAB7AEC112}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_timer_low" ID="{7351E7AE-EC6D-4763-A411-66C39BCFB123}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_menu_ui_main_start" ID="{9DC8AE26-54B4-4807-B26C-6699A11C261A}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_timer_out" ID="{7077A726-BAA4-480C-892E-B4392A5DD12A}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_text_advance" ID="{2F289261-A349-4890-B4FB-D0B820B682B7}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_exitgame" ID="{A0EF42D3-32F3-4B00-AEB7-E85EF9A5E645}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_xp_lost" ID="{1DEAB6E6-CD53-4C7D-92D0-4F144092CB2D}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_delivery_decline" ID="{E3D55F82-8AB1-4C8E-8BCA-C4F15DF96588}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_delivery_new" ID="{20AEFC9C-A17B-4D62-AC3E-5F82FA5DDC4C}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_text_close" ID="{B6C532E6-79D8-4FA8-9A06-185D8286EEF0}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_ui_xp_gained" ID="{7ABA5CFC-7408-4FED-8E9E-AF5EB25D7A7A}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Ambience" ID="{59729497-566C-43D6-A182-4F3617B49D37}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_bb_sx_game_amb_meowing" ID="{901B0235-4E45-4336-923F-91DEA392ABBD}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_amb_crowd_small" ID="{1E64F872-EBE5-4525-829F-41554DF76E08}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_amb_crowd_large" ID="{E331CF09-5BDD-47E7-915E-4B711C0A6E7F}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_game_amb_water_lap_stone" ID="{FFABA4D8-CFC3-4A0E-BA19-1E352B28E708}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_amb_water_lap_stone" ID="{EBD7A2BD-1045-4BFE-93A9-58C736F0AE24}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_amb_water_waves" ID="{6B3C24C5-0013-4C37-BB9F-1A2582BFDEF2}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_amb_seagulls" ID="{B68755DD-1006-4F14-8E0E-2F01ABC81407}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Environment" ID="{673AB352-7824-47BE-812E-C4E6B16A2EAC}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Player" ID="{376C5CFF-85D0-48F8-B65E-1E51707C0666}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_bb_sx_game_plr_broom_takeoff" ID="{028A5463-C911-408E-8A35-1A85708A9734}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_impact_ground" ID="{F8580E3F-C3CD-417C-8DC0-A327231425AB}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_broom_flying" ID="{0F62E85F-7A0B-41B7-8DD3-509A0E19BB23}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_game_plr_broom_flying" ID="{B6F51522-A2B2-4288-99B7-174DF30105B4}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_skim_water" ID="{EFD5A123-8CCE-479E-AFAF-4DEA31A65947}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_impact_water" ID="{4470A3C3-A6E6-4844-A731-142C2867DDF7}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_impact_building" ID="{DF495CE1-B1CE-48B0-A3D1-A714170E5C18}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_skim_ground" ID="{F5D04135-142C-4924-B8B8-479FDED3BE34}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_broom_decelerate" ID="{80E6F595-7800-4A68-9BBB-B15A2D4C3AA4}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_broom_stop" ID="{CBFDDEC2-F279-4AB7-BC4B-E9D689F50CCA}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_plr_broom_accelerate" ID="{49CD7115-0296-4CD9-B098-1FE28BB2ACE2}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Interactibles" ID="{02C39375-3699-4092-BE96-C67838AC5622}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_bb_sx_game_int_enter_active_pickup" ID="{14D620C5-8C03-43B4-843F-1116A209AF94}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_game_int_enter_active_pickup" ID="{10C80DC5-704B-4E07-9930-834AEA4BB590}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_int_delivery_pickup" ID="{D02B0D84-5196-4E38-AB3E-C6F1FA90487C}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_int_delivery_dropoff" ID="{34D5DD25-3243-4E6A-BEFB-3EBD4A2DFE60}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_sx_game_int_exit_active_pickup" ID="{C2C7B1E3-94AC-4E99-8FBA-D463FB62B9D9}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Music" ID="{ECB24DC6-401E-445E-A266-DB011F0DF65A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="play_bb_mx_menu" ID="{8C69FE2E-8740-410E-9DE7-9CD835F64440}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="play_bb_mx_level" ID="{91BB0EFB-7B54-4666-A65F-6BD298AEF333}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_mx_menu" ID="{76F33288-3085-4AE2-AB83-DB5F4B4AA12E}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

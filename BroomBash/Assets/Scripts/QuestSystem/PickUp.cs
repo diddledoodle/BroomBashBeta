@@ -14,13 +14,19 @@ public class PickUp : MonoBehaviour
         questController = _qc;
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.GetComponent<PlayerController>())
-    //    {
-    //        timePlayerEnteredTrigger = questController.timeSinceStart;
-    //    }
-    //}
+    /*jpost audio*/
+    //re-enabling this ontrigger enter for audio purposes
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<SphereCollider>())
+        {
+            //debug
+            Debug.Log("player has entered pickup zone");
+            //play the enter active pickup wwise sound
+            AkSoundEngine.PostEvent("play_bb_sx_game_int_enter_active_pickup", gameObject);
+            //timePlayerEnteredTrigger = questController.timeSinceStart; legacy trigger for quest controller?
+        }
+    }
 
     //private void OnTriggerStay(Collider other)
     //{
@@ -37,12 +43,19 @@ public class PickUp : MonoBehaviour
     //    }
     //}
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.GetComponent<PlayerController>())
-    //    {
-    //        timePlayerEnteredTrigger = -1;
-    //        playerEnteredTrigger = false;
-    //    }
-    //}
+    /*jpost audio*/
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.GetComponent<SphereCollider>())
+        {
+            //debug
+            Debug.Log("exited the pickupzone");
+            //stop the enter active pickup sound
+            AkSoundEngine.PostEvent("stop_bb_sx_game_int_enter_active_pickup", gameObject);
+            //play the exit active pickup sound
+            AkSoundEngine.PostEvent("play_bb_sx_game_int_exit_active_pickup", gameObject);
+            //timePlayerEnteredTrigger = -1; legacy trigger for quest controller?
+            //playerEnteredTrigger = false; legacy trigger for quest controller?
+        }
+    }
 }

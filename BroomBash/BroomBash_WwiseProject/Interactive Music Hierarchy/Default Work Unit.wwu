@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1CBC1AFE-0917-4E3C-A7D4-F73CB5295792}" SchemaVersion="94">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{1CBC1AFE-0917-4E3C-A7D4-F73CB5295792}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Menu" ID="{3D6EDFD0-6D6F-4B20-8F29-830E960DA58A}" ShortID="828508566">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-15</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="_Nguyen_FULLMIX_BroomBash Intro_menu_1" ID="{C8D81A4A-D294-4C43-9F63-1D203FB1E9F8}" ShortID="957744196">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="6392.0625"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="_Nguyen_FULLMIX_BroomBash Intro_menu_1" ID="{3476E8B5-9280-42D4-91B8-107F922E454C}" ShortID="1017317434">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="_Nguyen_FULLMIX_BroomBash Intro_menu_1" ID="{17C220A4-B565-4613-ADC2-3121F0200338}" ShortID="554304641">
+											<Language>SFX</Language>
+											<AudioFile>_Nguyen_FULLMIX_BroomBash Intro_menu_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{4D456C5F-2A6B-4A5C-95B3-8B206A3A1799}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{C4D2B998-B2B0-4F92-BC46-5F858F1CBC1E}">
+											<ClipList>
+												<MusicClip Name="_Nguyen_FULLMIX_BroomBash Intro_menu_1" ID="{10C690EF-C200-4452-A29C-ADAD5C9028BB}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="6392.0625"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="_Nguyen_FULLMIX_BroomBash Intro_menu_1" ID="{17C220A4-B565-4613-ADC2-3121F0200338}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{0AA6FFB6-AB14-4A85-827A-82A8092187DB}"/>
+								<MusicCue Name="Exit Cue" ID="{FF4FF69B-B3EF-40C7-BE4F-67E8C9267862}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="6392.0625"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{786C2770-9677-400F-A569-ED8A763A0E55}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{1E4F79B1-7F84-4E1B-B740-17AA20A8C7D2}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{AAB2C60E-514E-4F91-87C4-559B4A608821}" ShortID="106448339">
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{DECE5D30-2ED5-4BDE-B6EC-73A1407A8FD6}" ShortID="255930306">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="_Nguyen_FULLMIX_BroomBash Intro_menu_1" ID="{C8D81A4A-D294-4C43-9F63-1D203FB1E9F8}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+				<MusicPlaylistContainer Name="Level" ID="{4E7E1024-FBD1-47E7-AA2B-DDE56E4B5B07}" ShortID="568546894">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="_Nguyen_FULLMIX_BroomBash Main" ID="{7465EC3A-3481-4398-99C0-DF170589A860}" ShortID="934637017">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="54567.2916666667"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3CF32DB8-C0BE-4978-BFA7-76CB72FB9484}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="_Nguyen_FULLMIX_BroomBash Main" ID="{1C819CBC-7612-4D49-9748-77BCC0E91978}" ShortID="616607854">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63D21D4F-6415-4C93-B609-A948656A43E4}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="_Nguyen_FULLMIX_BroomBash Main" ID="{652E5BF6-5822-4C53-8088-5A64886ABD91}" ShortID="413294733">
+											<Language>SFX</Language>
+											<AudioFile>_Nguyen_FULLMIX_BroomBash Main.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{8E8A0B5C-E20A-4C3A-AA7A-0323575E5208}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{4AA6E816-8BFA-45B6-BD03-C6F6ED30C4F8}">
+											<ClipList>
+												<MusicClip Name="_Nguyen_FULLMIX_BroomBash Main" ID="{5444160D-7D93-4226-AF2E-C0485D376C01}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="54567.2916666667"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="_Nguyen_FULLMIX_BroomBash Main" ID="{652E5BF6-5822-4C53-8088-5A64886ABD91}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{75F74BD7-761F-4F8D-9D11-EC4AD2855042}"/>
+								<MusicCue Name="Exit Cue" ID="{1EFC27C0-4FD7-4B9A-949A-79DDC4E949D7}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="54567.2916666667"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{AA63256E-3105-4FC2-8214-CA66C695C0D5}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{FA022BA1-6E26-4748-883F-B48B88CB5F0F}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{20CB1CD2-E88D-482B-9430-C446FA3BEB0C}" ShortID="306572740">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{56FFFBEC-78B9-4BE5-BB2E-2DD436F4B226}" ShortID="504354713">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="_Nguyen_FULLMIX_BroomBash Main" ID="{7465EC3A-3481-4398-99C0-DF170589A860}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

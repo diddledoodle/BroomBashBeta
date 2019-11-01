@@ -42,6 +42,13 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public QuestController questController;
 
+    /*jpost audio*/
+    //audio related fields
+    private bool hasAccelerated = false;
+    private bool hasSlowedDown = false;
+    private bool hasStopped = false;
+    private bool isFlyingNormal = false;
+
     private void Start()
     {
         // Get the input handler
@@ -155,21 +162,69 @@ public class PlayerController : MonoBehaviour
         if(_speedControlInput > inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = maximumSpeed;
+
+            /*jpost audio*/
+            if (!hasAccelerated)
+            {
+                //play the broom accelerate sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_accelerate", gameObject);
+                //stop the flying normal sound
+                //AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
+                hasAccelerated = true;
+                hasSlowedDown = false;
+                isFlyingNormal = false;
+            }
+            
         }
         // Slow down
         else if(_speedControlInput < -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = 0;
+            /*jpost audio*/
+            if (!hasSlowedDown)
+            {
+                //play the broom deccelerate sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_decelerate", gameObject);
+                hasSlowedDown = true;
+            }
         }
         // Go back to base speed
         else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = baseSpeed;
+            /*jpost audio*/
+            //reset hasAccelerated
+            hasAccelerated = false;
+            //reset hasSlowedDown
+            hasSlowedDown = true;
+            //reset hasStopped
+            hasStopped = false;
+            /*jpost audio*/
+            if (!isFlyingNormal)
+            {
+                //play normal flying sound
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_flying", gameObject);
+                isFlyingNormal = true;
+            }
         }
 
         else if(inputHandler.Stop)
         {
             _wantedSpeed = 0;
+            /*jpost audio*/
+            //if the player hasn't stopped
+            if (!hasStopped)
+            {
+                //play the broom stop sound from wwise
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_broom_stop", gameObject);
+                //set hasStopped to true
+                hasStopped = true;
+                //stop the flying normal sound
+                AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
+                isFlyingNormal = false;
+            }
+
+
         }
 
         return _wantedSpeed;
@@ -212,5 +267,29 @@ public class PlayerController : MonoBehaviour
         {
             questController.PlayerCollidedWithObjectDuringQuest();
         }
+
+        /*jpost audio*/
+        //collision sounds for buildings
+        if (collision.gameObject.GetComponent<MeshCollider>())
+        {
+            if(collision.gameObject.GetComponent<MeshCollider>().name == "polySurface99")
+            {
+                //play wwise sound for building collision at location of collision
+                AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_building", collision.gameObject);
+            }                
+        }
+        //collision sounds for water
+        if (collision.gameObject.name == "Water")
+        {
+            //play wwise sound for water collision at location of collision
+            AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_water", collision.gameObject);
+        }
+        //collision sounds for ground
+        if (collision.gameObject.tag == "Ground")
+        {
+            //play wwise sound for water collision at location of collision
+            AkSoundEngine.PostEvent("play_bb_sx_game_plr_impact_ground", gameObject);            
+        }
+            
     }
 }

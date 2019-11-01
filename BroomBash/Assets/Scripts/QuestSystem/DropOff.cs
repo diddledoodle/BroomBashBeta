@@ -18,4 +18,17 @@ public class DropOff : MonoBehaviour
     {
         questController.PlayerArrivedAtDeliveryLocation(this);
     }
+
+    /*jpost audio*/
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<SphereCollider>())
+        {
+            //debug
+            Debug.Log("player has entered dropoff zone");
+            //play the enter active dropoff wwise sound
+            AkSoundEngine.PostEvent("play_bb_sx_game_int_delivery_dropoff", gameObject);
+            //timePlayerEnteredTrigger = questController.timeSinceStart; legacy trigger for quest controller?
+        }
+    }
 }

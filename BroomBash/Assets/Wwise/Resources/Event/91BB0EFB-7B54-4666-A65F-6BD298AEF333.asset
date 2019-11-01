@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbd9fbea46880244b46addd6df97f19, type: 3}
+  m_Name: 91BB0EFB-7B54-4666-A65F-6BD298AEF333
+  m_EditorClassIdentifier: 
+  objectName: play_bb_mx_level
+  id: 749720245
+  guid: 91BB0EFB-7B54-4666-A65F-6BD298AEF333

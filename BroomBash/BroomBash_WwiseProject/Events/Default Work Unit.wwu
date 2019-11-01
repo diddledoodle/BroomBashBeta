@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="play_bb_sx_menu_ui_main_start" ID="{9DC8AE26-54B4-4807-B26C-6699A11C261A}">
+					<ChildrenList>
+						<Action Name="" ID="{00E4EB9D-08F9-435F-A80D-FE0A00C91A75}" ShortID="455436263">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_menu_ui_main_start_01" ID="{EF83A56A-8502-4509-A55D-60EFA9C51E4E}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_broom_accelerate" ID="{49CD7115-0296-4CD9-B098-1FE28BB2ACE2}">
+					<ChildrenList>
+						<Action Name="" ID="{5E2C3375-8614-4E62-AEEF-7D4F32D6C6C7}" ShortID="430516661">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_accelerating_01" ID="{79A909F1-A62D-4864-BBF4-1C7A72D3CEA4}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_int_enter_active_pickup" ID="{14D620C5-8C03-43B4-843F-1116A209AF94}">
+					<ChildrenList>
+						<Action Name="" ID="{F42188C8-B524-439C-BE1B-2027428CA916}" ShortID="491012290">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_int_enter_active_pickup_01" ID="{C60C6FE4-D779-4C9D-8384-5B0DBC756A0B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_broom_takeoff" ID="{028A5463-C911-408E-8A35-1A85708A9734}">
+					<ChildrenList>
+						<Action Name="" ID="{B687D3E2-7992-4754-8BFC-FBA11512E811}" ShortID="78872928">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_takeoff_01" ID="{FEF16770-B539-48A7-A816-1E9CDADD9FAB}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_broom_flying" ID="{0F62E85F-7A0B-41B7-8DD3-509A0E19BB23}">
+					<ChildrenList>
+						<Action Name="" ID="{85254C3C-E3E9-489A-9579-890532A4B498}" ShortID="900415918">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_flying_01" ID="{744B48A1-6716-47EB-AFB8-DD0CB4010C9B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_broom_decelerate" ID="{80E6F595-7800-4A68-9BBB-B15A2D4C3AA4}">
+					<ChildrenList>
+						<Action Name="" ID="{D425FC4F-BBCE-47B9-87E2-973D25649741}" ShortID="1071174589">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_decelerating_01" ID="{A73990B8-18E4-4CF4-A120-45FA751A6747}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_broom_stop" ID="{CBFDDEC2-F279-4AB7-BC4B-E9D689F50CCA}">
+					<ChildrenList>
+						<Action Name="" ID="{EDD36F0A-AC0A-4A81-8A52-9D42E2EC3BC4}" ShortID="715551408">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_stop_01" ID="{7016CF98-A7E6-4F57-ABC3-FC38F3F43099}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_impact_building" ID="{DF495CE1-B1CE-48B0-A3D1-A714170E5C18}">
+					<ChildrenList>
+						<Action Name="" ID="{E30B501F-4D19-4DAE-BBEC-9CB7AE3E4C9F}" ShortID="830784727">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_impact_building_01" ID="{23A3A71D-66C3-4F5D-A27D-5A93E88E25F5}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_impact_ground" ID="{F8580E3F-C3CD-417C-8DC0-A327231425AB}">
+					<ChildrenList>
+						<Action Name="" ID="{7F89FEFA-F8E5-44B3-9F18-D7CAC6045F80}" ShortID="421275225">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_impact_ground_01" ID="{B9D6791C-4510-4071-A937-E016CCF37B16}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_impact_water" ID="{4470A3C3-A6E6-4844-A731-142C2867DDF7}">
+					<ChildrenList>
+						<Action Name="" ID="{4C23E5B5-418A-4A47-8806-FAEE823A4B17}" ShortID="45556541">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_impact_water_01" ID="{138F05DD-B827-415D-9C9E-56E3E7FBE168}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_skim_water" ID="{EFD5A123-8CCE-479E-AFAF-4DEA31A65947}">
+					<ChildrenList>
+						<Action Name="" ID="{763ED793-3CCD-4CE3-AAF2-E314D07B9606}" ShortID="827434747">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_skim_water_01" ID="{7F57984E-2D48-4C41-8CA0-033E4D771061}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_plr_skim_ground" ID="{F5D04135-142C-4924-B8B8-479FDED3BE34}">
+					<ChildrenList>
+						<Action Name="" ID="{386AE077-5F9A-44DB-8CD7-BA4B059548EE}" ShortID="840215026">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_skim_ground_01" ID="{AFF09259-B3FA-42DD-BC6A-727226F2B1F9}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_int_exit_active_pickup" ID="{C2C7B1E3-94AC-4E99-8FBA-D463FB62B9D9}">
+					<ChildrenList>
+						<Action Name="" ID="{655FFB70-6FB5-4D21-A4ED-0D4D7052CEBB}" ShortID="370942127">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_int_exit_active_pickup_01" ID="{105B41FE-BD00-4AE8-A8F9-002FCE3E8AB5}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_menu_ui_main_navigation" ID="{5CD0D1E1-E233-4523-95CD-680E8D99AA35}">
+					<ChildrenList>
+						<Action Name="" ID="{CAC39870-7425-4C60-9720-CF59924C72BA}" ShortID="370784200">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_menu_ui_main_navigation_01" ID="{103E07B6-E745-4E31-AD22-B1935DEF2BA9}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_exitgame" ID="{A0EF42D3-32F3-4B00-AEB7-E85EF9A5E645}">
+					<ChildrenList>
+						<Action Name="" ID="{F9BDB8CF-8BE2-4F66-BE65-29FB8C27482B}" ShortID="760593680">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_exitgame_01" ID="{79BC0194-56E5-413E-8E56-186099A2B0AB}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_text_advance" ID="{2F289261-A349-4890-B4FB-D0B820B682B7}">
+					<ChildrenList>
+						<Action Name="" ID="{D53E352E-0CD1-4393-A591-98C26DFF2362}" ShortID="142998130">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_text_advance_01" ID="{DBEDF63C-903E-4308-9DB2-CE1B33327786}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_text_close" ID="{B6C532E6-79D8-4FA8-9A06-185D8286EEF0}">
+					<ChildrenList>
+						<Action Name="" ID="{AB6F492F-4D32-413A-9233-8E8FDC6D4600}" ShortID="487209576">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_text_close_01" ID="{9212AF1F-1365-4B69-988F-0CC49C3FDC60}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_delivery_new" ID="{20AEFC9C-A17B-4D62-AC3E-5F82FA5DDC4C}">
+					<ChildrenList>
+						<Action Name="" ID="{1D7A3FF2-EA02-4895-844A-88FF719BC7C5}" ShortID="590694306">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_delivery_new_01" ID="{C31927A6-FD8E-4C86-99C9-1D73B6041A5D}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_delivery_accept" ID="{D72AB749-2919-4152-9285-FFD275678FA8}">
+					<ChildrenList>
+						<Action Name="" ID="{849A03A2-2C6B-4677-84AE-C55BBAE03DD9}" ShortID="461146025">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_delivery_accept_01" ID="{0B2A17A4-D816-495A-93AD-4CA4C2E7BDC5}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_delivery_decline" ID="{E3D55F82-8AB1-4C8E-8BCA-C4F15DF96588}">
+					<ChildrenList>
+						<Action Name="" ID="{F6C6ECDA-0D8F-4046-BE22-315D2B7874D8}" ShortID="750941140">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_delivery_decline_01" ID="{C5738D46-097B-4304-B26B-637053AAF7DB}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_xp_gained" ID="{7ABA5CFC-7408-4FED-8E9E-AF5EB25D7A7A}">
+					<ChildrenList>
+						<Action Name="" ID="{3187F01C-D554-415A-9FCE-7E03EEA2CF06}" ShortID="15888410">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_xp_gain_01" ID="{D6FB6DAE-DB45-43F2-AE43-4E35AF492C7B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_xp_lost" ID="{1DEAB6E6-CD53-4C7D-92D0-4F144092CB2D}">
+					<ChildrenList>
+						<Action Name="" ID="{2F4B70DA-E50A-4B07-86C3-B665BCEA408F}" ShortID="1070507145">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_xp_lose_01" ID="{FB94E7FE-306C-4AFB-B93F-567E8501738B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_timer_low" ID="{7351E7AE-EC6D-4763-A411-66C39BCFB123}">
+					<ChildrenList>
+						<Action Name="" ID="{5DA825B8-2BDE-416F-B66B-AC559479568B}" ShortID="523062239">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_timer_low_01" ID="{E70A9501-F508-4709-A3AF-2AFC9B92ECBC}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_ui_timer_out" ID="{7077A726-BAA4-480C-892E-B4392A5DD12A}">
+					<ChildrenList>
+						<Action Name="" ID="{AE27DD27-E322-4602-B01A-D203DB7652AA}" ShortID="985152056">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_timer_out_01" ID="{30670D33-4ADE-4C66-8850-C2A7155C4266}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_int_delivery_pickup" ID="{D02B0D84-5196-4E38-AB3E-C6F1FA90487C}">
+					<ChildrenList>
+						<Action Name="" ID="{01C9F778-A32C-4A78-B931-F33CCDB0006E}" ShortID="1073428104">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_delivery_pickup_01" ID="{B8CA4AFF-7FA5-4505-89BB-25FAF957539E}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_int_delivery_dropoff" ID="{34D5DD25-3243-4E6A-BEFB-3EBD4A2DFE60}">
+					<ChildrenList>
+						<Action Name="" ID="{57541BEA-4A9D-4BC4-94D4-33BBA1CE4619}" ShortID="905755155">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_delivery_dropoff_01" ID="{2FFEB5AC-2ECE-487C-A9B7-8E77C94BEE89}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_amb_seagulls" ID="{B68755DD-1006-4F14-8E0E-2F01ABC81407}">
+					<ChildrenList>
+						<Action Name="" ID="{83A5161D-5F4D-4FB4-AC1B-92F86AFF71F3}" ShortID="93553284">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_amb_seagulls_01" ID="{08B93383-80A8-43E0-BC60-92DF9E308C87}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_amb_meowing" ID="{901B0235-4E45-4336-923F-91DEA392ABBD}">
+					<ChildrenList>
+						<Action Name="" ID="{8023F876-178E-4901-8FF3-D959B6FFEC14}" ShortID="1069611478">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Meowing" ID="{E2ECDBED-8404-48B5-BDDC-A7AAAFAD27ED}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_amb_water_lap_stone" ID="{EBD7A2BD-1045-4BFE-93A9-58C736F0AE24}">
+					<ChildrenList>
+						<Action Name="" ID="{AC651077-7691-4C2D-B365-946EF1827D16}" ShortID="1048546858">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_amb_water_lap_stone_01" ID="{0DC9C571-1B5D-437D-ADB4-76B7AF8DE0A0}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_amb_water_waves" ID="{6B3C24C5-0013-4C37-BB9F-1A2582BFDEF2}">
+					<ChildrenList>
+						<Action Name="" ID="{0826A9CD-4A82-4D3A-81F5-AAA9783AD900}" ShortID="50238836">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_amb_water_waves_01" ID="{4BB5780D-1593-40A3-830E-AE6B49056E66}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_amb_crowd_large" ID="{E331CF09-5BDD-47E7-915E-4B711C0A6E7F}">
+					<ChildrenList>
+						<Action Name="" ID="{D6A876B7-E6D9-4C57-9CB9-16DDF3443694}" ShortID="69668450">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_amb_crowds_large_01" ID="{278D7501-9ABE-4102-BC10-FFF5D4E44CE1}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_sx_game_amb_crowd_small" ID="{1E64F872-EBE5-4525-829F-41554DF76E08}">
+					<ChildrenList>
+						<Action Name="" ID="{38724EF7-987B-4E3B-8F9B-709E3360C56F}" ShortID="132193382">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_amb_crowds_small_01" ID="{C8E010F4-E853-4FFA-A30F-190309934C89}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_sx_game_plr_broom_flying" ID="{B6F51522-A2B2-4288-99B7-174DF30105B4}">
+					<ChildrenList>
+						<Action Name="" ID="{F75DAAAE-683E-408B-B7FB-B46F72495FDA}" ShortID="923070467">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_plr_broom_flying_01" ID="{744B48A1-6716-47EB-AFB8-DD0CB4010C9B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_sx_game_amb_water_lap_stone" ID="{FFABA4D8-CFC3-4A0E-BA19-1E352B28E708}">
+					<ChildrenList>
+						<Action Name="" ID="{65BA9864-3B3D-4C67-B5DF-A353A3B8836C}" ShortID="1060977067">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_amb_water_lap_stone_01" ID="{0DC9C571-1B5D-437D-ADB4-76B7AF8DE0A0}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_sx_game_int_enter_active_pickup" ID="{10C80DC5-704B-4E07-9930-834AEA4BB590}">
+					<ChildrenList>
+						<Action Name="" ID="{34513D6F-5540-4180-8483-933D6C79BEE7}" ShortID="525666657">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_int_enter_active_pickup_01" ID="{C60C6FE4-D779-4C9D-8384-5B0DBC756A0B}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_sx_game_ui_timer_low" ID="{FE8E8D76-5FE5-46D7-A6FC-D9EAB7AEC112}">
+					<ChildrenList>
+						<Action Name="" ID="{6D9BBD59-EDFC-4943-8F41-87B7C6E2A77A}" ShortID="11061643">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bb_sx_game_ui_timer_low_01" ID="{E70A9501-F508-4709-A3AF-2AFC9B92ECBC}" WorkUnitID="{5A0473FB-4D25-435D-8321-F2AA4B04AE75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_mx_menu" ID="{8C69FE2E-8740-410E-9DE7-9CD835F64440}">
+					<ChildrenList>
+						<Action Name="" ID="{6BD6B214-0E2B-4FEC-97B5-318C496C4E8C}" ShortID="627764742">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{3D6EDFD0-6D6F-4B20-8F29-830E960DA58A}" WorkUnitID="{1CBC1AFE-0917-4E3C-A7D4-F73CB5295792}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="play_bb_mx_level" ID="{91BB0EFB-7B54-4666-A65F-6BD298AEF333}">
+					<ChildrenList>
+						<Action Name="" ID="{53279BC3-3AA1-424C-A418-B9878E2F3BFF}" ShortID="621082334">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Level" ID="{4E7E1024-FBD1-47E7-AA2B-DDE56E4B5B07}" WorkUnitID="{1CBC1AFE-0917-4E3C-A7D4-F73CB5295792}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_mx_menu" ID="{76F33288-3085-4AE2-AB83-DB5F4B4AA12E}">
+					<ChildrenList>
+						<Action Name="" ID="{D3A7DF51-24CD-4581-AC18-84352F983A5E}" ShortID="207200785">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu" ID="{3D6EDFD0-6D6F-4B20-8F29-830E960DA58A}" WorkUnitID="{1CBC1AFE-0917-4E3C-A7D4-F73CB5295792}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
