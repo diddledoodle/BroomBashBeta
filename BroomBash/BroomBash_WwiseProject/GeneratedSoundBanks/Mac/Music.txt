@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	749720245	play_bb_mx_level			\Default Work Unit\play_bb_mx_level	
+	3636228032	play_bb_mx_menu			\Default Work Unit\play_bb_mx_menu	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	413294733	_Nguyen_FULLMIX_BroomBash Main	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\_Nguyen_FULLMIX_BroomBash Main_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Level\_Nguyen_FULLMIX_BroomBash Main\_Nguyen_FULLMIX_BroomBash Main		10477160
+	554304641	_Nguyen_FULLMIX_BroomBash Intro_menu_1	D:\Columbia Fall 2019\Indie Team\BroomBash\BroomBashBeta\BroomBash\BroomBash_WwiseProject\.cache\Mac\SFX\_Nguyen_FULLMIX_BroomBash Intro_menu_1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Menu\_Nguyen_FULLMIX_BroomBash Intro_menu_1\_Nguyen_FULLMIX_BroomBash Intro_menu_1		1227548
+

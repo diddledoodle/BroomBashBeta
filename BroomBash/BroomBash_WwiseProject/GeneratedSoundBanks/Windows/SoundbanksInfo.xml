@@ -233,5 +233,24 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="3991942870" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="749720245" Name="play_bb_mx_level" ObjectPath="\Events\Default Work Unit\play_bb_mx_level" DurationType="Infinite"/>
+				<Event Id="3636228032" Name="play_bb_mx_menu" ObjectPath="\Events\Default Work Unit\play_bb_mx_menu" DurationType="OneShot" DurationMin="6.392063" DurationMax="6.392063"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="413294733" Language="SFX">
+					<ShortName>_Nguyen_FULLMIX_BroomBash Main.wav</ShortName>
+					<Path>SFX\_Nguyen_FULLMIX_BroomBash Main_D79FB2B7.wem</Path>
+				</File>
+				<File Id="554304641" Language="SFX">
+					<ShortName>_Nguyen_FULLMIX_BroomBash Intro_menu_1.wav</ShortName>
+					<Path>SFX\_Nguyen_FULLMIX_BroomBash Intro_menu_1_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

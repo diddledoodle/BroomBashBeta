@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BB_MX_LEVEL = 749720245U;
+        static const AkUniqueID PLAY_BB_MX_MENU = 3636228032U;
         static const AkUniqueID PLAY_BB_SX_GAME_AMB_CROWD_LARGE = 2811784222U;
         static const AkUniqueID PLAY_BB_SX_GAME_AMB_CROWD_SMALL = 374084730U;
         static const AkUniqueID PLAY_BB_SX_GAME_AMB_MEOWING = 3417746653U;
@@ -57,6 +59,7 @@ namespace AK
         static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID INTERACTIBLES = 2987141838U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYER = 1069431850U;
         static const AkUniqueID UI = 1551306167U;
     } // namespace BANKS
