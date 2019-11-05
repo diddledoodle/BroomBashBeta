@@ -52,6 +52,8 @@ public class PauseMenu : MonoBehaviour {
         /*jpost audio*/
         //play the exit game sound from wwise
         AkSoundEngine.PostEvent ("play_bb_sx_game_ui_exitgame", gameObject);
+        //stop the level music from playing
+        AkSoundEngine.PostEvent("stop_bb_mx_level", gameObject);
         // Make sure time is set to 1 
         Time.timeScale = 1;
         SceneManager.LoadSceneAsync ("MainMenu");

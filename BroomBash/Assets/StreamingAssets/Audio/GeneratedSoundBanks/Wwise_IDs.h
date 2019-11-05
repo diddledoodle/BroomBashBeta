@@ -47,6 +47,7 @@ namespace AK
         static const AkUniqueID PLAY_BB_SX_GAME_UI_XP_LOST = 214100990U;
         static const AkUniqueID PLAY_BB_SX_MENU_UI_MAIN_NAVIGATION = 1875305114U;
         static const AkUniqueID PLAY_BB_SX_MENU_UI_MAIN_START = 661752896U;
+        static const AkUniqueID STOP_BB_MX_LEVEL = 422104307U;
         static const AkUniqueID STOP_BB_MX_MENU = 1527761650U;
         static const AkUniqueID STOP_BB_SX_GAME_AMB_WATER_LAP_STONE = 2971162542U;
         static const AkUniqueID STOP_BB_SX_GAME_INT_ENTER_ACTIVE_PICKUP = 823679326U;

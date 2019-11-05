@@ -63,7 +63,7 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Mac"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="Kl+wiYWvW0uEjS6VyYoTPA=="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="l5RyWWxW1kOhgk82F7SdN1KzOmckeL5HgS7E5rFqLqx1k8MCmTaSQL6Wxng4rFYi/1xsN9CF+Ei2Xh5RcHwGZnYdyI9S1lhAtfJYRVEJoMDGTbLsHkBeRKJm2wEfDfZa"/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="l5RyWWxW1kOhgk82F7SdN1KzOmckeL5HgS7E5rFqLqx1k8MCmTaSQL6Wxng4rFYixk2y7B5AXkSiZtsBHw32Wv9cbDfQhfhItl4eUXB8BmZ2HciPUtZYQLXyWEVRCaDA"/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="4V7Jl/AqRki1iTWISWX4NQH/////////3BuBqhcILEG9f18AC5c5IAH/////////"/>
 				<Property Name="Interactive Music\x64_{7465EC3A-3481-4398-99C0-DF170589A860} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPy0jGWPbmyNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>

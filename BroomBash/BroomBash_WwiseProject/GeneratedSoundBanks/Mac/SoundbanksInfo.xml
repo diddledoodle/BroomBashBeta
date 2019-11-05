@@ -240,6 +240,7 @@
 			<IncludedEvents>
 				<Event Id="749720245" Name="play_bb_mx_level" ObjectPath="\Events\Default Work Unit\play_bb_mx_level" DurationType="Infinite"/>
 				<Event Id="3636228032" Name="play_bb_mx_menu" ObjectPath="\Events\Default Work Unit\play_bb_mx_menu" DurationType="OneShot" DurationMin="6.392063" DurationMax="6.392063"/>
+				<Event Id="422104307" Name="stop_bb_mx_level" ObjectPath="\Events\Default Work Unit\stop_bb_mx_level" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1527761650" Name="stop_bb_mx_menu" ObjectPath="\Events\Default Work Unit\stop_bb_mx_menu" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
