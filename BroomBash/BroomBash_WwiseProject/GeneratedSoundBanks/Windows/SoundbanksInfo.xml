@@ -78,6 +78,7 @@
 				<Event Id="3283685423" Name="play_bb_sx_game_plr_impact_water" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_impact_water" DurationType="OneShot" DurationMin="0.917004" DurationMax="1.090508"/>
 				<Event Id="3817973033" Name="play_bb_sx_game_plr_skim_ground" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_skim_ground" DurationType="OneShot" DurationMin="3.067875" DurationMax="3.648339"/>
 				<Event Id="789946661" Name="play_bb_sx_game_plr_skim_water" ObjectPath="\Events\Default Work Unit\play_bb_sx_game_plr_skim_water" DurationType="Infinite"/>
+				<Event Id="653522542" Name="stop_bb_sx_all" ObjectPath="\Events\Default Work Unit\stop_bb_sx_all" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="764517844" Name="stop_bb_sx_game_plr_broom_flying" ObjectPath="\Events\Default Work Unit\stop_bb_sx_game_plr_broom_flying" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>

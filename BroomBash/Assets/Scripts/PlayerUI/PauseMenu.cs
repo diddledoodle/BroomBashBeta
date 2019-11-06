@@ -56,6 +56,8 @@ public class PauseMenu : MonoBehaviour {
         AkSoundEngine.PostEvent("stop_bb_mx_level", gameObject);
         //stop the timer low sound from playing
         AkSoundEngine.PostEvent("stop_bb_sx_game_ui_timer_low", gameObject);
+        //testing out stopping ALL sfx from playing when the player exits to the menu
+        AkSoundEngine.PostEvent("stop_bb_sx_all", gameObject);
         // Make sure time is set to 1 
         Time.timeScale = 1;
         SceneManager.LoadSceneAsync ("MainMenu");

@@ -364,6 +364,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -469,6 +470,17 @@
 									<ObjectRef Name="Level" ID="{4E7E1024-FBD1-47E7-AA2B-DDE56E4B5B07}" WorkUnitID="{1CBC1AFE-0917-4E3C-A7D4-F73CB5295792}"/>
 								</Reference>
 							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stop_bb_sx_all" ID="{8FA8F4A4-7D8D-4CA8-88AD-39B3877CF645}">
+					<ChildrenList>
+						<Action Name="" ID="{B2B19ED2-913C-4A90-BAA0-133C888CF121}" ShortID="202140360">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
 						</Action>
 					</ChildrenList>
 				</Event>

@@ -52,6 +52,7 @@
 						<ObjectRef Name="play_bb_sx_game_plr_skim_ground" ID="{F5D04135-142C-4924-B8B8-479FDED3BE34}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_broom_decelerate" ID="{80E6F595-7800-4A68-9BBB-B15A2D4C3AA4}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_broom_stop" ID="{CBFDDEC2-F279-4AB7-BC4B-E9D689F50CCA}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="stop_bb_sx_all" ID="{8FA8F4A4-7D8D-4CA8-88AD-39B3877CF645}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="play_bb_sx_game_plr_broom_accelerate" ID="{49CD7115-0296-4CD9-B098-1FE28BB2ACE2}" WorkUnitID="{855DC7C0-84BE-446A-9BBF-E40563D82E33}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
