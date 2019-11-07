@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5c5f342fa653a04694f8cd30fd9bc0b0
     GuidInternal: 
-    m_lastTime: -8586290343436646148
+    m_lastTime: -8586285431524691530
     List:
     - name: Ambience
       guid: 979472596c56d643a1824f3617b49d37
@@ -92,7 +92,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: c0c75d85be846a449bbfe40563d82e33
     GuidInternal: 
-    m_lastTime: -8586290344576353160
+    m_lastTime: -8586285429871404710
     List:
     - name: play_bb_mx_level
       guid: fb0ebb91547b6646a65f6bd298aef333
@@ -502,6 +502,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
+    - name: stop_bb_mx_level
+      guid: 702e0aa2e9634446be9600ab47efcf7e
+      id: 422104307
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_mx_level
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_mx_level
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: stop_bb_mx_menu
       guid: 8832f3768530e24aab83db5f4b4aa12e
       id: 1527761650
@@ -511,6 +523,18 @@ MonoBehaviour:
       - ElementName: stop_bb_mx_menu
         ObjectType: 3
       Path: Default Work Unit\stop_bb_mx_menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: stop_bb_sx_all
+      guid: a4f4a88f8d7da84c88ad39b3877cf645
+      id: 653522542
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_bb_sx_all
+        ObjectType: 3
+      Path: Default Work Unit\stop_bb_sx_all
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

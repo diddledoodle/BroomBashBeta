@@ -49,6 +49,10 @@ public class MenuNavigation : MonoBehaviour
         // Select the button of the selected index 
         menuButtons[_selectedIndex].Select();
         currentSelectedIndex = _selectedIndex;
+
+        /*jpost audio*/
+        //play the menu navigation UI sound from wwise
+        AkSoundEngine.PostEvent("play_bb_sx_menu_ui_main_navigation", gameObject);
     }
 
     public void SelectFirstIndexOnEnable()

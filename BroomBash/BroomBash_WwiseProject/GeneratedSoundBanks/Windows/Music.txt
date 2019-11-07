@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	422104307	stop_bb_mx_level			\Default Work Unit\stop_bb_mx_level	
 	749720245	play_bb_mx_level			\Default Work Unit\play_bb_mx_level	
 	1527761650	stop_bb_mx_menu			\Default Work Unit\stop_bb_mx_menu	
 	3636228032	play_bb_mx_menu			\Default Work Unit\play_bb_mx_menu	
