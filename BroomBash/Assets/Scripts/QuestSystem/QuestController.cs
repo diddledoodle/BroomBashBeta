@@ -180,6 +180,7 @@ public class QuestController : MonoBehaviour
             {
                 //stop the low timer sound from looping
                 AkSoundEngine.PostEvent("stop_bb_sx_game_ui_timer_low", gameObject);
+                timerIsLow = false;
             }
             
         }

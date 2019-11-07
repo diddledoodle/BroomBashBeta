@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	291020428	play_bb_sx_game_plr_broom_accelerate			\Default Work Unit\play_bb_sx_game_plr_broom_accelerate	
+	653522542	stop_bb_sx_all			\Default Work Unit\stop_bb_sx_all	
 	764517844	stop_bb_sx_game_plr_broom_flying			\Default Work Unit\stop_bb_sx_game_plr_broom_flying	
 	789946661	play_bb_sx_game_plr_skim_water			\Default Work Unit\play_bb_sx_game_plr_skim_water	
 	2242722565	play_bb_sx_game_plr_broom_takeoff			\Default Work Unit\play_bb_sx_game_plr_broom_takeoff	

@@ -103,6 +103,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             speed = 0;
+            /*jpost audio*/
+            //testing out properly stopping the player flying normal sound if the player isn't moving
+            //stop the flying normal sound
+            AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
+            isFlyingNormal = false;
         }
 
 		// Forward velocity
