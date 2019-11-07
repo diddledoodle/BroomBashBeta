@@ -39,8 +39,8 @@ public class SceneSetup : MonoBehaviour
         GameObject _pp = Instantiate(postProcessing);
     }
 
-    public void TestPlayerEvent()
+    private void InitializeCameraFovChanger()
     {
-        Debug.Log("Player accepted quest");
+
     }
 }

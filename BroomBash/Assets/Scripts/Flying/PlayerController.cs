@@ -26,12 +26,12 @@ public class PlayerController : MonoBehaviour
     public float stoppedHoverNoiseAmount = 0.01f;
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
+    [Tooltip("The trail renderer gameobjects that show the player is speeding up")]
+    public List<GameObject> speedTrailRenderers = new List<GameObject>();
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool stopPlayer = false;
-
-    
-    
+    [HideInInspector]
     public float speed;
 
     [HideInInspector]
@@ -59,6 +59,11 @@ public class PlayerController : MonoBehaviour
         playerStartingPosition = this.gameObject.transform.position;
         // Stop the player on start so they dont go shooting off
         StopPlayer();
+        // Disable speed trail renderers
+        foreach (GameObject go in speedTrailRenderers)
+        {
+            go.SetActive(false);
+        }
         // Release the player after a few seconds
         Invoke("UnstopPlayer", 2f);
     }
@@ -166,7 +171,11 @@ public class PlayerController : MonoBehaviour
         if(_speedControlInput > inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = maximumSpeed;
-
+            // Enable speed trail renderers
+            foreach(GameObject go in speedTrailRenderers)
+            {
+                go.SetActive(true);
+            }
             /*jpost audio*/
             if (!hasAccelerated)
             {
@@ -184,6 +193,12 @@ public class PlayerController : MonoBehaviour
         else if(_speedControlInput < -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = 0;
+            // Disable speed trail renderers
+            foreach (GameObject go in speedTrailRenderers)
+            {
+                go.SetActive(false);
+            }
+
             /*jpost audio*/
             if (!hasSlowedDown)
             {
@@ -196,6 +211,11 @@ public class PlayerController : MonoBehaviour
         else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = baseSpeed;
+            foreach (GameObject go in speedTrailRenderers)
+            {
+                go.SetActive(false);
+            }
+
             /*jpost audio*/
             //reset hasAccelerated
             hasAccelerated = false;
