@@ -5,23 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]
-    private string gameSceneName;
-    [SerializeField]
-    private GameObject creditsMenuPanel;
-    [SerializeField]
-    private GameObject titleMenuPanel;
-    public void LoadGameScene()
+    public GameObject creditsMenuPanel;
+    public GameObject titleMenuPanel;
+
+    public void LoadGameScene(string _levelName)
     {
-        SceneManager.LoadSceneAsync(gameSceneName);
+        SceneManager.LoadSceneAsync(_levelName);
     }
     public void ShowCredits()
     {
         creditsMenuPanel.SetActive(true);
+        creditsMenuPanel.GetComponent<MenuNavigation>().SelectFirstIndexOnEnable();
     }
     public void ShowTitle()
     {
         titleMenuPanel.SetActive(true);
+        titleMenuPanel.GetComponent<MenuNavigation>().SelectFirstIndexOnEnable();
     }
     public void ExitGame()
     {

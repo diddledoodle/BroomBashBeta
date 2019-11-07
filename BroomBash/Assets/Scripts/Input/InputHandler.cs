@@ -15,6 +15,11 @@ public class InputHandler : MonoBehaviour {
     public bool Stop = false;
     public bool Accept = false;
     public bool Decline = false;
+
+    // Menu navigation Actions
+    public bool MenuUp = false;
+    public bool MenuDown = false;
+    public bool Pause = false;
    
     private PlayerControlActions playerControlActions;
     private InputDevice currentInputDevice;
@@ -45,6 +50,14 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.accept.AddDefaultBinding(Key.Return);
         playerControlActions.decline.AddDefaultBinding(Key.Backspace);
 
+        // Menu navigation default bindins
+        playerControlActions.menuUp.AddDefaultBinding(InputControlType.LeftStickUp);
+        playerControlActions.menuDown.AddDefaultBinding(InputControlType.LeftStickDown);
+        playerControlActions.pause.AddDefaultBinding(InputControlType.Command);
+        playerControlActions.menuUp.AddDefaultBinding(Key.UpArrow);
+        playerControlActions.menuDown.AddDefaultBinding(Key.DownArrow);
+        playerControlActions.pause.AddDefaultBinding(Key.Escape);
+
     }
 	
 	// Update is called once per frame
@@ -59,6 +72,12 @@ public class InputHandler : MonoBehaviour {
         SpeedControl = playerControlActions.speedControl.Value;
         Accept = playerControlActions.accept.WasPressed;//(playerControlActions.accept.Value > controllerDeadZone) ? true : false;
         Decline = playerControlActions.decline.WasPressed;
+
+        // Update menu inputs
+        MenuUp = playerControlActions.menuUp.WasReleased;
+        MenuDown = playerControlActions.menuDown.WasReleased;
+        Pause = playerControlActions.pause.WasReleased;
+
         // Toggle stopped based on the stop button
         /*if (playerControlActions.stop.WasPressed)
         {
@@ -70,14 +89,14 @@ public class InputHandler : MonoBehaviour {
             Stop = false;
         }*/
         // Check for player stopped
-        if (this.SpeedControl > -0.9f)
-        {
-            Stop = false;
-        }
-        else
-        if (this.SpeedControl < -this.controllerDeadZone && this.SpeedControl < -0.9f)
-        {
-            Stop = true;
-        }
+        //if (this.SpeedControl > -0.9f)
+        //{
+        //    Stop = false;
+        //}
+        //else
+        //if (this.SpeedControl < -this.controllerDeadZone && this.SpeedControl < -0.9f)
+        //{
+        //    Stop = true;
+        //}
     }
 }

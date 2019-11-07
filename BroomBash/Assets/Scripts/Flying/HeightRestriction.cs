@@ -33,7 +33,7 @@ public class HeightRestriction : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (ground != null)
+        if (ground != null && playerController.questController != null)
         {
             // Check max flight height
             if (playerController.questController.countdownTimerIsActive)

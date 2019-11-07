@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public float minimumSpeed = 1f;
     [Tooltip("The maximum speed that the player can fly at when the 'throttle' is pressed")]
     public float maximumSpeed = 25f;
+    [Tooltip("How fast the player is able to accelerate and deccelerate")]
+    public float speedChangeMultiplier = 1f;
     [Tooltip("The speed at which the player steers their flying direction on the X plane")]
     public float rotattionSpeedX = 1f;
     [Tooltip("The speed that the player can pitch their flying direction on the y plane")]
@@ -24,15 +26,16 @@ public class PlayerController : MonoBehaviour
     public float stoppedHoverNoiseAmount = 0.01f;
     [Tooltip("[WORKAROUND] Child object to rotate with steer - PlayerGO/MeshGO/<All necessary meshes>")]
     public GameObject childObjectToRotateTowardSteer;
+    [Tooltip("The trail renderer gameobjects that show the player is speeding up")]
+    public List<GameObject> speedTrailRenderers = new List<GameObject>();
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool stopPlayer = false;
+    [HideInInspector]
+    public float speed;
 
-    
-
-    private float speed;
-    private float lastSpeed;
-    private Vector3 playerStartingPosition = Vector3.zero;
+    [HideInInspector]
+    public Vector3 playerStartingPosition = Vector3.zero;
 
     [HideInInspector]
     public InputHandler inputHandler;
@@ -54,23 +57,28 @@ public class PlayerController : MonoBehaviour
         questController = GameObject.FindObjectOfType<QuestController>();
         // Get the players starting poosition
         playerStartingPosition = this.gameObject.transform.position;
+        // Stop the player on start so they dont go shooting off
+        StopPlayer();
+        // Disable speed trail renderers
+        foreach (GameObject go in speedTrailRenderers)
+        {
+            go.SetActive(false);
+        }
+        // Release the player after a few seconds
+        Invoke("UnstopPlayer", 2f);
     }
 
     private void OnGUI()
     {
-        // Print directions on the screen - temporary
-        if(!questController.playerUIManager.dialogSystemIsActive && !questController.playerUIManager.notificationSystemIsActive)
-        {
-            GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
-            textStyle.fontSize = 22;
-            GUI.color = Color.green;
-            GUI.Box(new Rect(10.0f, Screen.height - 240, 400.0f, 40.0f), "Left Stick - Flight Control", textStyle);
-            GUI.Box(new Rect(10.0f, Screen.height - 200, 400.0f, 40.0f), "Right Trigger - Speed up", textStyle);
-            GUI.Box(new Rect(10.0f, Screen.height - 160, 400.0f, 40.0f), "Left Trigger - Slow Down", textStyle);
-            GUI.Box(new Rect(10.0f, Screen.height - 120, 400.0f, 40.0f), "Left Bumper (L1) - Stop", textStyle);
-            GUI.Box(new Rect(10.0f, Screen.height - 80, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
-            GUI.Box(new Rect(10.0f, Screen.height - 40, 400.0f, 40.0f), "Esc - Exit to Main Menu", textStyle);
-        }
+        //GUIStyle textStyle = new GUIStyle((GUIStyle)"label");
+        //textStyle.fontSize = 22;
+        //GUI.color = Color.green;
+        //GUI.Box(new Rect(10.0f, Screen.height - 240, 400.0f, 40.0f), "Left Stick - Flight Control", textStyle);
+        //GUI.Box(new Rect(10.0f, Screen.height - 200, 400.0f, 40.0f), "Right Trigger - Speed up", textStyle);
+        //GUI.Box(new Rect(10.0f, Screen.height - 160, 400.0f, 40.0f), "Left Trigger - Slow Down", textStyle);
+        //GUI.Box(new Rect(10.0f, Screen.height - 120, 400.0f, 40.0f), "Left Bumper (L1) - Stop", textStyle);
+        //GUI.Box(new Rect(10.0f, Screen.height - 80, 400.0f, 40.0f), "R - reset position to scene origin", textStyle);
+        //GUI.Box(new Rect(10.0f, Screen.height - 40, 400.0f, 40.0f), "Esc - Exit to Main Menu", textStyle);
     }
 
     private void FixedUpdate()
@@ -88,29 +96,39 @@ public class PlayerController : MonoBehaviour
 	{
         if (!stopPlayer)
         {
-            speed = GetWantedSpeed(inputHandler.SpeedControl);
+            if(inputHandler.SpeedControl > -0.95)
+            {
+                speed = Mathf.Lerp(speed, GetWantedSpeed(inputHandler.SpeedControl), Time.deltaTime * speedChangeMultiplier);
+            }
+            else if(inputHandler.SpeedControl < -0.95)
+            {
+                speed = Mathf.Lerp(speed, 0, Time.deltaTime * speedChangeMultiplier * 2);
+            }
         }
         else
         {
             speed = 0;
+            /*jpost audio*/
+            //testing out properly stopping the player flying normal sound if the player isn't moving
+            //stop the flying normal sound
+            AkSoundEngine.PostEvent("stop_bb_sx_game_plr_broom_flying", gameObject);
+            isFlyingNormal = false;
         }
 
 		// Forward velocity
 		Vector3 moveVector = transform.forward * speed;
-		Vector3 yaw = inputHandler.Steer * transform.right * rotattionSpeedX * Time.deltaTime;
-		Vector3 pitch = -(inputHandler.Pitch) * transform.up * rotattionSpeedY * Time.deltaTime; // Need to negate pitch input to meet design doc specifications
+		Vector3 yaw = inputHandler.Steer * transform.right * ((speed > 5) ? rotattionSpeedX : rotattionSpeedX / 3) * Time.deltaTime;
+		Vector3 pitch = -(inputHandler.Pitch) * transform.up * ((speed > 5) ? rotattionSpeedY : rotattionSpeedY / 3) * Time.deltaTime; // Need to negate pitch input to meet design doc specifications
 		Vector3 dir = yaw + pitch;
 
 		// Limit rotation
 
 		float maxX = (moveVector + dir != Vector3.zero) ? Quaternion.LookRotation(moveVector + dir).eulerAngles.x : 0; // Need to get rid of that annoying debug from Quaternion.LookRotation taking in a 0 vector
 
-
-
 		if (speed != 0)
 		{
 			this.transform.position += moveVector * Time.deltaTime;
-			if (maxX < 90 && maxX > 70 || maxX > 270 && maxX < 290)
+			if (maxX < 90 && maxX > 70 || maxX > 270 && maxX < 290 || speed < 1)
 			{
 				// TODO: Maybe to some sort of falloff if angle is exceeded to add difficulty?
 			}
@@ -118,28 +136,36 @@ public class PlayerController : MonoBehaviour
 			{
 				moveVector += dir;
 				transform.rotation = Quaternion.LookRotation(moveVector);
-                
+			}
+
+            // Hover if speed is less than 3
+            if(speed < 3)
+            {
+                Hover();
             }
 		}
 		else if (speed == 0)
 		{
-			// Hover noise
-			this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(this.transform.position.y - stoppedHoverNoiseAmount, this.transform.position.y + stoppedHoverNoiseAmount, Mathf.PingPong(Time.time, 1)), this.transform.position.z);
+            Hover();
 		}
 
 		RotateChildTowardSteer();
 	}
 
+    private void Hover()
+    {
+        // Hover noise
+        this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(this.transform.position.y - stoppedHoverNoiseAmount, this.transform.position.y + stoppedHoverNoiseAmount, Mathf.PingPong(Time.time, 1)), this.transform.position.z);
+    }
+
     public void StopPlayer()
     {
         stopPlayer = true;
-        Debug.Log("The player was stopped", this.gameObject);
     }
 
     public void UnstopPlayer() // Lol is that even a word?
     {
         stopPlayer = false;
-        Debug.Log("The player was released", this.gameObject);
     }
 
     private float GetWantedSpeed(float _speedControlInput)
@@ -150,7 +176,11 @@ public class PlayerController : MonoBehaviour
         if(_speedControlInput > inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = maximumSpeed;
-
+            // Enable speed trail renderers
+            foreach(GameObject go in speedTrailRenderers)
+            {
+                go.SetActive(true);
+            }
             /*jpost audio*/
             if (!hasAccelerated)
             {
@@ -167,7 +197,13 @@ public class PlayerController : MonoBehaviour
         // Slow down
         else if(_speedControlInput < -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
-            _wantedSpeed = minimumSpeed;
+            _wantedSpeed = 0;
+            // Disable speed trail renderers
+            foreach (GameObject go in speedTrailRenderers)
+            {
+                go.SetActive(false);
+            }
+
             /*jpost audio*/
             if (!hasSlowedDown)
             {
@@ -180,6 +216,11 @@ public class PlayerController : MonoBehaviour
         else if (_speedControlInput < inputHandler.controllerDeadZone && _speedControlInput > -inputHandler.controllerDeadZone && !inputHandler.Stop)
         {
             _wantedSpeed = baseSpeed;
+            foreach (GameObject go in speedTrailRenderers)
+            {
+                go.SetActive(false);
+            }
+
             /*jpost audio*/
             //reset hasAccelerated
             hasAccelerated = false;
@@ -243,7 +284,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Rotate back level if player is stopped
-        if(speed == 0)
+        if(speed < 2)
         {
             this.transform.eulerAngles = Quaternion.Lerp(Quaternion.Euler(this.transform.eulerAngles), Quaternion.Euler(0, this.transform.eulerAngles.y, this.transform.eulerAngles.z), Time.deltaTime * stoppedLevelingRotattionSpeed).eulerAngles;
         }

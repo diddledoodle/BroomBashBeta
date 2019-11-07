@@ -34,13 +34,13 @@ public class SceneSetup : MonoBehaviour
         // Set up the player UI
         GameObject _playerUI = Instantiate(playerUI);
         // Reference the player UI in the quest manager
-        GameObject.FindObjectOfType<QuestController>().playerUIManager = _playerUI.GetComponent<PlayerUIManager>();
+        if(GameObject.FindObjectOfType<QuestController>()) GameObject.FindObjectOfType<QuestController>().playerUIManager = _playerUI.GetComponent<PlayerUIManager>();
         // Instantiate post processing
         GameObject _pp = Instantiate(postProcessing);
     }
 
-    public void TestPlayerEvent()
+    private void InitializeCameraFovChanger()
     {
-        Debug.Log("Player accepted quest");
+
     }
 }
