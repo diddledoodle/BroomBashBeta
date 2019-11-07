@@ -54,11 +54,13 @@ public class PlayerUIManager : MonoBehaviour
     {
         if (questController != null && questController.countdownTimerIsActive)
         {
-            timer.text = $"<b>{questController.timeLeft.ToString("F0")} seconds</b>";
+            timer.text = $"<b>{questController.timeLeft.ToString("F0")}</b>";
+            
         }
         else
         {
             timer.text = string.Empty;
+           
         }
         // Update the xp and level text
         if(playerLevelSystem != null)
