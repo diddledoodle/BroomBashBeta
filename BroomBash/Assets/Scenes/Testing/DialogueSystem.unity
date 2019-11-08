@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialController
       objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110172, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
         type: 3}
       propertyPath: m_LocalPosition.x

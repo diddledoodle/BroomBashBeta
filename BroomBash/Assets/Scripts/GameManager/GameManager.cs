@@ -18,14 +18,27 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         dsc = GameObject.FindObjectOfType<DialogueSystemController>();
-        // Make sure the tutorial var in dialogue lua is true
-        DialogueLua.SetVariable("endTutorial", false);
-        Invoke("StartTutorial", 0.2f);
+        if(tutorialController != null)
+        {
+            // Make sure the tutorial var in dialogue lua is true
+            DialogueLua.SetVariable("endTutorial", false);
+            Invoke("StartTutorial", 0.2f);
+        }
+        else
+        {
+            // Enable the quest controller objects
+            questController.NoQuestActiveGameObjects();
+            tutorialIsActive = false;
+            tutorialEnded = true;
+            dsc.displaySettings.subtitleSettings.continueButton = DisplaySettings.SubtitleSettings.ContinueButtonMode.Optional;
+            GameObject.FindObjectOfType<PlayerController>().GetComponentInChildren<TargetIndicator>().tutorial = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (tutorialController == null) return;
         if (tutorialIsActive)
         {
             // Disable the tutorial and allow the player full reign of the game world

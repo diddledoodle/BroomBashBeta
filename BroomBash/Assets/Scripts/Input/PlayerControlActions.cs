@@ -13,6 +13,10 @@ public class PlayerControlActions : PlayerActionSet
     public PlayerAction stop;
     public PlayerAction accept;
     public PlayerAction decline;
+    public PlayerAction cameraXAxisPositive;
+    public PlayerAction cameraXAxisNegative;
+    public PlayerAction cameraYAxisPositive;
+    public PlayerAction cameraYAxisNegative;
 
     // Menu navigation Actions
     public PlayerAction menuUp;
@@ -23,6 +27,8 @@ public class PlayerControlActions : PlayerActionSet
     public PlayerOneAxisAction steer;
     public PlayerOneAxisAction pitch;
     public PlayerOneAxisAction speedControl;
+    public PlayerOneAxisAction cameraAxisX;
+    public PlayerOneAxisAction cameraAxisY;
 
 	public PlayerControlActions ()
 	{
@@ -36,6 +42,10 @@ public class PlayerControlActions : PlayerActionSet
         stop = CreatePlayerAction("Stop");
         accept = CreatePlayerAction("Accept");
         decline = CreatePlayerAction("Decline");
+        cameraXAxisPositive = CreatePlayerAction("CameraxAxisPositive");
+        cameraXAxisNegative = CreatePlayerAction("CameraXAxisNegative");
+        cameraYAxisPositive = CreatePlayerAction("CameraYAxisPositive");
+        cameraYAxisNegative = CreatePlayerAction("CameraYAxisNegative");
 
         // Create menu navigation actions
         menuUp = CreatePlayerAction("MenuUp");
@@ -46,5 +56,7 @@ public class PlayerControlActions : PlayerActionSet
         steer = CreateOneAxisPlayerAction(steerLeft, steerRight);
         pitch = CreateOneAxisPlayerAction(pitchUp, pitchDown);
         speedControl = CreateOneAxisPlayerAction(slowDown, speedUp);
+        cameraAxisX = CreateOneAxisPlayerAction(cameraXAxisNegative, cameraXAxisPositive);
+        cameraAxisY = CreateOneAxisPlayerAction(cameraYAxisNegative, cameraYAxisPositive);
     }
 }

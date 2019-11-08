@@ -12,6 +12,8 @@ public class InputHandler : MonoBehaviour {
     public float Pitch = 0;
     public float Steer = 0;
     public float SpeedControl = 0;
+    public float CameraAxisX;
+    public float CameraAxisY;
     public bool Stop = false;
     public bool Accept = false;
     public bool Decline = false;
@@ -39,6 +41,10 @@ public class InputHandler : MonoBehaviour {
         playerControlActions.stop.AddDefaultBinding(InputControlType.LeftBumper);
         playerControlActions.accept.AddDefaultBinding(InputControlType.Action1);
         playerControlActions.decline.AddDefaultBinding(InputControlType.Action2);
+        playerControlActions.cameraXAxisPositive.AddDefaultBinding(InputControlType.RightStickRight);
+        playerControlActions.cameraXAxisNegative.AddDefaultBinding(InputControlType.RightStickLeft);
+        playerControlActions.cameraYAxisPositive.AddDefaultBinding(InputControlType.RightStickUp);
+        playerControlActions.cameraYAxisNegative.AddDefaultBinding(InputControlType.RightStickDown);
         // Player default bindings - Keyboard
         playerControlActions.pitchDown.AddDefaultBinding(Key.W);
         playerControlActions.pitchUp.AddDefaultBinding(Key.S);
@@ -72,6 +78,8 @@ public class InputHandler : MonoBehaviour {
         SpeedControl = playerControlActions.speedControl.Value;
         Accept = playerControlActions.accept.WasPressed;//(playerControlActions.accept.Value > controllerDeadZone) ? true : false;
         Decline = playerControlActions.decline.WasPressed;
+        CameraAxisX = playerControlActions.cameraAxisX;
+        CameraAxisY = playerControlActions.cameraAxisY;
 
         // Update menu inputs
         MenuUp = playerControlActions.menuUp.WasReleased;

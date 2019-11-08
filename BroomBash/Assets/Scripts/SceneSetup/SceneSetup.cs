@@ -26,8 +26,8 @@ public class SceneSetup : MonoBehaviour
         // Set up the cameras
         GameObject _mainCamera = Instantiate(mainCamera);
         CinemachineVirtualCamera _cinemachineVCam = Instantiate(cinemachineVCam).GetComponent<CinemachineVirtualCamera>();
-        _cinemachineVCam.m_Follow = this.gameObject.transform;
-        _cinemachineVCam.m_LookAt = this.gameObject.transform;
+        _cinemachineVCam.m_Follow = this.transform;
+        _cinemachineVCam.m_LookAt = this.gameObject.GetComponentInChildren<CameraTarget>().transform;
         GameObject _miniMapCamera = Instantiate(miniMapCamera);
         MiniMap _miniMap = _miniMapCamera.GetComponent<MiniMap>();
         _miniMap.player = this.gameObject.transform;
