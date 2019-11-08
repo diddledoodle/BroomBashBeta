@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07272866, g: 0.021980114, b: 0.12588419, a: 1}
+  m_IndirectSpecularColor: {r: 0.07270791, g: 0.021938043, b: 0.1257539, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2083,6 +2083,8 @@ MonoBehaviour:
     Environment Art-Walter Page
 
     Sound Design-James Post
+
+    Sound Supervisors-Ami Patel, Cole Kruger
 
     Music- Catherine Nguyen'
 --- !u!222 &1635563094
