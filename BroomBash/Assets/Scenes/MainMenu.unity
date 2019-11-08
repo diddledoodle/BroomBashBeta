@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2084,7 +2084,7 @@ MonoBehaviour:
 
     Sound Design-James Post
 
-    Sound Supervisors-Ami Patel, Cole Kruger
+    Sound Supervisors-Ami Patel, Cole Krueger
 
     Music- Catherine Nguyen'
 --- !u!222 &1635563094
