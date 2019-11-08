@@ -176,13 +176,21 @@ public class QuestController : MonoBehaviour
                     timerIsLow = true;
                 }
             }
-            if(timeLeft < 1)
+            if(timeLeft < 1 || countdownTimerIsActive == false)
             {
                 //stop the low timer sound from looping
                 AkSoundEngine.PostEvent("stop_bb_sx_game_ui_timer_low", gameObject);
                 timerIsLow = false;
+                hasRunOutOfTime = true;
             }
             
+        }
+        else
+        {
+            // stop the low timer sound from looping
+            AkSoundEngine.PostEvent("stop_bb_sx_game_ui_timer_low", gameObject);
+            timerIsLow = false;
+            hasRunOutOfTime = true;
         }
 
         // Check for boss required quests

@@ -825,18 +825,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07df65ec87dda248bd338524c854d9e, type: 3}
---- !u!114 &1176601662 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1748307956069110170, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
-    type: 3}
-  m_PrefabInstance: {fileID: 75538740}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cf9ad0b684bdcf4db5718f459c7d2b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1429710213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1833,7 +1821,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tutorialController
       value: 
-      objectReference: {fileID: 1176601662}
+      objectReference: {fileID: 0}
     - target: {fileID: 7216976993901849987, guid: fee21dde8b48b4e9ab545e180dec4006,
         type: 3}
       propertyPath: questController
