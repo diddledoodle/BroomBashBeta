@@ -33,14 +33,15 @@ public class PlayerController : MonoBehaviour
     public bool stopPlayer = false;
     [HideInInspector]
     public float speed;
-
     [HideInInspector]
     public Vector3 playerStartingPosition = Vector3.zero;
-
     [HideInInspector]
     public InputHandler inputHandler;
     [HideInInspector]
     public QuestController questController;
+
+    // Need to access this to make sure rb velocity is always at Vector3.zero
+    private Rigidbody rb;
 
     /*jpost audio*/
     //audio related fields
@@ -55,6 +56,8 @@ public class PlayerController : MonoBehaviour
         inputHandler = this.gameObject.AddComponent<InputHandler>() as InputHandler;
         // Get the quest controller
         questController = GameObject.FindObjectOfType<QuestController>();
+        // Get this objects rigidbody
+        rb = this.gameObject.GetComponent<Rigidbody>();
         // Get the players starting poosition
         playerStartingPosition = this.gameObject.transform.position;
         // Stop the player on start so they dont go shooting off
@@ -94,6 +97,9 @@ public class PlayerController : MonoBehaviour
 
     private void FlightMechanics()
 	{
+        // Make sure the rigidbody's velocity is always zero
+        rb.velocity = Vector3.zero;
+
         if (!stopPlayer)
         {
             if(inputHandler.SpeedControl > -0.95)
