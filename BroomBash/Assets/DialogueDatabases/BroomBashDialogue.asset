@@ -121,7 +121,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
+    spritePortrait: {fileID: 21300000, guid: 4bdb4e42a665a0948af4282a83c2c0d5, type: 3}
     alternatePortraits: []
     spritePortraits: []
   - id: 5
@@ -938,7 +938,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -1012,7 +1012,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -1086,7 +1086,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -1160,7 +1160,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -1313,7 +1313,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[3]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -1528,7 +1528,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -1859,7 +1859,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -1879,7 +1879,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hold the [left trigger] down to stop.
+        value: Hold [L] down to stop.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2043,7 +2043,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -2116,7 +2116,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -2190,7 +2190,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -2210,7 +2210,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Slowly pull in the [left trigger] to start slowing down.
+        value: Slowly pull in the [L] to start slowing down.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2374,7 +2374,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[3]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -2394,7 +2394,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Good! If you wanna speed up, use the [right trigger].
+        value: Good! If you wanna speed up, use [R].
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -2558,7 +2558,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -2743,7 +2743,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -2795,6 +2795,12 @@ MonoBehaviour:
         originDialogueID: 1
         destinationConversationID: 7
         destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      - originConversationID: 7
+        originDialogueID: 1
+        destinationConversationID: 7
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2890,7 +2896,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[3]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -2963,7 +2969,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -3006,7 +3012,7 @@ MonoBehaviour:
       - title: Response Menu Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 7
       isRoot: 0
       isGroup: 0
@@ -3108,7 +3114,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -3183,7 +3189,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -3257,7 +3263,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -3492,84 +3498,11 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 1
         destinationConversationID: 8
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 34
-        y: 102
-        width: 160
-        height: 30
-    - id: 2
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: -1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 5
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: "Customer: Poppy\r\nEXP: 5\r\nDifficulty: Easy\r\nTime Limit: 60 seconds"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 8
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 8
-        originDialogueID: 2
-        destinationConversationID: 8
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
       - originConversationID: 8
-        originDialogueID: 2
+        originDialogueID: 1
         destinationConversationID: 8
         destinationDialogueID: 3
         isConnector: 0
@@ -3583,8 +3516,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 71
-        y: 195
+        x: 34
+        y: 102
         width: 160
         height: 30
     - id: 3
@@ -3813,7 +3746,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -3833,8 +3766,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Now we need to find Poppy and deliver their order. Customers should
-          be marked with [purple sphere] in both the overworld and GPS.
+        value: Now we need to find Poppy. Customers should be marked with [purple
+          sphere] in both the overworld and GPS.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3887,7 +3820,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -3907,9 +3840,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Broom Bash expects couriers to deliver within a certain time limit.
-          If you fail to deliver on time, you\u2019ll be penalized and your rating
-          will go down a star. "
+        value: 'Broom Bash expects couriers to deliver within a certain time limit.
+          If you fail to deliver on time, your rating will go down a star. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3962,7 +3894,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -4036,7 +3968,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -4110,7 +4042,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -4185,7 +4117,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -4369,7 +4301,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[1]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -4389,7 +4321,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Be more careful, geeze! That\u2019s someone\u2019s dinner!"
+        value: "Be careful, geeze! That\u2019s someone\u2019s dinner!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -4553,7 +4485,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -4898,7 +4830,7 @@ MonoBehaviour:
       - originConversationID: 12
         originDialogueID: 1
         destinationConversationID: 12
-        destinationDialogueID: 2
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4914,79 +4846,6 @@ MonoBehaviour:
         y: 80
         width: 160
         height: 30
-    - id: 2
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: -1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: Player gained 5 EXP!
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 2
-        destinationConversationID: 12
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 20
-        y: 130
-        width: 160
-        height: 30
     - id: 3
       fields:
       - title: Title
@@ -4994,7 +4853,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[3]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -5015,7 +4874,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Well, congrats on your first delivery. Oh, you\u2019re probably wondering
-          about EXP."
+          about the cash you earned."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5057,8 +4916,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 34
-        y: 230
+        x: 39
+        y: 171
         width: 160
         height: 30
     - id: 4
@@ -5068,7 +4927,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -5088,8 +4947,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "With each successful delivery, you\u2019ll be rewarded experience
-          points. When you earn a certain amount of EXP, you'll \"level up\"."
+        value: "With each successful delivery, you\u2019ll be rewarded money. With
+          more experience, you'll earn even more dough! Ain't that kind of nice?"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5142,7 +5001,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -5216,7 +5075,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -5290,7 +5149,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
@@ -5310,82 +5169,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "These special tasks will reward you with bonus EXP, so keep an eye
+        value: "These special tasks will reward you with bonus cash, so keep an eye
           out for \u2018em!"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 12
-        originDialogueID: 7
-        destinationConversationID: 12
-        destinationDialogueID: 8
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 34
-        y: 441
-        width: 160
-        height: 30
-    - id: 8
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "Hmm...that should be about everything. You\u2019re now good to go.
-          Call ya later. I\u2019m off."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5422,7 +5207,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 34
-        y: 491
+        y: 441
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
@@ -5658,15 +5443,15 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 3
         type: 5
@@ -5678,15 +5463,15 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Use the [left stick right and left] to steer right and then left.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
@@ -5694,11 +5479,11 @@ MonoBehaviour:
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 14
       isRoot: 0
       isGroup: 0
@@ -5842,15 +5627,15 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[2]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 3
         type: 5
@@ -5862,16 +5647,16 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Use the [left stick up and down] to pitch yourself forward and backward
           to adjust your height.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
@@ -5879,11 +5664,11 @@ MonoBehaviour:
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -6027,15 +5812,15 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
-        value: '[]'
+        value: '[1]'
         type: 3
         typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 3
         type: 5
@@ -6047,16 +5832,16 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Looks like you have everything down well enough. Now get out there,
-          you're costing me money sitting here!
+          you're costing me money!
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
@@ -6064,84 +5849,11 @@ MonoBehaviour:
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      conversationID: 16
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 16
-        originDialogueID: 1
-        destinationConversationID: 16
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      canvasRect:
-        serializedVersion: 2
-        x: 20
-        y: 80
-        width: 160
-        height: 30
-    - id: 2
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Welcome to Broom Bash!
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -6160,7 +5872,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 20
-        y: 132
+        y: 80
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
