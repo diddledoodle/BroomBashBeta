@@ -7,7 +7,7 @@ public class MenuNavigation : MonoBehaviour
 {
 
     public List<Button> menuButtons;
-    [SerializeField]
+
     private int currentSelectedIndex = 0;
 
     private InputHandler inputHandler;

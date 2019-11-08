@@ -355,7 +355,7 @@ MonoBehaviour:
   target: {fileID: 0}
   meshes: {fileID: 2095712489}
   hideDistance: 0
-  tutorial: 0
+  tutorial: 1
 --- !u!1 &1199537931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1179,7 @@ Transform:
   m_GameObject: {fileID: 884562655478222816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 752601669522157328}
   m_RootOrder: 2

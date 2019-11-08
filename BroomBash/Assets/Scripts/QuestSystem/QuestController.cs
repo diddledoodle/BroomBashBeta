@@ -395,8 +395,6 @@ public class QuestController : MonoBehaviour
             /*jpost audio*/
             //play add xp sound from wwise
             AkSoundEngine.PostEvent("play_bb_sx_game_ui_xp_gained", gameObject);
-            //debug
-            Debug.Log("xp sound should play");
         }
 
         // Reset player collisions during quest
@@ -459,7 +457,23 @@ public class QuestController : MonoBehaviour
         SceneManager.LoadSceneAsync(0);
     }
 
-    private void NoQuestActiveGameObjects()
+    public void TurnOffAllLocations()
+    {
+        // Disable all drop off locations
+        foreach (DropOff d in dropOffs)
+        {
+            d.GetComponent<Renderer>().material = invisibleMaterial;
+            d.gameObject.SetActive(false);
+        }
+        // Diable all pick up locations
+        foreach (PickUp p in pickUps)
+        {
+            p.GetComponent<Renderer>().material = pickUpLocationMaterial;
+            p.gameObject.SetActive(false);
+        }
+    }
+
+    public void NoQuestActiveGameObjects()
     {
         // Disable all drop off locations
         foreach(DropOff d in dropOffs)
@@ -510,6 +524,13 @@ public class QuestController : MonoBehaviour
             currentPlayerDifficulty = 2;
             currentQuestDifficulty = "Hard";
         }
+    }
+    
+    public void AddTutorialXpToPlayerLevelingSystem(int _amt)
+    {
+        playerLevelSystem.AddXpToPlayerLevel(_amt);
+        // play add xp sound from wwise
+        AkSoundEngine.PostEvent("play_bb_sx_game_ui_xp_gained", gameObject);
     }
 
     public void AddXpToPlayerLevelingSystem(int _playerDifficulty)

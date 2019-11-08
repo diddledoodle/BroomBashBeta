@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Vector3 playerStartingPosition = Vector3.zero;
     [HideInInspector]
+    public Vector3 playerStartingRotation = Vector3.zero;
+    [HideInInspector]
     public InputHandler inputHandler;
     [HideInInspector]
     public QuestController questController;
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody>();
         // Get the players starting poosition
         playerStartingPosition = this.gameObject.transform.position;
+        playerStartingRotation = this.gameObject.transform.rotation.eulerAngles;
         // Stop the player on start so they dont go shooting off
         StopPlayer();
         // Disable speed trail renderers

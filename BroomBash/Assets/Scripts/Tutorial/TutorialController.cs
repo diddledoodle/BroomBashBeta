@@ -25,8 +25,12 @@ public class TutorialController : MonoBehaviour
     public GameObject pickUpLocation;
     public GameObject dropOffLocation;
 
+    //[HideInInspector]
+    public bool enabled = true;
+
     private InputHandler inputHandler;
 
+    private bool introductionConvoOver = false;
     private bool stopConvoOver = false;
     private bool slowDownConvoOver = false;
     private bool speedUpConvoOver = false;
@@ -59,20 +63,22 @@ public class TutorialController : MonoBehaviour
         // Trigger the first dialogue
         Invoke("TriggerFirstDialogue", firstDialogueTriggerTime);
         // Add event listeners
-        stop.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { UnstopPlayer(); stopConvoOver = true; });
-        slowDown.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { UnstopPlayer(); slowDownConvoOver = true; });
-        speedUp.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { UnstopPlayer(); speedUpConvoOver = true; });
-        steer.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { UnstopPlayer(); steerConvoOver = true; });
-        pitch.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { UnstopPlayer(); pitchConvoOver = true; });
+        stop.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { if (!enabled) return; UnstopPlayer(); stopConvoOver = true; });
+        slowDown.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { if (!enabled) return; UnstopPlayer(); slowDownConvoOver = true; });
+        speedUp.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { if (!enabled) return; UnstopPlayer(); speedUpConvoOver = true; });
+        steer.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { if (!enabled) return;  UnstopPlayer(); steerConvoOver = true; });
+        pitch.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { if (!enabled) return; UnstopPlayer(); pitchConvoOver = true; });
         pause.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate {
+            if (!enabled) return;
             playerController.StopPlayer();
             playerController.transform.position = playerController.playerStartingPosition;
+            playerController.transform.eulerAngles = playerController.playerStartingRotation;
             playerController.transform.eulerAngles = Vector3.zero;
             pauseConvoOver = true;
             StartGameplayTutorial();
             });
-        start.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { UnstopPlayer(); pickUpLocation.SetActive(true); playerController.GetComponentInChildren<TargetIndicator>().target = pickUpLocation.transform; });
-        end.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { StartCoroutine(BackToMenu()); });
+        start.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { if (!enabled) return;  UnstopPlayer(); pickUpLocation.SetActive(true); playerController.GetComponentInChildren<TargetIndicator>().target = pickUpLocation.transform; });
+        end.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { if (!enabled) return; enabled = false;/*StartCoroutine(BackToMenu());*/ });
     }
 
     private void GetInputHandler()
@@ -84,29 +90,38 @@ public class TutorialController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Return if input handler is not found
-        if(inputHandler == null)
+        if (enabled == true)
         {
-            return;
+            // Return if input handler is not found
+            if (inputHandler == null)
+            {
+                return;
+            }
+            // Make sure the player cant move until it is time in the tutorial
+            MakePlayerStopDuringIntroduction();
+            // Check for stop completed
+            CheckForStop();
+            // Check for slow down completed
+            CheckForSlowDown();
+            // Check for speed up completed
+            CheckForSpeedUp();
+            // Check for steer completed
+            CheckForSteering();
+            // Check for pitch completed
+            CheckForPitch();
         }
-
-        // Check for stop completed
-        CheckForStop();
-        // Check for slow down completed
-        CheckForSlowDown();
-        // Check for speed up completed
-        CheckForSpeedUp();
-        // Check for steer completed
-        CheckForSteering();
-        // Check for pitch completed
-        CheckForPitch();
     }
 
     private void TriggerFirstDialogue()
     {
         introduction0.OnUse();
         introduction0.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { TriggerDialogue(introduction1); });
-        introduction1.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate { playerController.UnstopPlayer(); StartCoroutine(TriggerDialogueDelay(stop, 5)); });
+        
+   
+        introduction1.GetComponent<DialogueSystemEvents>().conversationEvents.onConversationEnd.AddListener(delegate {
+            if (DialogueLua.GetVariable("endTutorial").asBool == false)
+            { playerController.UnstopPlayer(); introductionConvoOver = true; StartCoroutine(TriggerDialogueDelay(stop, 5)); }
+        });
     }
 
     private void TriggerDialogue(DialogueSystemTrigger _trigger)
@@ -123,6 +138,11 @@ public class TutorialController : MonoBehaviour
         Debug.Log("Stopped player");
         _trigger.OnUse();
         Debug.Log($"Triggered convo: {_trigger.gameObject.name}");
+    }
+
+    private void MakePlayerStopDuringIntroduction()
+    {
+        if (!introductionConvoOver) playerController.StopPlayer();
     }
 
     private void CheckForStop()

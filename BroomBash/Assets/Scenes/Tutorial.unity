@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -120,224 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &29497462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 29497464}
-  - component: {fileID: 29497463}
-  - component: {fileID: 29497465}
-  m_Layer: 0
-  m_Name: TutorialDialoguePause
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &29497463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29497462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialPause
-  conversationConversant: {fileID: 29497464}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &29497464
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29497462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &29497465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29497462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &31903308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,442 +189,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b254b3eda55fb47bf8fccbacd9fc15, type: 3}
---- !u!1 &235447493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 235447494}
-  - component: {fileID: 235447495}
-  - component: {fileID: 235447496}
-  m_Layer: 0
-  m_Name: TutorialDialogueIntro0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &235447494
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235447493}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &235447495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235447493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialIntroduction0
-  conversationConversant: {fileID: 235447494}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!114 &235447496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235447493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
---- !u!1 &339681689
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 339681691}
-  - component: {fileID: 339681690}
-  - component: {fileID: 339681692}
-  m_Layer: 0
-  m_Name: TutorialDialogueSlowDown
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &339681690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339681689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialFlightSlowDown
-  conversationConversant: {fileID: 339681691}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &339681691
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339681689}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &339681692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339681689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &376622374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -912,230 +258,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31c7b66bbb7bf75409b52d6ff74381f1, type: 3}
---- !u!1 &397412716 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6842621289501558206, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1427359690}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &535372372
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 535372374}
-  - component: {fileID: 535372373}
-  - component: {fileID: 535372375}
-  m_Layer: 0
-  m_Name: TutorialDialoguePitch
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &535372373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535372372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialFlightPitch
-  conversationConversant: {fileID: 535372374}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &535372374
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535372372}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &535372375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535372372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &615388720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1280,442 +402,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1582644849}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &937853407
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937853409}
-  - component: {fileID: 937853408}
-  - component: {fileID: 937853410}
-  m_Layer: 0
-  m_Name: TutorialDialogueGameplayEnd
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &937853408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937853407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialPlayerColllision
-  conversationConversant: {fileID: 937853409}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &937853409
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937853407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &937853410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937853407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
---- !u!1 &1033584361
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1033584363}
-  - component: {fileID: 1033584362}
-  - component: {fileID: 1033584364}
-  m_Layer: 0
-  m_Name: TutorialDialogueStop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1033584362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033584361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialFlightStop
-  conversationConversant: {fileID: 1033584363}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &1033584363
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033584361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1033584364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033584361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1101632641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1785,224 +471,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d53a0a608453e8e4b967a068d35dbf17, type: 3}
---- !u!1 &1140521185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1140521187}
-  - component: {fileID: 1140521186}
-  - component: {fileID: 1140521188}
-  m_Layer: 0
-  m_Name: TutorialDialogueGameplayStart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1140521186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140521185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialDeliveryStart
-  conversationConversant: {fileID: 1140521187}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &1140521187
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140521185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1140521188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140521185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1 &1147061930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,6 +616,111 @@ PrefabInstance:
       propertyPath: displaySettings.subtitleSettings.continueButton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957461143, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957499559, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957449747, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957449747, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957504187, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957504187, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957504187, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957487485, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957487485, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 666575957, guid: bc9fce21f348db24fb1db6c7e88704c7, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -2220,111 +793,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957461143, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957487485, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957487485, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957499559, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957449747, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957449747, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957504187, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957504187, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957504187, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957513097, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1668871385957470611, guid: bc9fce21f348db24fb1db6c7e88704c7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc9fce21f348db24fb1db6c7e88704c7, type: 3}
 --- !u!4 &1213349172 stripped
@@ -2351,501 +819,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f561a5f7e4da7f246a526873174cd882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1240878228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1240878230}
-  - component: {fileID: 1240878229}
-  - component: {fileID: 1240878231}
-  m_Layer: 0
-  m_Name: TutorialDialogueIntro1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1240878229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240878228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialIntroduction1
-  conversationConversant: {fileID: 1240878230}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &1240878230
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240878228}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1240878231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240878228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!4 &1272133599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5963903399516484956, guid: c07df65ec87dda248bd338524c854d9e,
     type: 3}
   m_PrefabInstance: {fileID: 616696473}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1427359690
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1679896875}
-    m_Modifications:
-    - target: {fileID: 6842621289501558206, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_Name
-      value: DropOffLocation
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 666484994, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 666484994, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 666484994, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerEndConvo
-      objectReference: {fileID: 0}
-    - target: {fileID: 666484994, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 666484994, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1679896876}
-    - target: {fileID: 666484993, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: conversationActor
-      value: 
-      objectReference: {fileID: 1975307416}
-    - target: {fileID: 666484993, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: selectedDatabase
-      value: 
-      objectReference: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47,
-        type: 2}
-    - target: {fileID: 666484993, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
-      propertyPath: conversation
-      value: TutorialDeliveryDropoff
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bd3acd523e6bb5c48aaf880d55ccfddf, type: 3}
---- !u!4 &1427359691 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6842621289501558201, guid: bd3acd523e6bb5c48aaf880d55ccfddf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1427359690}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1447545893
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1679896875}
-    m_Modifications:
-    - target: {fileID: 5736742434660103993, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_Name
-      value: PickUpLocation
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1679896876}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTargetToDropOff
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1679896876}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTargetArrowTarget
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747765, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747760, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: selectedDatabase
-      value: 
-      objectReference: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47,
-        type: 2}
-    - target: {fileID: 585747760, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversation
-      value: TutorialDeliveryPickup
-      objectReference: {fileID: 0}
-    - target: {fileID: 585747760, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
-      propertyPath: conversationActor
-      value: 
-      objectReference: {fileID: 1975307416}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f1da4e8b251c8d647b751f54c0754968, type: 3}
---- !u!4 &1447545894 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5736742434660103992, guid: f1da4e8b251c8d647b751f54c0754968,
-    type: 3}
-  m_PrefabInstance: {fileID: 1447545893}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1510748761 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5736742434660103993, guid: f1da4e8b251c8d647b751f54c0754968,
-    type: 3}
-  m_PrefabInstance: {fileID: 1447545893}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1582644849
 PrefabInstance:
@@ -2916,511 +894,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8363e84e4bb7644c8289298be348462, type: 3}
---- !u!1 &1679896874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1679896875}
-  - component: {fileID: 1679896876}
-  m_Layer: 0
-  m_Name: TutorialController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1679896875
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679896874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 235447494}
-  - {fileID: 1240878230}
-  - {fileID: 1033584363}
-  - {fileID: 339681691}
-  - {fileID: 1878196768}
-  - {fileID: 1880536787}
-  - {fileID: 535372374}
-  - {fileID: 29497464}
-  - {fileID: 1447545894}
-  - {fileID: 1427359691}
-  - {fileID: 1140521187}
-  - {fileID: 937853409}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1679896876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679896874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cf9ad0b684bdcf4db5718f459c7d2b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1231657672}
-  firstDialogueTriggerTime: 2
-  introduction0: {fileID: 235447495}
-  introduction1: {fileID: 1240878229}
-  stop: {fileID: 1033584362}
-  slowDown: {fileID: 339681690}
-  speedUp: {fileID: 1878196770}
-  steer: {fileID: 1880536786}
-  pitch: {fileID: 535372373}
-  pause: {fileID: 29497463}
-  start: {fileID: 1140521186}
-  end: {fileID: 937853408}
-  pickUpLocation: {fileID: 1510748761}
-  dropOffLocation: {fileID: 397412716}
---- !u!1 &1878196767
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1878196768}
-  - component: {fileID: 1878196770}
-  - component: {fileID: 1878196769}
-  m_Layer: 0
-  m_Name: TutorialDialogueSpeedUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1878196768
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878196767}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1878196769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878196767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
---- !u!114 &1878196770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878196767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialFlightSpeedUp
-  conversationConversant: {fileID: 1878196768}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!1 &1880536785
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1880536787}
-  - component: {fileID: 1880536786}
-  - component: {fileID: 1880536788}
-  m_Layer: 0
-  m_Name: TutorialDialogueSteering
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1880536786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880536785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 32
-  condition:
-    luaConditions: []
-    questConditions: []
-    acceptedTags: []
-    acceptedGameObjects: []
-    luaWizardIndex: -1
-    lastEvaluationValue: 0
-  setQuestState: 1
-  questName: 
-  questState: 0
-  setQuestEntryState: 0
-  questEntryNumber: 1
-  questEntryState: 0
-  luaCode: 
-  sequence: 
-  sequenceSpeaker: {fileID: 0}
-  sequenceListener: {fileID: 0}
-  waitOneFrameOnStartOrEnable: 1
-  alertMessage: 
-  textTable: {fileID: 0}
-  alertDuration: 0
-  sendMessages: []
-  barkSource: 0
-  barkConversation: 
-  barkText: 
-  barkTextSequence: 
-  barker: {fileID: 0}
-  barkTarget: {fileID: 0}
-  barkOrder: 0
-  allowBarksDuringConversations: 0
-  skipBarkIfNoValidEntries: 0
-  cacheBarkLines: 0
-  conversation: TutorialFlightSteering
-  conversationConversant: {fileID: 1880536787}
-  conversationActor: {fileID: 1975307416}
-  startConversationEntryID: -1
-  exclusive: 0
-  skipIfNoValidEntries: 1
-  stopConversationOnTriggerExit: 0
-  stopConversationIfTooFar: 0
-  maxConversationDistance: 5
-  monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
-  pauseGameDuringConversation: 0
-  setActiveActions: []
-  setEnabledActions: []
-  setAnimatorStateActions: []
-  onExecute:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  useConversationTitlePicker: 1
-  useBarkTitlePicker: 1
-  useQuestNamePicker: 1
-  selectedDatabase: {fileID: 11400000, guid: 417cc435990114b60a3d74728a9c3e47, type: 2}
---- !u!4 &1880536787
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880536785}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1679896875}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1880536788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880536785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conversationEvents:
-    onConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationLineCancelled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenu:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onConversationResponseMenuTimeout:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onLinkedConversationStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  barkEvents:
-    onBarkStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onBarkLine:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  sequenceEvents:
-    onSequenceStart:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onSequenceEnd:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
-        DialogueSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  questEvents:
-    onQuestStateChange:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingEnabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onQuestTrackingDisabled:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-    onUpdateQuestTracker:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  pauseEvents:
-    onDialogueSystemPause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    onDialogueSystemUnpause:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1 &1899717871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,11 +1004,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 752601669522157423, guid: db4908519adb79d4ba2dbd3d8274d9c1,
-        type: 3}
-      propertyPath: m_Name
-      value: _Player
-      objectReference: {fileID: 0}
     - target: {fileID: 752601669522157328, guid: db4908519adb79d4ba2dbd3d8274d9c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3591,6 +1059,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 752601669522157423, guid: db4908519adb79d4ba2dbd3d8274d9c1,
+        type: 3}
+      propertyPath: m_Name
+      value: _Player
+      objectReference: {fileID: 0}
     - target: {fileID: 124169744, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -3601,6 +1074,140 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db4908519adb79d4ba2dbd3d8274d9c1, type: 3}
+--- !u!1001 &1748307956536713398
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1748307956069110172, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_Name
+      value: TutorialController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110173, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748307956069110170, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1231657672}
+    - target: {fileID: 1748307956703986801, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307955585543203, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307956996709980, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307956335837484, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307956156277396, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307955730257508, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307956425097955, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307956524267713, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307955808346531, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307955707946621, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307955417536596, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    - target: {fileID: 1748307956828119382, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a,
+        type: 3}
+      propertyPath: conversationActor
+      value: 
+      objectReference: {fileID: 1975307416}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0cd16c9ee18c44b6beb1b2fa3846e5a, type: 3}
 --- !u!1001 &2529869544445419339
 PrefabInstance:
   m_ObjectHideFlags: 0
