@@ -8,6 +8,14 @@ public class MainMenu : MonoBehaviour
     public GameObject creditsMenuPanel;
     public GameObject titleMenuPanel;
 
+    private void Start()
+    {
+        creditsMenuPanel.SetActive(false);
+        titleMenuPanel.SetActive(true);
+        // Hide the mouse cursor
+        Cursor.visible = false;
+    }
+
     public void LoadGameScene(string _levelName)
     {
         SceneManager.LoadSceneAsync(_levelName);

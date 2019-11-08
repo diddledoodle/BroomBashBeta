@@ -7,7 +7,7 @@ public class MenuNavigation : MonoBehaviour
 {
 
     public List<Button> menuButtons;
-
+    [SerializeField]
     private int currentSelectedIndex = 0;
 
     private InputHandler inputHandler;
@@ -17,6 +17,7 @@ public class MenuNavigation : MonoBehaviour
     {
         // Select the first button
         menuButtons[0].Select();
+        currentSelectedIndex = 0;
         // Get the inputhandler
         inputHandler = GameObject.FindObjectOfType<InputHandler>();
     }
@@ -63,5 +64,6 @@ public class MenuNavigation : MonoBehaviour
             menuButtons[1].Select();
         }
         menuButtons[0].Select();
+        currentSelectedIndex = 0;
     }
 }
