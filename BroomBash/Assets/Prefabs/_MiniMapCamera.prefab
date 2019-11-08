@@ -88,5 +88,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  rotateWithPlayer: 0
+  rotateWithPlayer: 1
   heightAbovePlayer: 10

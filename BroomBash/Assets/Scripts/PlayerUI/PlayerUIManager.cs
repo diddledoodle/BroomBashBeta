@@ -54,8 +54,16 @@ public class PlayerUIManager : MonoBehaviour
     {
         if (questController != null && questController.countdownTimerIsActive)
         {
-            timer.text = $"<b>{questController.timeLeft.ToString("F0")}</b>";
+            float _secondsLeft = questController.timeLeft;
             
+            if(_secondsLeft < 10)
+            {
+                timer.text = $"<color=red><b>{_secondsLeft.ToString("F0")}</b></color>";
+            }
+            else if(_secondsLeft > 10)
+            {
+                timer.text = $"<color=white><b>{_secondsLeft.ToString("F0")}</b></color>";
+            }
         }
         else
         {
@@ -65,7 +73,7 @@ public class PlayerUIManager : MonoBehaviour
         // Update the xp and level text
         if(playerLevelSystem != null)
         {
-            xpText.text = $"<b>XP {playerLevelSystem.xp}</b>";
+            xpText.text = $"<b>${playerLevelSystem.xp}</b>";
             levelText.text = $"<b>Level {playerLevelSystem.currentLevel + 1}</b>";
         }
         else

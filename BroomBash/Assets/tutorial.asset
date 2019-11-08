@@ -1510,13 +1510,13 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 1
         destinationConversationID: 3
-        destinationDialogueID: 2
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       - originConversationID: 3
         originDialogueID: 1
         destinationConversationID: 3
-        destinationDialogueID: 3
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       conditionsString: randomValue == 1
@@ -1803,13 +1803,13 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 5
         destinationConversationID: 3
-        destinationDialogueID: 2
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       - originConversationID: 3
         originDialogueID: 5
         destinationConversationID: 3
-        destinationDialogueID: 3
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       conditionsString: randomValue == 2
