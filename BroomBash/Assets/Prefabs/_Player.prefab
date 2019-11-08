@@ -840,9 +840,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundTag: Ground
-  maxHeightFromGround: 60
+  maxHeightFromGround: 100
   minHeightFromGround: 0.3
-  maxHeightFromGroundQuestNotActive: 80
+  maxHeightFromGroundQuestNotActive: 180
 --- !u!114 &1707904220858327486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,14 +880,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752601669522157423}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5000
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!114 &124169744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,7 +1195,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &164675853972521603
 MonoBehaviour:
@@ -1216,11 +1216,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6924655365767258088}
     m_Modifications:
-    - target: {fileID: 405492891957682094, guid: c0c9e55a0ee24d04d967294b627942af,
-        type: 3}
-      propertyPath: m_Name
-      value: BBCharSitting
-      objectReference: {fileID: 0}
     - target: {fileID: 3745799153486376381, guid: c0c9e55a0ee24d04d967294b627942af,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1291,6 +1286,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2683776
       objectReference: {fileID: 0}
+    - target: {fileID: 405492891957682094, guid: c0c9e55a0ee24d04d967294b627942af,
+        type: 3}
+      propertyPath: m_Name
+      value: BBCharSitting
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0c9e55a0ee24d04d967294b627942af, type: 3}
 --- !u!1001 &3455378059386162608
@@ -1300,11 +1300,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2095712490}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: b98da6effbc964d90a62b0170ba61066,
-        type: 3}
-      propertyPath: m_Name
-      value: Arrow
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b98da6effbc964d90a62b0170ba61066,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1375,6 +1370,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5000
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b98da6effbc964d90a62b0170ba61066,
+        type: 3}
+      propertyPath: m_Name
+      value: Arrow
+      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: b98da6effbc964d90a62b0170ba61066,
         type: 3}
       propertyPath: m_CastShadows
@@ -1400,10 +1400,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 752601669811963280}
     m_Modifications:
-    - target: {fileID: 100010, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
-      propertyPath: m_Name
-      value: Whole Broom
-      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1459,6 +1455,10 @@ PrefabInstance:
     - target: {fileID: 400010, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
       propertyPath: m_LocalScale.z
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
+      propertyPath: m_Name
+      value: Whole Broom
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: fedc38c8866ae1242bdcc5d131591f5d, type: 3}
       propertyPath: m_Materials.Array.data[0]

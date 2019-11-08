@@ -165,7 +165,7 @@ public class QuestController : MonoBehaviour
             CountdownTimer();
 
             /*jpost audio*/
-            if(timeLeft < 10 )
+            if(timeLeft < 10 && timeLeft > 0)
             {
                 if (!timerIsLow)
                 {
@@ -205,8 +205,6 @@ public class QuestController : MonoBehaviour
             {
                 EndQuestFromFailure();
             }
-            // Change quest material back to idle
-            currentQuest.gameObject.GetComponent<Renderer>().material = dropOffLocationMaterial;
             
             /*jpost audio*/ 
             if (!hasRunOutOfTime)
@@ -420,20 +418,22 @@ public class QuestController : MonoBehaviour
 
     public void EndQuestFromFailure()
     {
+        // Enable/Disable gameobjects
+        NoQuestActiveGameObjects();
+        if (failedDeliveryConvo != null) failedDeliveryConvo.OnUse();
+        GameObject.FindObjectOfType<PlayerUIManager>().SubtractLiveStar();
+
+        bossQuestIsActive = false;
         countdownTimerIsActive = false;
         playerHasQuest = false;
         playerHasBossQuest = false;
         playerHasDelivery = false;
         playerHasBossDelivery = false;
+        DialogueLua.SetVariable("BossQuestIsActive", false);
         //SubXpToPlayerLevelingSystem(currentPlayerDifficulty);
         CalculatePlayersCurrentDifficulty();
         currentPlayerFailedQuests -= 1;
         currentPlayerCollisionsPerDelivery = maxPlayerCollisionsPerDelivery;
-        //playerUIManager.RunDialogSystem("You failed this quest! :(", PlayerUIManager.QuestStatus.FAIL);
-        // Enable/Disable gameobjects
-        NoQuestActiveGameObjects();
-        failedDeliveryConvo.OnUse();
-        GameObject.FindObjectOfType<PlayerUIManager>().SubtractLiveStar();
     }
 
     public void EndGameFromFailure()
@@ -441,11 +441,17 @@ public class QuestController : MonoBehaviour
         countdownTimerIsActive = false;
         playerHasQuest = false;
         playerHasDelivery = false;
-        //playerUIManager.RunDialogSystem("<b>Game Over!</b>\n You failed too many quests.", PlayerUIManager.QuestStatus.GAMEOVER);
         // Enable/Disable gameobjects
         NoQuestActiveGameObjects();
         // Play game over convo
-        gameOverConvo.OnUse();
+        if (gameOverConvo != null)
+        {
+            gameOverConvo.OnUse();
+        }
+        else
+        {
+            EndGame();
+        }
     }
 
     public void EndGame()
@@ -464,6 +470,7 @@ public class QuestController : MonoBehaviour
         // Enable all pick up locations
         foreach(PickUp p in pickUps)
         {
+            p.GetComponent<Renderer>().material = pickUpLocationMaterial;
             p.gameObject.SetActive(true);
         }
     }

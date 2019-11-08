@@ -183,9 +183,12 @@ public class PlayerController : MonoBehaviour
         {
             _wantedSpeed = maximumSpeed;
             // Enable speed trail renderers
-            foreach(GameObject go in speedTrailRenderers)
-            {
-                go.SetActive(true);
+            if (!stopPlayer)
+            {                
+                foreach (GameObject go in speedTrailRenderers)
+                {
+                    go.SetActive(true);
+                }
             }
             /*jpost audio*/
             if (!hasAccelerated)
